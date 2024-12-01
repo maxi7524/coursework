@@ -1,22 +1,29 @@
 import numpy as np
 from numpy import polynomial as P
 
-def horner_method(x, coeffs, z):
+def horner_eval(coeffs, z):
     """
     Evaluate a polynomial at a given point using Horner's method.
     
     Parameters:
-    x (array-like): Points of the polynomial.
-    coeffs (array-like): Coefficients of the polynomial.
+    coeffs (array-like): Coefficients of the polynomial (in ascending order of degree).
     z (float or array-like): Point(s) at which to evaluate the polynomial.
     
     Returns:
     float or ndarray: Value of the polynomial at point(s) z.
     """
-    result = np.zeros_like(z, dtype=float)
-    for c in reversed(coeffs):
-        result = result * (z - x) + c
+    result = coeffs[-1]  # Start with the highest degree coefficient
+    for c in reversed(coeffs[:-1]):  # Iterate through remaining coefficients in reverse
+        result = result * z + c
     return result
+
+def standard_polynomial_eval(coeffs, z):
+    """Standard polynomial evaluation method"""
+    result = 0
+    for i, coeff in enumerate(coeffs):
+        result += coeff * (z ** i)
+    return result
+
 
 def neville(datax, datay, x):
     """
