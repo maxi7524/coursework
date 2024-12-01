@@ -64,7 +64,33 @@ def newton_polynomial(x, f):
         divided_diff[k:] = (divided_diff[k:] - divided_diff[k-1:-1]) / (x[k:] - x[:-k])
     return divided_diff
 
-def coef_change(x):
+def newton_to_standard(coeffs, x_points):
+    """
+    Convert Newton form coefficients to standard polynomial coefficients.
+    
+    Parameters:
+    coeffs (array-like): Coefficients in Newton form
+    x_points (array-like): x coordinates used for Newton interpolation
+    
+    Returns:
+    ndarray: Coefficients in standard polynomial form (ascending order)
+    """
+    n = len(coeffs)
+    result = np.zeros(n)
+    
+    # First coefficient is the same in both forms
+    result[0] = coeffs[0]
+    
+    # For each degree
+    for i in range(1, n):
+        # Multiply previous result by (x - x_i) and add next coefficient
+        result[i] = coeffs[i]
+        for j in range(i-1, -1, -1):
+            result[j] = result[j] - result[j+1] * x_points[i-1]
+            
+    return result
+
+def standard_to_chebyshev(x):
     """
     Convert polynomial coefficients to Chebyshev form.
     
