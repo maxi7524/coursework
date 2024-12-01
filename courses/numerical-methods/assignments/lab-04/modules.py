@@ -54,6 +54,10 @@ def newton_polynomial(x, f):
     Returns:
     ndarray: Coefficients of the polynomial in Newton's form.
     """
+    # creating arrays
+    x = np.array(x, copy=True)
+    f = np.array(f, copy=True)
+
     n = len(x)
     divided_diff = np.array(f, copy=True)
     for k in range(1, n):
