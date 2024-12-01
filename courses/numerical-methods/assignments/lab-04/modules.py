@@ -78,19 +78,17 @@ def coef_change(x):
     poly_cheby = poly.convert(kind=P.Chebyshev)
     return poly_cheby.coef
 
-def clenshaw_algorithm(coeffs, x):
+
+def clenshaw_evaluate(coeffs, x):
     """
-    Evaluate a Chebyshev series at a given point using the Clenshaw algorithm.
-    
-    Parameters:
-    coeffs (array-like): Coefficients of the Chebyshev series.
-    x (float or array-like): Point(s) at which to evaluate the series.
-    
-    Returns:
-    float or ndarray: Value of the series at point(s) x.
+    Clenshaw algorithm for evaluating Chebyshev polynomials
     """
-    b_n2 = 0
-    b_n1 = 0
+    b_k1 = 0
+    b_k2 = 0
+    
     for c in reversed(coeffs[1:]):
-        b_n2, b_n1 = b_n1, 2 * x * b_n1 - b_n2 + c
-    return x * b_n1 - b_n2 + coeffs[0]
+        b_k = 2 * x * b_k1 - b_k2 + c
+        b_k2 = b_k1
+        b_k1 = b_k
+    
+    return x * b_k1 - b_k2 + coeffs[0]
