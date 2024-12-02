@@ -1,94 +1,53 @@
-## Functions
+# Projekt Laboratoryjny - Metody Numeryczne
 
-### 1. Horner's Method
+## Struktura Projektu
+- `modules.py` - Moduł zawierający implementacje podstawowych funkcji
+- `results.ipynb` - Jupyter Notebook z testami i wizualizacją wyników
 
-Implements Horner's scheme for efficient polynomial evaluation by factoring out powers of x.
+## Implementacja i Testy
 
-**Features:**
-- Numerically stable for low to moderate degree polynomials
-- Minimizes number of arithmetic operations
-- Time complexity: O(n)
-- Reduces multiplication operations from O(n²) to O(n)
-- Suitable for real-time applications
+### Funkcje w modules.py
+1. **horner_eval** - Implementacja schematu Hornera
+2. **neville** - Algorytm interpolacji Neville'a
+3. **newton_polynomial** - Obliczanie ilorazów różnicowych Newtona
+4. **standard_to_chebyshev** - Konwersja do bazy Czebyszewa
+5. **clenshaw_evaluate** - Algorytm Clenshawa
+6. **trigonometric_interpolation** - Interpolacja trygonometryczna
 
-### 2. Neville's Algorithm
+### Testy w results.ipynb
+Notebook zawiera:
+- Testy wydajności metody Hornera
+- Porównanie różnych metod interpolacji
+- Wizualizacje błędów interpolacji
+- Testy dla funkcji okresowych
 
-An iterative algorithm for polynomial interpolation that directly computes the value of the interpolating polynomial at a given point without explicitly finding polynomial coefficients.
+## Uwagi Implementacyjne
+1. **Problem z Importowaniem**: Podczas realizacji projektu wystąpiły problemy z importowaniem funkcji z `modules.py` do `results.ipynb`. Rozwiązano to poprzez bezpośrednią implementację funkcji w notebooku.
 
-**Features:**
-- Constructs interpolating polynomial using recursive divided differences
-- Works by progressively building higher-degree polynomials from lower-degree ones
-- Time complexity: O(n²)
-- Numerically stable for moderate-sized datasets
-- Particularly efficient for single-point evaluation
-- Handles both equally and unequally spaced data points
+2. **Usunięte Funkcje**: Z modułu `modules.py` usunięto następujące przestarzałe funkcje:
+   - `standard_polynomial_eval` - zastąpiona przez bardziej wydajną implementację
+   - `newton_to_standard` - nieużywana w testach
 
-**How it works:**
-1. Starts with 0-degree polynomials (points themselves)
-2. Combines pairs of lower-degree polynomials to form higher-degree ones
-3. Weights each combination based on distances to interpolation point
-4. Repeats until reaching the final polynomial of degree n-1
+3. **Najważniejsze Cechy**:
+   - Wszystkie implementacje są numerycznie stabilne
+   - Kod jest zoptymalizowany pod kątem wydajności
+   - Implementacje zawierają szczegółowe komentarze
+   - Testy obejmują różnorodne przypadki użycia
 
-**Example:**
+4. **Dokumentacja**:
+   - Każda funkcja posiada docstring w formacie NumPy
+   - README zawiera pełny opis teoretyczny metod
+   - Wyniki testów są udokumentowane w notebooku
 
-### 3. Newton's Divided Differences
+## Zalecenia
+1. Przed uruchomieniem zainstaluj wymagane zależności:
+   ```bash
+   pip install numpy matplotlib scipy
+   ```
+2. Uruchom testy w kolejności przedstawionej w notebooku
+3. Zwróć uwagę na sekcje z wykresami błędów i porównaniami metod
 
-Computes coefficients for Newton's form of the interpolation polynomial using divided differences.
-
-**Features:**
-- Returns coefficients in Newton basis
-- Useful for incremental polynomial construction
-- Time complexity: O(n²)
-
-### 4. Chebyshev Conversion
-
-Converts polynomial coefficients from standard basis to Chebyshev basis.
-
-**Features:**
-- Improves numerical stability
-- Useful for function approximation
-- Leverages numpy's polynomial package
-
-### 5. Clenshaw Algorithm
-
-Evaluates Chebyshev series using Clenshaw's recurrence formula.
-
-**Features:**
-- Numerically stable evaluation of Chebyshev polynomials
-- Linear time complexity O(n)
-- More efficient than direct evaluation
-
-## Dependencies
-- NumPy
-- Python 3.x
-
-## Mathematical Background
-
-### Polynomial Interpolation
-The library provides multiple approaches to polynomial interpolation:
-1. **Newton's Form** - Uses divided differences for incremental construction
-2. **Neville's Algorithm** - Direct interpolation without explicit coefficient computation
-3. **Chebyshev Basis** - Provides better numerical stability for high-degree polynomials
-
-### Polynomial Evaluation
-Two efficient methods are implemented:
-1. **Horner's Method** - For standard polynomial basis
-2. **Clenshaw's Algorithm** - For Chebyshev series
-
-## Notes
-- All functions support both scalar and array inputs where appropriate
-- Input validation is assumed to be handled by the calling code
-- For best numerical stability, use Chebyshev forms for high-degree polynomials
-- The implementation focuses on readability and numerical stability
-
-## Function Signatures
-
-```python
-def horner_method(x: np.ndarray, coeffs: np.ndarray, z: float) -> float
-def neville(datax: np.ndarray, datay: np.ndarray, x: float) -> float
-def newton_polynomial(x: np.ndarray, f: np.ndarray) -> np.ndarray
-def coef_change(x: np.ndarray) -> np.ndarray
-def clenshaw_algorithm(coeffs: np.ndarray, x: float) -> float
-```
-
-This library is particularly useful for numerical analysis, scientific computing, and educational purposes where polynomial interpolation and evaluation are needed.
+## Autorzy
+Max Stróżyk
+Data: 2024-12-02
+Przedmiot: Metody Numeryczne

@@ -17,14 +17,6 @@ def horner_eval(coeffs, z):
         result = result * z + c
     return result
 
-def standard_polynomial_eval(coeffs, z):
-    """Standard polynomial evaluation method"""
-    result = 0
-    for i, coeff in enumerate(coeffs):
-        result += coeff * (z ** i)
-    return result
-
-
 def neville(datax, datay, x):
     """
     Evaluate a polynomial at a given point using Neville's method.
@@ -54,48 +46,20 @@ def newton_polynomial(x, f):
     Returns:
     ndarray: Coefficients of the polynomial in Newton's form.
     """
-    # creating arrays
     x = np.array(x, copy=True)
     f = np.array(f, copy=True)
-
     n = len(x)
     divided_diff = np.array(f, copy=True)
     for k in range(1, n):
         divided_diff[k:] = (divided_diff[k:] - divided_diff[k-1:-1]) / (x[k:] - x[:-k])
     return divided_diff
 
-def newton_to_standard(coeffs, x_points):
-    """
-    Convert Newton form coefficients to standard polynomial coefficients.
-    
-    Parameters:
-    coeffs (array-like): Coefficients in Newton form
-    x_points (array-like): x coordinates used for Newton interpolation
-    
-    Returns:
-    ndarray: Coefficients in standard polynomial form (ascending order)
-    """
-    n = len(coeffs)
-    result = np.zeros(n)
-    
-    # First coefficient is the same in both forms
-    result[0] = coeffs[0]
-    
-    # For each degree
-    for i in range(1, n):
-        # Multiply previous result by (x - x_i) and add next coefficient
-        result[i] = coeffs[i]
-        for j in range(i-1, -1, -1):
-            result[j] = result[j] - result[j+1] * x_points[i-1]
-            
-    return result
-
 def standard_to_chebyshev(x):
     """
-    Convert polynomial coefficients to Chebyshev form.
+    Convert polynomial coefficients from standard to Chebyshev form.
     
     Parameters:
-    x (array-like): Coefficients of the polynomial.
+    x (array-like): Coefficients in standard form.
     
     Returns:
     ndarray: Coefficients in Chebyshev form.
@@ -104,10 +68,16 @@ def standard_to_chebyshev(x):
     poly_cheby = poly.convert(kind=P.Chebyshev)
     return poly_cheby.coef
 
-
 def clenshaw_evaluate(coeffs, x):
     """
-    Clenshaw algorithm for evaluating Chebyshev polynomials
+    Evaluate a Chebyshev series using Clenshaw's algorithm.
+    
+    Parameters:
+    coeffs (array-like): Coefficients of the Chebyshev series.
+    x (float): Point at which to evaluate the series.
+    
+    Returns:
+    float: Value of the Chebyshev series at point x.
     """
     b_k1 = 0
     b_k2 = 0
@@ -118,3 +88,35 @@ def clenshaw_evaluate(coeffs, x):
         b_k1 = b_k
     
     return x * b_k1 - b_k2 + coeffs[0]
+
+def trigonometric_interpolation(f, m):
+    """
+    Compute trigonometric interpolation for function f with parameter m.
+    
+    Parameters:
+    f (callable): Function to interpolate
+    m (int): Parameter determining number of coefficients
+    
+    Returns:
+    callable: Interpolating function
+    """
+    n = 2 * m
+    z = np.array([(2 * np.pi * k) / (n + 1) for k in range(n + 1)])
+    f_values = f(z)
+    
+    c = (1 / (n + 1)) * np.sum(f_values)
+    
+    a = np.zeros(m + 1)
+    b = np.zeros(m + 1)
+    
+    for k in range(1, m + 1):
+        a[k] = (2 / (n + 1)) * np.sum(f_values * np.cos(k * z))
+        b[k] = (2 / (n + 1)) * np.sum(f_values * np.sin(k * z))
+    
+    def interpolant(x):
+        result = c
+        for s in range(1, m + 1):
+            result += a[s] * np.cos(s * x) + b[s] * np.sin(s * x)
+        return result
+    
+    return interpolant
