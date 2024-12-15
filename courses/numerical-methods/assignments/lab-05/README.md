@@ -28,10 +28,13 @@ where $Q$ is orthogonal ($Q^TQ = I$) and $R$ is upper triangular.
 
 #### Solution Method
 Using Gram-Schmidt process on columns $a_1, ..., a_n$ of $A$:
+
 $$q_1 = \frac{a_1}{||a_1||}$$
+
 $$q_k = \frac{a_k - \sum_{i=1}^{k-1} \langle a_k, q_i \rangle q_i}{||a_k - \sum_{i=1}^{k-1} \langle a_k, q_i \rangle q_i||}$$
 
 The $R$ matrix is constructed as:
+
 $$r_{ij} = \begin{cases} 
 \langle a_j, q_i \rangle & \text{if } i \leq j \\
 0 & \text{if } i > j
@@ -39,7 +42,9 @@ $$r_{ij} = \begin{cases}
 
 #### Matrix Formulation
 For a matrix $A = [a_1 | a_2 | ... | a_n]$, we get:
+
 $$Q = [q_1 | q_2 | ... | q_n]$$
+
 $$R = \begin{bmatrix}
 r_{11} & r_{12} & \cdots & r_{1n} \\
 0 & r_{22} & \cdots & r_{2n} \\
@@ -51,6 +56,7 @@ r_{11} & r_{12} & \cdots & r_{1n} \\
 
 #### Problem Statement
 We aim to find $h^*$ such that:
+
 $$||h^*-f|| = \inf\{||u -f|| u \in U\}$$
 
 #### Theoretical Foundation
@@ -61,22 +67,26 @@ $$||h^*-f|| = \inf\{||u -f|| u \in U\}$$
 
 #### Solution Method
 Let $\{f_i\}_{i \in I}$ be base of $U$. Since $f_i \in U$:
+
 $$
 \left<f-h^*, f_i\right> = 0, \text{ so}  \left<f, f_i\right> = \left<h^*, f_i\right> 
 $$
 
 As $h^* \in U$, we can express it as a linear combination:
+
 $$
 \exists! \{a_i\}_{i \in I}: h^* = \sum_{i \in I} a_if_i
 $$
 
 Combining these terms yields:
+
 $$
 \left<h^*, f_i\right> = \sum_{j \in I} a_j \left<f_j, f_i\right> = \left<f, f_i\right> 
 $$
 
 #### Matrix Formulation
 The problem reduces to solving $Aa = b$:
+
 $$
 \begin{bmatrix} 
 \left<f_1, f_1\right> & \left<f_2, f_1\right> & \cdots & \left<f_n, f_1\right> \\ 
@@ -101,7 +111,9 @@ The solution vector $a$ determines $h^*$ in terms of our chosen basis.
 
 #### Problem Statement
 Find weights $Z_i$ and points $L_i$ such that:
+
 $$\int_a^b f(x)dx \approx \sum_{i=1}^n f(L_i)Z_i$$
+
 where points $L_i$ are evenly spaced in $[a,b]$.
 
 #### Theoretical Foundation
