@@ -105,6 +105,33 @@ a_1 \\ a_2 \\ \vdots \\ a_n \\
 \end{bmatrix}
 $$
 
+Druga wersja
+
+$$
+\left[\begin{array}{cccc}
+1 & 1 & \cdots & 1 \\
+L_1 & L_2 & \cdots & L_n \\
+L_1^2 & L_2^2 & \cdots & L_n^2 \\
+\vdots & \vdots & \ddots & \vdots \\
+L_1^{n-1} & L_2^{n-1} & \cdots & L_n^{n-1}
+\end{array}\right]
+\left[\begin{array}{c}
+Z_1 \\
+Z_2 \\
+\vdots \\
+Z_n
+\end{array}\right]
+=
+\left[\begin{array}{c}
+b-a \\
+\frac{b^2-a^2}{2} \\
+\frac{b^3-a^3}{3} \\
+\vdots \\
+\frac{b^n-a^n}{n}
+\end{array}\right]
+$$
+
+
 The solution vector $a$ determines $h^*$ in terms of our chosen basis.
 
 ### Quadratics Integration
