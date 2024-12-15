@@ -15,7 +15,9 @@ This repository contains implementations of various numerical methods for linear
 
 #### Problem Statement
 For any matrix $A \in \mathbb{R}^{n \times n}$, find matrices $Q$ and $R$ such that:
+
 $$A = QR$$
+
 where $Q$ is orthogonal ($Q^TQ = I$) and $R$ is upper triangular.
 
 #### Theoretical Foundation
@@ -191,35 +193,10 @@ Contains core implementations of numerical methods:
 
 #### Gram-Schmidt Orthogonalization
 
-```python
-def gram_schmidt(vec: list) -> list:
-    """
-    Performs Gram-Schmidt orthogonalization on a set of vectors.
-    
-    Args:
-        vec (list): List of input vectors
-        
-    Returns:
-        list: Orthonormalized vectors
-    """
-```
+
 
 #### Unitary Space Approximation
 
-```python
-def apoximation_in_unitary_space(f, n, a_lim, b_lim):
-    """
-    Approximates function in unitary space using polynomial basis.
-    
-    Args:
-        f: Function to approximate
-        n: Number of basis functions
-        a_lim, b_lim: Interval boundaries
-        
-    Returns:
-        function: Approximating polynomial
-    """
-```
 
 #### Integration Methods
 - `riemann_sum`: Middle-point Riemann sum implementation
@@ -259,4 +236,3 @@ Contains testing and utility functions:
 - SciPy
 - Matplotlib
 
-# numerical_methods_lab05
