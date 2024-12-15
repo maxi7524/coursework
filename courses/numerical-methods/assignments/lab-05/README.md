@@ -68,27 +68,20 @@ $$||h^*-f|| = \inf\{||u -f|| u \in U\}$$
 #### Solution Method
 Let $\{f_i\}_{i \in I}$ be base of $U$. Since $f_i \in U$:
 
-$$
-\left<f-h^*, f_i\right> = 0, \text{ so}  \left<f, f_i\right> = \left<h^*, f_i\right> 
-$$
+$$\left<f-h^*, f_i\right> = 0, \text{ so}  \left<f, f_i\right> = \left<h^*, f_i\right> $$
 
 As $h^* \in U$, we can express it as a linear combination:
 
-$$
-\exists! \{a_i\}_{i \in I}: h^* = \sum_{i \in I} a_if_i
-$$
+$$\exists! \{a_i\}_{i \in I}: h^* = \sum_{i \in I} a_if_i$$
 
 Combining these terms yields:
 
-$$
-\left<h^*, f_i\right> = \sum_{j \in I} a_j \left<f_j, f_i\right> = \left<f, f_i\right> 
-$$
+$$\left<h^*, f_i\right> = \sum_{j \in I} a_j \left<f_j, f_i\right> = \left<f, f_i\right>$$
 
 #### Matrix Formulation
 The problem reduces to solving $Aa = b$:
 
-$$
-\begin{bmatrix} 
+$$\begin{bmatrix} 
 \left<f_1, f_1\right> & \left<f_2, f_1\right> & \cdots & \left<f_n, f_1\right> \\ 
 \left<f_1, f_2\right> & \left<f_2, f_2\right> & \cdots & \left<f_n, f_2\right> \\ 
 \vdots & \vdots & \ddots & \vdots \\ 
@@ -102,35 +95,7 @@ a_1 \\ a_2 \\ \vdots \\ a_n \\
 \left<f, f_2\right> \\ 
 \vdots \\ 
 \left<f, f_n\right> \\ 
-\end{bmatrix}
-$$
-
-Druga wersja
-
-$$
-\left[\begin{array}{cccc}
-1 & 1 & \cdots & 1 \\
-L_1 & L_2 & \cdots & L_n \\
-L_1^2 & L_2^2 & \cdots & L_n^2 \\
-\vdots & \vdots & \ddots & \vdots \\
-L_1^{n-1} & L_2^{n-1} & \cdots & L_n^{n-1}
-\end{array}\right]
-\left[\begin{array}{c}
-Z_1 \\
-Z_2 \\
-\vdots \\
-Z_n
-\end{array}\right]
-=
-\left[\begin{array}{c}
-b-a \\
-\frac{b^2-a^2}{2} \\
-\frac{b^3-a^3}{3} \\
-\vdots \\
-\frac{b^n-a^n}{n}
-\end{array}\right]
-$$
-
+\end{bmatrix}$$
 
 The solution vector $a$ determines $h^*$ in terms of our chosen basis.
 
