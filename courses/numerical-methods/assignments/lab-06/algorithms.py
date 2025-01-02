@@ -1,8 +1,39 @@
 import numpy as np
-
+from scipy.integrate import quad
+from functools import reduce 
 
 # quadrics 
 
+## help function
+def multiplication_newton(x, i, n): 
+    rtn_val = 1
+    for f in [lambda x, i=i, j=j: (x-j)/(i-j) for j in range(n+1) if j != i]:
+        rtn_val *= f(x)
+    return rtn_val
+
+## Newton Cotes - simple 
+def newton_cotes_simple(f, a, b, n):
+    pass
+## Newton Cotes - complex 
+def newton_cotes_complex(f: callable, a: float, b:float, n: int, m: int) -> float:
+    '''
+    n - number of dimension
+    m - number of intervals
+    '''
+    B_list = np.zeros(n+1)
+    # finding coefficients
+    for i in range(n+1):        
+        B_list[i] = quad(multiplication_newton, 0, n, args=(i, n))[0]
+    # finding Q value 
+    rtn_val = (b-a)/(m*n) * sum(
+        sum(
+            (f(a + (n*s + k) * (b-a)/(m*n)) for s in range(m)) 
+            ) * B_list[k] for k in range(n+1)
+        )
+    return rtn_val
+    
+    
+    # to write later - we add m because with n-> infty we got errors (phenomena of Runge's)
 #### finding zero places ####
 
 # Bisection Method
