@@ -31,6 +31,7 @@ TODO exercise
 $(x, y) -> (x, y, x^2 + y^2)$ and we optimize third one 
 
 TODO 
+- stratify method in train test split ~ for equally splitting classes for training !!!!
 - learn how this works, how interpret this 
 - do some basics calculations and get intuition behind this
 ### Description of model 
