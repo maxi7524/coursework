@@ -74,3 +74,17 @@ why RSS
 - other functional can by also used but in certain situations 
 
 slide 15/16 (end of presentation )
+
+
+
+#### Lecture about 
+
+checking assumptions 
+- we always need to check if data is colinear (with certain tests)
+- also error values 
+
+cross validation
+- method is splitting our data on $cv$ amount, than performs test with 1 test group and other as learning group, 
+- i do not understand why we want to perform this on models from task 1,2 it only depends on data?
+
+
