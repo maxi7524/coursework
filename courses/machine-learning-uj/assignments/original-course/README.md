@@ -29,11 +29,5 @@ contains information about logistic regression, and model characteristics
 
 
 
-# Do powtórki z 14.03 - zrobić w niedziele wieczór / poniedziałek rano !!!
-- cross validation 
-- polynomial features (żeby się pobawić tą regresją liniową na wielomianach, i jakieś testy które sprawdzają niezależnośc zmiennych) 
-- użycie metryk z pakietu naukowego, (r_2 score itd) - znacznie czytelniejsze od wbudowanych poniewaz widać co sprawdzamy (jak ktoś jest mniej obyty ze standardami ~ błędów na pewno nie ma, nie trzeba kodu pisać dodatkowego i jest numerycznie bardzie jefektywne (poniewaz zamienia wzsystko na numpy array i robi to współbieżnie))
-- robienie pod różne typy danych wszędzie tych samych zmiennych na stesty (trzymać się standardu) ~ problem potem z czytaniem kodu, nawet swojego poniewaz z niczym się nie kojarzy
-- rozpisywanie po kolei zmiennych, nie robienie zbyt długich formuł jednolinijkowych (i tak nie oszczędzamy pamięci bo w jak zamieni nam to na bit language to ilość operacji jest taka sama) 
 
 

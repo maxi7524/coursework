@@ -36,7 +36,7 @@ TODO
 - do some basics calculations and get intuition behind this
 ### Description of model 
 characteristics 
-- sensitivity - what fraction of true positive examples are captured 
+- sensitivity(recall) - what fraction of true positive examples are captured 
 - specitifiy
 - precision 
 programming (methods with crossing values, and how fast interpret this)
