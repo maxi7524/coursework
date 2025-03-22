@@ -26,8 +26,7 @@ contains information about logistic regression, and model characteristics
     - 20% - adjusting parameters (depends on model)
     - 20% - testing accuracy 
 
-
-
+# Lecture 4 
 
 
 
