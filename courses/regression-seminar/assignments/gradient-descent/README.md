@@ -45,4 +45,27 @@ testss
 do statystyki ~ jaki test do jakich danych należy stosować 
 
 test statystyka 
-- test chi^2 do przeliczneia 
+- test chi^2 do przeliczenia 
+
+
+
+
+## summary structure 
+
+### Methods
+
+#### algorithms
+- args 
+    - x0 - list format (we handle one and multidimensional case this way)
+    - func - function from which we will create gradient 
+    - learning_rate - 
+    - max_iter - 
+    - tol -
+#### Plots
+- plot_3d
+    - create three dimensional plot with arrows which show are gradient is changing 
+    - plot is made for presentation, explanation
+- plot_3d_on_2d 
+    - create two dimensional plot with arrows which shows how approximation is changing 
+    - plot is made for presentation, explanation
+- 
