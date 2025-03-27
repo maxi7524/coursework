@@ -13,12 +13,16 @@ adjustment
     TODO ~ slide with construction 
 
 - logarithm usage
+    it is used to indicate change in probability (so changing probability of certain event scales similar)
     better scale for calculating, (numerically)
     to maximize answer difference (?)
 
 derivation 
 - prediction of probability of $y_i$
-    TODO ~ slajd 
+    - we finding probability of $p/(1-p)$ so we are looking for fraction of probability 
+    - we taking log so we can have $\beta_i X_i$ interpretetd as factor of which probability is changing due to variable $X_i$
+    - important is that probability is rising to factor $e$ not $\beta_i$ 
+    - another important thing is that to find border of function we need to look up for $p = 1/2$ 
 
 Interpretation of cost function
 - we creating this in fashion of LE, and latter we want to minimize $-J(B)$ so we are finding MLE. 
