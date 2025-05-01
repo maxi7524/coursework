@@ -1,185 +1,205 @@
-# Analiza regresji dla danych Abalone w R
+# -------- INICJALIZACJA ŚRODOWISKA -------- #
 
-# ---------------------------
-# 1. Ładowanie bibliotek
-# ---------------------------
-if (!require("tidyverse")) install.packages("tidyverse")
-if (!require("car")) install.packages("car")
-if (!require("broom")) install.packages("broom")
-if (!require("ggcorrplot")) install.packages("ggcorrplot")
-if (!require("huxtable")) install.packages("huxtable")
-if (!require("performance")) install.packages("performance")
+options(encoding = "UTF-8")
+Sys.setlocale("LC_ALL", "pl_PL.UTF-8")
+
+# -------- INSTALACJA PAKIETÓW -------- #
+
+required_packages <- c(
+  "tidyverse", "broom", "car", "performance", 
+  "corrplot", "lmtest", "olsrr", "caret", "recipes"
+)
+
+new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
+if(length(new_packages)) install.packages(new_packages)
 
 library(tidyverse)
-library(car)
 library(broom)
-library(ggcorrplot)
-library(huxtable)
+library(car)
 library(performance)
+library(corrplot)
+library(lmtest)
+library(olsrr)
+library(caret)
+library(recipes)
 
-set.seed(1333)
+seed <- 1333
+set.seed(seed)
 
-# Ustawienie ziarna dla reprodukowalności
-set.seed(1333)
+# -------- FUNKCJE POMOCNICZE -------- #
 
-# ---------------------------
-# 2. Funkcje pomocnicze
-# ---------------------------
-
-# Funkcja do obliczania VIF
-calculate_vifs <- function(df) {
-  # Tworzymy tymczasowy model z fikcyjną zmienną zależną
-  temp_df <- df %>% select(where(is.numeric))
-  temp_model <- lm(I(rep(1, nrow(temp_df))) ~ ., data = temp_df)
+vifs_calculation <- function(df, entry_name = NULL) {
+  temp_df <- cbind(df, y_temp = rnorm(nrow(df)))
+  vif_results <- car::vif(lm(y_temp ~ ., data = temp_df))
   
-  # Obliczamy VIF dla każdej zmiennej
-  vif_values <- car::vif(temp_model)
-  
-  # Zwracamy jako uporządkowaną ramkę danych
-  tibble(
-    Zmienna = names(vif_values),
-    VIF = vif_values
-  ) %>% arrange(desc(VIF))
-}
-
-# Funkcja do testowania istotności nowych zmiennych
-test_feature_importance <- function(base_df, y, test_features) {
-  results <- tibble()
-  
-  # Model bazowy
-  base_model <- lm(y ~ ., data = base_df)
-  
-  for (feature in names(test_features)) {
-    # Nowy model z dodatkową zmienną
-    new_df <- bind_cols(base_df, test_features[feature])
-    names(new_df)[ncol(new_df)] <- feature  # Upewniamy się, że nazwa kolumny jest poprawna
-    new_model <- lm(y ~ ., data = new_df)
-    
-    # Porównanie modeli
-    anova_test <- anova(base_model, new_model)
-    
-    # Zapis wyników
-    results <- bind_rows(results, tibble(
-      Zmienna = feature,
-      RSS_diff = anova_test$RSS[2] - anova_test$RSS[1],
-      df_diff = anova_test$Df[2] - anova_test$Df[1],
-      F_stat = anova_test$F[2],
-      p_value = anova_test$`Pr(>F)`[2]
-    ))
+  if (!is.null(entry_name)) {
+    vif_df <- data.frame(NAME_INDEX = entry_name, t(vif_results)) %>% 
+      tibble::column_to_rownames("NAME_INDEX")
+  } else {
+    vif_df <- data.frame(t(vif_results))
   }
-  
-  # Dodanie informacji o odrzuceniu H0
-  results %>% mutate(
-    Odrzucenie_H0 = p_value < 0.05
-  )
+  return(vif_df)
 }
 
-# ---------------------------
-# 3. Wczytanie i przygotowanie danych
-# ---------------------------
-
-# Wczytanie danych
-abalone <- read_csv("abalone.csv", col_names = c("Plec", "Dlugosc", "Srednica", "Wysokosc", 
-                                               "Cala_waga", "Waga_po_obraniu", "Waga_trzewi", 
-                                               "Waga_powloki", "Pierscienie"), skip = 1)
-
-# Kodowanie zmiennej kategorycznej
-abalone <- abalone %>%
-  mutate(
-    Plec_M = as.numeric(Plec == "M"),
-    Plec_F = as.numeric(Plec == "F"),
-    Plec_I = as.numeric(Plec == "I")
-  ) %>%
-  select(-Plec) %>%
-  select(Plec_I, Plec_M, Plec_F, everything())
-
-# ---------------------------
-# 4. Analiza danych
-# ---------------------------
-
-# Podział na zmienne objaśniające i docelową
-X <- abalone %>% select(-Pierscienie)
-y <- abalone$Pierscienie
-
-# Parametry do redukcji
-sex_columns <- c("Plec_I", "Plec_M", "Plec_F")
-reduce_features <- c("Srednica", "Cala_waga")
-
-# ---------------------------
-# 5. Modelowanie dla samic (F)
-# ---------------------------
-
-# Filtracja danych dla samic
-X_F <- X %>% filter(Plec_F == 1) %>% select(-all_of(sex_columns), -all_of(reduce_features))
-y_F <- y[X$Plec_F == 1]
-
-# Tworzenie nowych zmiennych (zgodnie z Twoją nową wersją)
-X_new <- X_F %>%
-  mutate(
-    # stosunki wymiarów
-    `Dlugosc/Wysokosc` = abalone$Dlugosc[X$Plec_F == 1] / abalone$Srednica[X$Plec_F == 1],
+F_test_permutation <- function(df, y, test_cols, n_perm) {
+  results <- list()
+  X_reduced <- df %>% select(-all_of(test_cols))
+  
+  for (test_col in test_cols) {
+    X_full <- df %>% select(-all_of(setdiff(test_cols, test_col)))
     
-    # masa / objętość
-    `Masa/objetosc` = abalone$Cala_waga[X$Plec_F == 1] * abalone$Dlugosc[X$Plec_F == 1] * 
-                      abalone$Srednica[X$Plec_F == 1] * abalone$Wysokosc[X$Plec_F == 1],
+    model_reduced <- lm(y ~ ., data = cbind(X_reduced, y = y))
+    model_full <- lm(y ~ ., data = cbind(X_full, y = y))
     
-    # stosunki mas
-    `Waga_powloki/Waga_po_obraniu` = abalone$Waga_powloki[X$Plec_F == 1] / abalone$Waga_po_obraniu[X$Plec_F == 1],
-    `Waga_powloki/Waga_trzewi` = abalone$Waga_powloki[X$Plec_F == 1] / abalone$Waga_trzewi[X$Plec_F == 1],
-    `Waga_powloki/Cala_waga` = abalone$Waga_powloki[X$Plec_F == 1] / abalone$Cala_waga[X$Plec_F == 1],
-    `Waga_po_obraniu/Cala_waga` = abalone$Waga_po_obraniu[X$Plec_F == 1] / abalone$Cala_waga[X$Plec_F == 1],
-    `Waga_trzewi/Cala_waga` = abalone$Waga_trzewi[X$Plec_F == 1] / abalone$Cala_waga[X$Plec_F == 1]
+    f_stat <- anova(model_reduced, model_full)$F[2]
+    
+    f_stats <- replicate(n_perm, {
+      X_perm <- X_full
+      X_perm[[test_col]] <- sample(X_full[[test_col]])
+      anova(model_reduced, lm(y ~ ., data = cbind(X_perm, y = y)))$F[2]
+    })
+    
+    p_value <- (sum(f_stats >= f_stat) + 1) / (n_perm + 1)
+    
+    results[[test_col]] <- data.frame(
+      `Testowana zmienna` = test_col,
+      `Statystyka F` = f_stat,
+      `P value` = p_value,
+      check.names = FALSE
+    )
+  }
+  bind_rows(results) %>% tibble::column_to_rownames("Testowana zmienna")
+}
+
+# -------- WCZYTANIE DANYCH -------- #
+
+COL_NAMES <- c('Płeć', 'Długość', 'Średnica', 'Wysokość', 'Cała_waga', 
+               'Waga_po_obraniu', 'Waga_trzewi', 'Waga_powłoki', 'Pierścienie')
+
+if (!file.exists('abalone_data_set.csv')) {
+  stop("Brak pliku danych. Proszę zapewnić 'abalone_data_set.csv'")
+} else {
+  df <- read.csv('abalone_data_set.csv', col.names = COL_NAMES, fileEncoding = "UTF-8")
+}
+
+# -------- PRZYGOTOWANIE DANYCH -------- #
+
+X_reduced <- df %>% select(-Pierścienie)
+y <- df %>% select(Pierścienie)
+
+X_reduced <- X_reduced %>% 
+  mutate(
+    Płeć_M = as.numeric(Płeć == "M"),
+    Płeć_F = as.numeric(Płeć == "F"),
+    Płeć_I = as.numeric(Płeć == "I")
+  ) %>% 
+  select(Płeć_I, Płeć_M, Płeć_F, everything(), -Płeć)
+
+# -------- ANALIZA DLA WYBRANEJ PŁCI -------- #
+
+SEX <- 'I'
+filt <- X_reduced[[paste0('Płeć_', SEX)]] == 1
+sex_columns <- c('Płeć_I', 'Płeć_M', 'Płeć_F')
+
+y_local <- y[filt, , drop = FALSE]
+X_old <- X_reduced[filt, !(names(X_reduced) %in% sex_columns), drop = FALSE]
+
+# Tworzenie nowych cech
+X_new <- X_old %>% 
+  mutate(
+    `Długość/Wysokość` = Długość / Wysokość,
+    `Masa/objętość` = Cała_waga / (Długość * Średnica * Wysokość),
+    `Waga_powłoki/Cała_waga` = Waga_powłoki / Cała_waga,
+    `Waga_po_obraniu/Cała_waga` = Waga_po_obraniu / Cała_waga,
+    `Waga_trzewi/Cała_waga` = Waga_trzewi / Cała_waga,
+    `Waga_powłoki/Waga_po_obraniu` = Waga_powłoki / Waga_po_obraniu,
+    `Waga_trzewi/Waga_po_obraniu` = Waga_trzewi / Waga_po_obraniu,
+    `Waga_trzewi/Waga_powłoki` = Waga_trzewi / Waga_powłoki
   )
 
-# Testowanie nowych zmiennych
-new_features <- setdiff(names(X_new), names(X_F))
-results <- test_feature_importance(X_F, y_F, X_new[new_features])
+# Usuwanie wierszy z problemami
+invalid_rows <- rowSums(is.na(X_new) | is.infinite(as.matrix(X_new))) > 0
+X_old <- X_old[!invalid_rows, , drop = FALSE]
+X_new <- X_new[!invalid_rows, , drop = FALSE] 
+y_local <- y_local[!invalid_rows, , drop = FALSE]
 
-# Wyświetlenie wyników
-print(results)
+NEW_FEATURE_NAMES <- setdiff(names(X_new), names(X_old))
 
-# Usunięcie nieistotnych zmiennych
-drop_features <- results %>% filter(p_value >= 0.05) %>% pull(Zmienna)
-X_new_features <- X_new %>% select(-all_of(drop_features))
+# -------- ANALIZA MODELU LINIOWEGO -------- #
 
-# Ponowna analiza VIF
-cat("\nVIF po usunięciu nieistotnych zmiennych:\n")
-print(calculate_vifs(X_new_features))
+model_data <- cbind(X_old, Pierścienie = y_local$Pierścienie)
+model_old <- lm(Pierścienie ~ ., data = model_data)
 
-# Finalny wybór zmiennych
-X_final <- X_new_features %>% select(-Waga_po_obraniu, -Waga_trzewi, -Waga_powloki)
+# Diagnostyka modelu
+residuals <- residuals(model_old)
 
-# ---------------------------
-# 6. Budowa i ocena modeli
-# ---------------------------
+par(mfrow = c(1,2))
+plot(fitted(model_old), residuals, main = "Reszty vs dopasowane")
+abline(h = 0, col = "red")
+qqnorm(residuals, main = "Wykres QQ")
+qqline(residuals, col = "red")
 
-# Model ze wszystkimi zmiennymi
-model_full <- lm(y_F ~ ., data = X_new)
-summary(model_full)
+cat("Test Shapiro-Wilka p-value:", shapiro.test(residuals)$p.value, "\n")
+cat("Test Breusch-Pagan p-value:", bptest(model_old)$p.value, "\n")
 
-# Model ze zredukowanymi zmiennymi
-model_reduced <- lm(y_F ~ ., data = X_final)
-summary(model_reduced)
+# -------- ANALIZA VIF I REDUKCJA ZMIENNYCH -------- #
+
+reduce_basic <- c('Cała_waga', 'Długość')
+vifs_basic <- vifs_calculation(X_old, "Model bazowy")
+print(vifs_basic)
+
+vifs_basic_after_red <- vifs_calculation(dplyr::select(X_old, -all_of(reduce_basic)), "Model bazowy po redukcji")
+print(vifs_basic_after_red)
+
+X_final <- dplyr::select(X_new, -all_of(reduce_basic))
 
 # Porównanie modeli
-anova(model_full, model_reduced)
+model_new <- lm(Pierścienie ~ ., data = cbind(X_old, Pierścienie = y_local$Pierścienie))
+model_final <- lm(Pierścienie ~ ., data = cbind(dplyr::select(X_old, -all_of(reduce_basic)), Pierścienie = y_local$Pierścienie))
 
-# ---------------------------
-# 7. Diagnostyka modelu
-# ---------------------------
+cat("R-squared początkowy model:", summary(model_new)$r.squared, "\n")
+cat("R-squared model po redukcji:", summary(model_final)$r.squared, "\n")
 
-# Reszty modelu
-residuals <- residuals(model_reduced)
+# -------- TEST F Z PERMUTACJAMI -------- #
 
-# Wykres QQ
-qqnorm(residuals)
-qqline(residuals, col = "red")
-title("Wykres QQ reszt modelu")
+n_perm <- 1000
+F_test_before_reduction <- F_test_permutation(X_final, y_local$Pierścienie, NEW_FEATURE_NAMES, n_perm)
+print(F_test_before_reduction)
 
-# Testy normalności
-shapiro.test(residuals)
+# -------- KOŃCOWA REDUKCJA MODELU -------- #
 
-# Inne wykresy diagnostyczne
-par(mfrow = c(2, 2))
-plot(model_reduced)
-par(mfrow = c(1, 1))
+significant_level <- 0.05
+vif_reduce_value <- 10
+
+F_test_before_reduction$`Odrzucenie H0` <- F_test_before_reduction$`P value` < significant_level
+reduce_features_F_test <- rownames(F_test_before_reduction)[!F_test_before_reduction$`Odrzucenie H0`]
+
+# Iteracyjna redukcja VIF
+reduce_features_vif_test <- c()
+vifs_after_F_test <- list()
+index_name <- "Model rozszerzony przed redukcją vif"
+
+repeat {
+  drop_features <- c(reduce_features_F_test, reduce_features_vif_test)
+  current_features <- setdiff(colnames(X_final), drop_features)
+  local_vifs <- vifs_calculation(dplyr::select(X_final, all_of(current_features)), index_name)
+  
+  max_vif_column <- names(which.max(local_vifs[1, ]))
+  max_vif_value <- max(local_vifs[1, ])
+  
+  vifs_after_F_test[[length(vifs_after_F_test) + 1]] <- local_vifs
+  reduce_features_vif_test <- c(reduce_features_vif_test, max_vif_column)
+  
+  if (max_vif_value < vif_reduce_value) break
+}
+
+vifs_after_F_test <- dplyr::bind_rows(vifs_after_F_test)
+
+# -------- PODSUMOWANIE KOŃCOWE -------- #
+
+model_new <- lm(Pierścienie ~ ., data = cbind(X_new, Pierścienie = y_local$Pierścienie))
+model_final <- lm(Pierścienie ~ ., data = cbind(X_final, Pierścienie = y_local$Pierścienie))
+
+cat("\nPodsumowanie końcowe:\n")
+cat("R-squared model pełny:", summary(model_new)$r.squared, "\n")
+cat("R-squared model końcowy:", summary(model_final)$r.squared, "\n")
