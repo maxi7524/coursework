@@ -40,26 +40,9 @@ Tutaj nie wiem jak to opisywać, jak bym to jakoś wypisywał po kolei i problem
 
 # UWAGI 
 ## Max -> Aleksandra
-### Opis funkcji
-#### definiowanie typu obiektów
-Możesz predefiniować typy które występują w danej funkcji:
-```Python
-def function(arg: float) -> float:
-    pass
-```
-To trochę pomaga w czytelności, ale to jest głównie dla mnie pomocne jak programuje ponieważ jak nadasz typ parametrowi, to masz dostęp do wszystkich metod danej klasy. 
-#### Dokumentacja funkcji
-Ja bym proponował, żeby zrobić opis operacji które są wykonywane w tej funkcji, można input opisać jaki jest przyjmowany obiekt (jako przykład moje funkcje)
-#### Format 
-zastanawiałem się czy zamiast pisania tych funkcji i kodu po kolei, nie zrobiliśmy klasy która tym w której były by metody odpowiedzialne za ładowanie danych itd. bo wtedy kod jest czytelniejszy i niektóre działania były by znacznie szybsze - byśmy zrobili odpowiednie zbiory które trzymały by wartości odpowiednich zbiorów itd. Możemy też zostawić tak jak jest 
-### Raport 
-Myślałem nad tym, żeby przy / nad ładowaniem danych opisać dokładnie format danych, o tym jak są przechowywane i jak nimi zarządzać. Nie zauważyłem że w metadata jest tak na dobrą sprawę słownik który pozwala na wygodne szukanie określonych indeksów, dlatego mi to tyle zajeło - tworzyłem funkcje która to robi. 
-
-
-### Konstrukcja with open 
-- wiem że to oni robili ale:
-    - Sprawdzanie wartości `filename` jest nie potrzebne - filename jest parametrem pozycyjnym, jak się go nie poda otrzymamy `TypeError`
-### 
-
+### ten multiindex
+Skomentowali to, ale jak mamy dostęp do metadanych to ja bym zostawił to rozwiązanie co aktualnie mamy. 
+### `clean_gios_2014` oraz `clean_gios_data`
+Dodałem fragment, który ustawia tym danym w kolumnach - to był powód dlaczego moje wykresy nie działały, można to też wprowadzić wcześniej.
 
 ## Aleksandra -> Max
