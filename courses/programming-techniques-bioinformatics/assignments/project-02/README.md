@@ -13,7 +13,6 @@
 ## Part 1 - download data
 - Download data from sites
 - Load data and create YYYY-MM-DDTHH:mm:ss±hh:mm data format (to hh resolution)
-    - 
 - Join datasets and save them to `raw_combined.json`
 ## Part 2 - data engineering 
 
