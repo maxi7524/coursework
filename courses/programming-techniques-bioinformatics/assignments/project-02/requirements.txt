@@ -1,0 +1,8 @@
+# standard packages
+numpy
+pandas
+matplotlib
+
+# data repositories
+git+https://github.com/m0rp43us/openmeteopy
+ucimlrepo
