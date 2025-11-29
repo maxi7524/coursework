@@ -3,6 +3,10 @@ numpy
 pandas
 matplotlib
 
+# machine learning / models
+scikit-learn
+statsmodels
+
 # data repositories
-git+https://github.com/m0rp43us/openmeteopy
 ucimlrepo
+git+https://github.com/m0rp43us/openmeteopy
