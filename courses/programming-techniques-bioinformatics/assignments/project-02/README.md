@@ -39,11 +39,11 @@ Takes X_train, X_test, Y_train, y_yest, makes predictions using regression model
 - Train models
     - Linear regression
     - Polynomial regression with ridge regularization
-Model evaluation
-- MSE
-- R²
-- Pearson correlation coefficient
-- Predicted vs. observed plot
+- Model evaluation
+    - MSE
+    - R²
+    - Pearson correlation coefficient
+    - Predicted vs. observed plot
 
 ### Part 4 - model sharing
 Enables using trained models in FastAPI
