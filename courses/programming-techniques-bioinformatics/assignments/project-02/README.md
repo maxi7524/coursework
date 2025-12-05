@@ -22,7 +22,11 @@
 Takes raw data, return clean data in X_train, X_test, Y_train, y_yest
 - Clean data
 - Feature engineering 
+    - box-cox transformation
+    - PCR (0.95 explainability -> 8 components) and PLS (8 components)
 - Splitting Data
+
+
 ### Part 3 - model training 
 Takes X_train, X_test, Y_train, y_yest ... have fun :) 
 
