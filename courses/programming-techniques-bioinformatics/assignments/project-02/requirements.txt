@@ -10,3 +10,6 @@ statsmodels
 # data repositories
 ucimlrepo
 git+https://github.com/m0rp43us/openmeteopy
+
+# api
+"fastapi[standard]"
