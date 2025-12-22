@@ -33,7 +33,7 @@ Where
 - Nn – station name
 - x = [:lower:]
 - X = [:upper:]
-## 5. Notebook Workflow (projekt_3_student.ipynb)
+## Notebook Workflow (projekt_3_student.ipynb)
 The notebook follows a structured execution flow:
 1. Import required libraries
 2. Import functions from load_data.py and analyse_data.py
