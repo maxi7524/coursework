@@ -34,7 +34,6 @@ def fill_na(df: pd.DataFrame) ->pd.DataFrame:
     '''
     return df.dropna()
 
-
 def time_to_month(df: pd.DataFrame) -> pd.DataFrame:
     '''
     Changes time index representation from day to month, by mean aggregating. Returns new df
@@ -63,7 +62,6 @@ def get_daily_mean(df: pd.DataFrame) -> pd.DataFrame:
     """
     daily_df = df.resample("D").mean()  
     return daily_df
-
 
 def get_daily_exceedances(df: pd.DataFrame, limit: float):
     """
@@ -173,5 +171,27 @@ def years_heatmaps_cities(df: pd.DataFrame, cities: list, years: list, *, meta=m
         #TODO skale ustawić wszędzie taką samą i inny kolor, dostosował bym ją tak, że pokazuje gdzie jest przekroczony poziom zagrażający życiu 
         plt.show()
 
-
 # Task 4 
+def plot_exceedance_bar(plot_df: pd.DataFrame, title: str = None):
+    """
+    Plot grouped bar chart of PM2.5 daily exceedances.
+
+    Parameters:
+    -----------
+    plot_df : pd.DataFrame
+        DataFrame where columns are stations and rows are years.
+    title : str, optional
+        Title of the plot. If None, a default title is used.
+    """
+    plt.figure(figsize=(12, 6))
+    plot_df.plot(kind="bar", figsize=(12,6))
+    
+    if title is None:
+        title = ("Number of Days with PM2.5 Exceedances\n"
+                 "WHO Limit = 15 µg/m³\nTop 3 and Bottom 3 Stations: 2015, 2018, 2021 and 2024")
+    plt.title(title, fontsize=12, fontweight='bold')
+    plt.xlabel("Year")
+    plt.ylabel("Number of exceedance days")
+    plt.legend(title="Stations", bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.tight_layout()
+    plt.show()

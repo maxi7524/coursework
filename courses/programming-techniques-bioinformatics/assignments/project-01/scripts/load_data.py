@@ -18,6 +18,7 @@ import numpy as np
 ### -------------------- ### 
 # funkcja do ściągania podanego archiwum
 gios_archive_url = "https://powietrze.gios.gov.pl/pjp/archives/downloadFile/"
+
 def download_gios_archive(year, gios_id, filename):
     # Pobranie archiwum ZIP do pamięci
     url = f"{gios_archive_url}{gios_id}"
@@ -41,60 +42,69 @@ def download_gios_archive(year, gios_id, filename):
 ### -------------------- ###
 ###  Clean data 
 ### -------------------- ### 
-###TODO ---------- połączyć te funkcje ---------- ###
 def clean_gios_data(df_raw: pd.DataFrame) -> pd.DataFrame:
     """
-    Clean GIOŚ PM2.5 data where 6th row contains column names.
-    Removes extra header rows and unit rows, converts data to numeric,
-    and sets datetime column 'Data'.
+    Clean GIOŚ PM2.5 data from various years.
+    Handles both old and new formats, removes extra headers,
+    converts values to float, fixes midnight timestamps.
     """
-   
+
     df = df_raw.dropna(how='all').copy()
-    df.columns = df.iloc[5]
+    first_cell = str(df.iloc[0, 0]).strip()
 
-    df = df_raw.copy()
-    df.columns = df.iloc[5]
-    df = df.iloc[6:].copy()
+    # --- stary format (np. 2015) ---
+    if first_cell == "Kod stacji":
+        df.columns = df.iloc[0]
+        df = df.iloc[1:].reset_index(drop=True)
 
-    df.rename(columns={df.columns[0]: "Data"}, inplace=True)
-    df = df[~df.iloc[:, 1].astype(str).str.contains('1g|ug/m3', na=False)]
+        # Znajdź pierwszy wiersz z datą w kolumnie Data
+        for i, val in enumerate(df.iloc[:, 0]):
+            try:
+                pd.to_datetime(val)
+                first_data_row = i
+                break
+            except Exception:
+                continue
 
-    df["Data"] = pd.to_datetime(df["Data"], errors="coerce", format="%Y-%m-%d %H:%M:%S")
-    df.iloc[:, 1:] = df.iloc[:, 1:].apply(pd.to_numeric, errors="coerce")
+        df = df.iloc[first_data_row:].copy()
+        df.rename(columns={df.columns[0]: "Data"}, inplace=True)
 
+        # Konwersja dat i liczb
+        df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
+        df.iloc[:, 1:] = df.iloc[:, 1:].apply(lambda x: pd.to_numeric(x.astype(str).str.replace(",", "."), errors="coerce"))
+
+    # --- nowy format (np. 2018, 2021, 2024) ---
+    elif first_cell == "Nr":
+        # Kolumny z wiersza 1 (Kod stacji)
+        df.columns = df.iloc[1]
+        df = df.iloc[2:].copy()
+        df.rename(columns={df.columns[0]: "Data"}, inplace=True)
+
+        # Usuń wiersze nagłówków i jednostek
+        df = df[~df.iloc[:, 1].astype(str).str.contains('1g|ug/m3|µg/m3', na=False)]
+
+        # Konwersja daty i wartości liczbowych
+        df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
+        df = df[df["Data"].notna()]
+        df.iloc[:, 1:] = df.iloc[:, 1:].apply(lambda x: pd.to_numeric(x.astype(str).str.replace(",", "."), errors="coerce"))
+
+    else:
+        raise ValueError("Unknown GIOŚ data format")
+
+    # Korekta godzin 00:00
     mask_midnight = df["Data"].dt.hour == 0
     df.loc[mask_midnight, "Data"] -= pd.Timedelta(days=1)
 
+    # Ustawienie indeksu i usunięcie wierszy całkowicie pusta
     df.set_index("Data", inplace=True)
     df = df.dropna(how='all', axis=0)
-
     df = df.astype(float)
+    df.index.name = "Data"
+
     return df
 
-def clean_gios_2014(df_raw: pd.DataFrame) -> pd.DataFrame:
-    """
-    Clean GIOŚ PM2.5 2014-format data:
-    - use first row as column headers,
-    - remove metadata rows,
-    - convert the first column to datetime and set as index,
-     
-    - convert all measurement columns to numeric.
-    """
-    df = df_raw.copy()
-    df.columns = df.iloc[0]
-    df = df.drop(index=0).reset_index(drop=True)
-    df.rename(columns={df.columns[0]: "Data"}, inplace=True)
-    df = df.dropna(axis=1, how='all')
-    df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
-    df.set_index("Data", inplace=True)
-    df = df.apply(pd.to_numeric, errors="coerce")
-    
-    df = df.iloc[2:]
-    mask_midnight = df.index.hour == 0
-    df.index = df.index - pd.to_timedelta(mask_midnight.astype(int), unit="D")
 
-    df = df.astype(float)
-    return df
+
 
 def clean_column_names(df):
     """Clean column names to standardize them across different years and simplify station code mapping."""
