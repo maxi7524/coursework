@@ -11,17 +11,36 @@ import seaborn as sns
 ### -------------------- ###
 ###  Helper functions 
 ### -------------------- ### 
+meta = pd.read_excel("https://powietrze.gios.gov.pl/pjp/archives/downloadFile/622", header=0, engine='openpyxl')
 
 # loading meta data 
-meta = pd.read_excel("https://powietrze.gios.gov.pl/pjp/archives/downloadFile/622", header=0, engine='openpyxl')
-# meta["Stary Kod stacji \n(o ile inny od aktualnego)"]
+def map_old_to_new_codes(meta=meta) -> dict:
+    """
+    Create a mapping from old station codes to new station codes
+    using GIOŚ metadata.
 
-# Creating a mapping from old station codes to current station codes using the metadata
-mapping = {}
-for _, row in meta.dropna(subset=["Stary Kod stacji \n(o ile inny od aktualnego)"]).iterrows():
-    old_codes = [c.strip() for c in row["Stary Kod stacji \n(o ile inny od aktualnego)"].split(",")]
-    for old in old_codes:
-        mapping[old] = row["Kod stacji"]
+    Returns
+    -------
+    dict
+        Dictionary mapping old station codes to current station codes.
+    """
+
+    # Find the column with old station codes (more robust)
+    old_col = [c for c in meta.columns if "Stary Kod stacji" in c][0]
+    new_col = "Kod stacji"
+
+    mapping = {}
+
+    for _, row in meta.dropna(subset=[old_col]).iterrows():
+        old_codes = str(row[old_col]).split(",")
+
+        for old in old_codes:
+            old = old.strip()
+            if old:
+                mapping[old] = row[new_col]
+
+    return mapping
+
 
 ### -------------------- ###
 ###  Data manipulation

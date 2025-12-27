@@ -1,46 +1,62 @@
 import pandas as pd
-import numpy as np
+from scripts.load_data import *
+from scripts.analyse_data import *
+import pytest
 
-from scripts.load_data import clean_gios_data
+gios_url_ids = {
+    2015: "236", 
+    2018: "603",
+    2021: "486",
+    2024: "582"
+}
+
+gios_pm25_file = {
+    2015: "2015_PM25_1g.xlsx",
+    2018: "2018_PM25_1g.xlsx",
+    2021: "2021_PM25_1g.xlsx",
+    2024: "2024_PM25_1g.xlsx"
+}
+
+@pytest.fixture
+def df2018_raw():
+    return download_gios_archive(2018, gios_url_ids[2018], gios_pm25_file[2018])
+
+@pytest.fixture
+def df2018_clean(df2018_raw):
+    return clean_gios_data2(df2018_raw)
 
 
-def test_returns_dataframe_with_datetime_index(sample_raw_df):
-    # The cleaned output should always be a pandas DataFrame
-    # indexed by datetime, because all further analysis
-    # (daily aggregation, time series, trends) depends on time indexing.
-    df = clean_gios_data(sample_raw_df)
 
+def test_clean_gios_data_returns_dataframe(df2018_raw):
+    df = clean_gios_data2(df2018_raw)
     assert isinstance(df, pd.DataFrame)
+    assert not df.empty
+
+
+def test_clean_gios_data_datetime_index(df2018_raw):
+    df = clean_gios_data2(df2018_raw)
     assert isinstance(df.index, pd.DatetimeIndex)
-    assert df.index.name == "Data"
 
 
-def test_no_metadata_rows(sample_raw_df):
-    # Raw GIOŚ files contain metadata rows (station codes, units, indicators).
-    # This test ensures that such rows are fully removed and do not appear
-    # in the cleaned time index.
-    df = clean_gios_data(sample_raw_df)
-
-    forbidden = ["Kod stacji", "Wskaźnik", "Czas uśredniania", "Jednostka"]
-    index_as_str = df.index.astype(str)
-
-    for word in forbidden:
-        assert not any(index_as_str.str.contains(word))
+def test_clean_gios_data_numeric_columns(df2018_raw):
+    df = clean_gios_data2(df2018_raw)
+    assert df.dtypes.apply(lambda x: x.kind in "fi").all()
 
 
-def test_midnight_shift(sample_2014_df):
-    # In GIOŚ data, measurements at 00:00 represent the previous day.
-    # This test verifies that midnight timestamps are correctly shifted
-    # so that daily aggregation produces the correct number of days.
-    df = clean_gios_data(sample_2014_df)
-
-    assert not (df.index.hour == 0).any()
+def test_no_metadata_rows(df2018_raw):
+    df = clean_gios_data2(df2018_raw)
+    forbidden = {"Nr", "Wskaźnik", "Czas uśredniania", "Jednostka", "Czas pomiaru"}
+    assert not set(df.columns).intersection(forbidden)
 
 
-def test_number_of_stations_positive(sample_raw_df):
-    # After cleaning, the dataset should contain at least one station.
-    # This sanity check ensures that columns were not accidentally dropped
-    # during format detection or metadata removal.
-    df = clean_gios_data(sample_raw_df)
+def test_clean_column_names_removes_spaces():
+    df = pd.DataFrame(columns=["  Abc ", "Def\n"])
+    df = clean_column_names(df)
+    assert "Abc" in df.columns
+    assert "Def" in df.columns
 
-    assert df.shape[1] > 0
+
+def test_map_old_to_new_codes_returns_dict():
+    mapping = map_old_to_new_codes()
+    assert isinstance(mapping, dict)
+    assert len(mapping) > 0

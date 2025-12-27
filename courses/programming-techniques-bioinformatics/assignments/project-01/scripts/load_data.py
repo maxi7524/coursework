@@ -42,68 +42,66 @@ def download_gios_archive(year, gios_id, filename):
 ### -------------------- ###
 ###  Clean data 
 ### -------------------- ### 
-def clean_gios_data(df_raw: pd.DataFrame) -> pd.DataFrame:
+
+def clean_gios_data2(df_raw: pd.DataFrame) -> pd.DataFrame:
     """
-    Clean GIOŚ PM2.5 data from various years.
-    Handles both old and new formats, removes extra headers,
-    converts values to float, fixes midnight timestamps.
+    Clean GIOŚ PM2.5 data (new format: 2018+).
+
+    - Automatically finds the 'Kod stacji' header row
+    - Removes metadata rows (Nr, units, averaging time, etc.)
+    - Converts datetime and numeric values
+    - Shifts midnight (00:00) measurements to the previous day
+    - Returns a clean DataFrame indexed by datetime
     """
 
-    df = df_raw.dropna(how='all').copy()
-    first_cell = str(df.iloc[0, 0]).strip()
+    # Remove completely empty rows
+    df = df_raw.dropna(how="all").copy()
 
-    # --- stary format (np. 2015) ---
-    if first_cell == "Kod stacji":
-        df.columns = df.iloc[0]
-        df = df.iloc[1:].reset_index(drop=True)
+    # Find the row that contains station codes ("Kod stacji")
+    header_row_idx = df[df.iloc[:, 0] == "Kod stacji"].index[0]
 
-        # Znajdź pierwszy wiersz z datą w kolumnie Data
-        for i, val in enumerate(df.iloc[:, 0]):
-            try:
-                pd.to_datetime(val)
-                first_data_row = i
-                break
-            except Exception:
-                continue
+    # Set column names from that row
+    df.columns = df.iloc[header_row_idx]
 
-        df = df.iloc[first_data_row:].copy()
-        df.rename(columns={df.columns[0]: "Data"}, inplace=True)
+    # Keep only rows below the header
+    df = df.iloc[header_row_idx + 1 :].copy()
 
-        # Konwersja dat i liczb
-        df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
-        df.iloc[:, 1:] = df.iloc[:, 1:].apply(lambda x: pd.to_numeric(x.astype(str).str.replace(",", "."), errors="coerce"))
+    # Remove metadata / non-data rows
+    metadata_rows = {
+        "Nr",
+        "Wskaźnik",
+        "Czas uśredniania",
+        "Jednostka",
+        "Czas pomiaru",
+    }
 
-    # --- nowy format (np. 2018, 2021, 2024) ---
-    elif first_cell == "Nr":
-        # Kolumny z wiersza 1 (Kod stacji)
-        df.columns = df.iloc[1]
-        df = df.iloc[2:].copy()
-        df.rename(columns={df.columns[0]: "Data"}, inplace=True)
+    df = df[~df.iloc[:, 0].isin(metadata_rows)]
 
-        # Usuń wiersze nagłówków i jednostek
-        df = df[~df.iloc[:, 1].astype(str).str.contains('1g|ug/m3|µg/m3', na=False)]
+    # Rename datetime column and parse dates
+    df.rename(columns={df.columns[0]: "Data"}, inplace=True)
 
-        # Konwersja daty i wartości liczbowych
-        df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
-        df = df[df["Data"].notna()]
-        df.iloc[:, 1:] = df.iloc[:, 1:].apply(lambda x: pd.to_numeric(x.astype(str).str.replace(",", "."), errors="coerce"))
+    df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
+    df = df[df["Data"].notna()]  # keep only valid datetime rows
 
-    else:
-        raise ValueError("Unknown GIOŚ data format")
-
-    # Korekta godzin 00:00
+    # Convert measurement values to float
+    # (replace comma decimal separator)
+    df.iloc[:, 1:] = df.iloc[:, 1:].apply(
+        lambda x: pd.to_numeric(
+            x.astype(str).str.replace(",", "."),
+            errors="coerce",
+        )
+    )
+    # Shift midnight measurements (00:00) to the previous day
     mask_midnight = df["Data"].dt.hour == 0
     df.loc[mask_midnight, "Data"] -= pd.Timedelta(days=1)
+    # Final cleanup
 
-    # Ustawienie indeksu i usunięcie wierszy całkowicie pusta
     df.set_index("Data", inplace=True)
-    df = df.dropna(how='all', axis=0)
+    df = df.dropna(how="all", axis=0)
     df = df.astype(float)
     df.index.name = "Data"
 
     return df
-
-
 
 
 def clean_column_names(df):
