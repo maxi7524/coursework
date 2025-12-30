@@ -45,5 +45,9 @@ The notebook follows a structured execution flow:
 
 
 
+co zmieniłem
+- dodałem file_name przy zapisie / oraz jeden chunk do ładowania ich, żeby nie musieć wszystkiego uruchamiać
+
+
 
 
