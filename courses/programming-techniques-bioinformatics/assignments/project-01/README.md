@@ -1,4 +1,5 @@
 # Project overview
+## Analysis
 Project 3 focuses on the analysis of PM2.5 air pollution data collected from measurement stations in Poland.
 The project is implemented in a *function-oriented design*, where all data loading, preprocessing, analysis, and visualization logic is encapsulated in reusable Python functions located in `scripts`. The notebook `projekt_3_student.ipynb` serves as the execution and presentation layer.
 
@@ -7,19 +8,29 @@ Main objectives:
 - Calculate monthly averages of PM2.5 concentrations
 - Visualize trends using heatmaps
 - Identify days on which PM2.5 concentration exceeded the accepted norm
+## Python and github functionality 
+We use additional github and python functionality, creating tests, and make them automatically run while doing `push` and `pull` operations.
 
+Main objectives:
+- Make tests for download and manipulate data manipulation functions 
+- Create script for github that run tests after commit push
 
 
 # Structure
 ## Files
 ```bash
-├── PM25_combined_2014_2019_2024.csv        
-├── projekt_3_student.ipynb                 solution of (1-6) project, 
-├── README.md                               
-├── requirements.txt                        file with used libraries
-└── scripts                                 
-    ├── analyse_data.py                     functions responsible for data manipulation and plots
-    └── load_data.py                        functions responsible for downloading and cleaning data
+├── README.md
+├── data
+│   ├── PM25_combined_2014_2019_2024.csv
+│   └── PM25_combined_2015_2018_2021_2024.csv
+├── main.py
+├── projekt_1_student.ipynb
+├── projekt_3_student.ipynb
+├── requirements.txt
+├── scripts
+│   ├── analyse_data.py
+│   └── load_data.py
+└── test_cleaning.py
 ```
 ## Data
 ### Station code
@@ -44,10 +55,7 @@ The notebook follows a structured execution flow:
 7. Present results using tables and plots
 
 
-
-co zmieniłem
-- dodałem file_name przy zapisie / oraz jeden chunk do ładowania ich, żeby nie musieć wszystkiego uruchamiać
-
-
-
+# Remarks
+## Tests
+`test_no_metadata_rows` will not pass on *github.com* because the file with metadata is to big to be loaded. This test only works on local computers.
 
