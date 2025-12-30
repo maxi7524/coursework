@@ -4,4 +4,3 @@ openpyxl
 matplotlib
 seaborn
 requests
-zipfile
