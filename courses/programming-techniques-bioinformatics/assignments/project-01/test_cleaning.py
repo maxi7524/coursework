@@ -26,7 +26,6 @@ def df2018_clean(df2018_raw):
     return clean_gios_data2(df2018_raw)
 
 
-
 def test_clean_gios_data_returns_dataframe(df2018_raw):
     df = clean_gios_data2(df2018_raw)
     assert isinstance(df, pd.DataFrame)
