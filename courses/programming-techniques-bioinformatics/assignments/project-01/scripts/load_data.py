@@ -117,3 +117,29 @@ def clean_column_names(df):
 ### -------------------- ###
 ###  Download function 
 ### -------------------- ### 
+
+
+
+#PART 5========================================
+
+'''Creating a dictionary that maps station codes to voivodeship using 
+a modified (shortened, untranslated) version of a function from 
+*"wczytanie.py"* (from de Fassilier's and Rawa's repo), available here: 
+https://gitlab.uw.edu.pl/d.rawa/flassilier_rawa_ztp_projekt_3'''
+
+
+def pobierz_i_stworz_mapowanie_woj(url):
+    
+    df_meta = pd.read_excel(url)
+
+    mapa_nazw = pd.Series(df_meta['Województwo'].values, index=df_meta['Kod stacji']).to_dict()
+
+    return mapa_nazw
+
+
+
+
+
+
+
+
