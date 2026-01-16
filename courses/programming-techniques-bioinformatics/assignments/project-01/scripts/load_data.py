@@ -122,11 +122,8 @@ def clean_column_names(df):
 
 #PART 5========================================
 
-'''Creating a dictionary that maps station codes to voivodeship using 
-a modified (shortened, untranslated) version of a function from 
-*"wczytanie.py"* (from de Fassilier's and Rawa's repo), available here: 
-https://gitlab.uw.edu.pl/d.rawa/flassilier_rawa_ztp_projekt_3'''
-
+'''Creating a dictionary that maps station codes to voivodeship using a modified (shortened, untranslated) version of a function from 
+*"wczytanie.py"* (from de Fassilier's and Rawa's repo), available here: https://gitlab.uw.edu.pl/d.rawa/flassilier_rawa_ztp_projekt_3'''
 
 def pobierz_i_stworz_mapowanie_woj(url):
     

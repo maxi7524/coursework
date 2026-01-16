@@ -219,11 +219,8 @@ def plot_exceedance_bar(plot_df: pd.DataFrame, title: str = None):
     #PART 5======================================
 
 '''
-The function below uses dictionary created in the cell right above
-and applies it to the df. It changes the station codes to voivodeships
-in the columns indexes od the df. The function below uses dictionary 
-created in the cell right above and applies it to the df. It changes 
-the station codes to voivodeships in the columns indexes od the df.
+The function below uses dictionary with a mapping (from pobierz_i_stworz_mapowanie_woj() in "load_data.py") and applies it to the df.
+It changes the station' codes to voivodeships in the columns indexes of the df.
 '''
 
 def mapuj_wojewodztwo(df_stacje, slownik_wojewodztwa):
@@ -254,6 +251,10 @@ def sumuj_dni_z_przekroczeniem(df, norma):
 
     return df_ile_dni_ponad_norme
 
+
+'''
+Funkcja rysuje wykres w zadaniu 5.
+'''
 
 def barplot_voivodeship(df, norm):
     df.T.plot(kind="bar",
