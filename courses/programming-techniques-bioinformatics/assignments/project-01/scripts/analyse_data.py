@@ -214,3 +214,54 @@ def plot_exceedance_bar(plot_df: pd.DataFrame, title: str = None):
     plt.legend(title="Stations", bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.tight_layout()
     plt.show()
+
+
+    #PART 5======================================
+
+'''
+The function below uses dictionary with a mapping (from pobierz_i_stworz_mapowanie_woj() in "load_data.py") and applies it to the df.
+It changes the station' codes to voivodeships in the columns indexes of the df.
+'''
+
+def mapuj_wojewodztwo(df_stacje, slownik_wojewodztwa):
+    df_stacje.columns = [slownik_wojewodztwa.get(kolumna, kolumna) for kolumna in df_stacje.columns]
+    return df_stacje
+
+'''
+funkcja z zalozenia przyjmuje df z godzinnymi pomiarami, liczy dzienne sumy, zwraca df
+z informacja o tym w jak wielu dniach danego roku nastapilo przekroczenie normy who
+'''
+
+def sumuj_dni_z_przekroczeniem(df, norma):
+    #grupuje df z danymi godzinowymi po roku, miesiacu i dniu - otrzymuje srednie dzienne
+    df_dzienne = df.groupby([
+        df.index.year,
+        df.index.month,
+        df.index.day
+    ]).mean()
+
+    #dla czytelnosci zmieniam nazwy kolumn powstalych po grupowaniu
+    df_dzienne.index.names = ["rok", "miesiac", "dzien"]
+
+    #df z wartosciami logicznymi - True jesli danego dnia przekroczono norme
+    df_czy_ponad_norme = df_dzienne > norma
+
+    #zliczamy liczbę dni z przekroczeniem dla każdego roku
+    df_ile_dni_ponad_norme = df_czy_ponad_norme.groupby(level="rok").sum()
+
+    return df_ile_dni_ponad_norme
+
+
+'''
+Funkcja rysuje wykres w zadaniu 5.
+'''
+
+def barplot_voivodeship(df, norm):
+    df.T.plot(kind="bar",
+        color=["darkgreen","seagreen",
+           "darkseagreen","lightgreen"],
+        figsize = (8,7),
+        title=f"Ilości dni z przekroczeniem normy who = {norm} w województwach"
+        )
+    plt.xticks(rotation = 75)
+    plt.tight_layout()
