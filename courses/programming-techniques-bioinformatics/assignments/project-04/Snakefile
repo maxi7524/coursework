@@ -16,12 +16,32 @@ rule pm25_year_data:
     input:
         "config/task4.yaml"
     output:
-        "results/pm25/{year}/clean_data.csv",
-        "results/pm25/{year}/daily_exceedances.csv" # TODO - tutaj trzeba te pliki związne 
+        clean="results/pm25/{year}/clean_data.csv",
+        exceed="results/pm25/{year}/daily_exceedances.csv" # TODO - tutaj trzeba te pliki związne 
     shell:
         """
         python scripts/PM25_year_clean.py \
             --year {wildcards.year} \
+            --config config/task4.yaml
+        """
+# rule for generating plts
+rule pm25_plots:
+    input:
+        "config/task4.yaml",
+        # TODO - tutaj jakoś tego configa i te dane uogólnić na wszystkie roles, bo to bez sensus że wszędzie są pojedyncze zmiany i jedna zmiana i jest rozjazd 
+        expand(
+            "results/pm25/{year}/clean_data.csv",
+            year=YEARS
+        ),
+        expand(
+            "results/pm25/{year}/daily_exceedances.csv",
+            year=YEARS
+        )
+    output:
+        plot_years_trend = "results/report_files/plot_years_trend_cities.png"
+    shell:
+        """
+        python scripts/PM25_analysis.py \
             --config config/task4.yaml
         """
 
@@ -54,10 +74,19 @@ rule pm25_year_data:
 # rule  for joining results into .md report
 rule report_task4:
     input:
-        pm25=expand(
+        # data files
+        clean=expand(
+            "results/pm25/{year}/clean_data.csv",
+            year=YEARS
+        ),
+        exceed=expand(
             "results/pm25/{year}/daily_exceedances.csv",
             year=YEARS
         ),
+        # TODO plots - add part were we add years and cities to name (so it it so double done and we are sure we have right file)
+        plot_years_trend="results/report_files/plot_years_trend_cities.png",
+
+        # 
         # pubmed=expand(
         #     "results/literature/{year}/pubmed_papers.csv",
         #     year=YEARS
@@ -65,14 +94,13 @@ rule report_task4:
     output:
         "results/report_task4.md"
     shell:
-        """
-        echo "zrobione" > results/report_task4.md
-        """
         # """
-        # python src/report/build_report.py \
-        #     --years {",".join(YEARS)} \
-        #     --config config/task4.yaml \
-        #     --output {output}
+        # echo "zrobione" > results/report_task4.md
         # """
+        """
+        python scripts/build_report.py \
+            --config config/task4.yaml \
+            --output {output}
+        """
 
 # rule for joining results into .md report

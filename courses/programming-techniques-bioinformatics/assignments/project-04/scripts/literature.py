@@ -1,1 +1,0 @@
-#TODO - tutaj zrobimy literature 

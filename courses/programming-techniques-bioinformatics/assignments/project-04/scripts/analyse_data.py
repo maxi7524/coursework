@@ -4,6 +4,7 @@
 ## data frameworks
 import pandas as pd
 import numpy as np
+from pathlib import Path
 ## Plots
 import matplotlib.pyplot as plt 
 import seaborn as sns 
@@ -115,7 +116,7 @@ def top3_bottom3_exceedances(exc: pd.Series) -> tuple[pd.Series, pd.Series]:
 ### -------------------- ### 
 
 # Task 3
-def years_trend_cities(df: pd.DataFrame, cities: list, years: list, *, meta=meta, save=False) -> None:
+def years_trend_cities(df: pd.DataFrame, cities: list, years: list, *, meta=meta, save_path: Path | str = False) -> None:
     '''
     Draw plots how concentration of PM2.5 was changing in given year across different cities
     \n**df**: Dataframe based on GIOŚ data TODO - tutaj zmienic nazwę po funkcji 
@@ -150,6 +151,9 @@ def years_trend_cities(df: pd.DataFrame, cities: list, years: list, *, meta=meta
     plt.xlabel('Month')
     plt.ylabel('Concentration of PM2.5')
     plt.ylim((0, df.mean(axis=1).max()*1.25))
+    # save part 
+    if save_path:
+        plt.savefig(save_path)
     plt.show()
 
 def years_heatmaps_cities(df: pd.DataFrame, cities: list, years: list, *, meta=meta, save=False) -> None:
