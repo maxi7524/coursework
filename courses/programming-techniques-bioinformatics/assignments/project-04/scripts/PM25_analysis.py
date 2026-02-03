@@ -30,9 +30,8 @@ PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 ### -------------------- ### 
 
 def main(years: list[int], cities: list[str], daily_mean: int) -> None:
-    
+    print(f"Analyze PM2.5 data for {years} years")
     # merge data 
-    print(f"Merge df from {years=}")
     dfs_clean = []
     dfs_exceed = []
     ## folder with data
@@ -42,8 +41,6 @@ def main(years: list[int], cities: list[str], daily_mean: int) -> None:
         dfs_clean.append(clean_df)
         exceed_df = pd.read_csv(input_dir / 'daily_exceedances.csv')
         dfs_exceed.append(exceed_df)
-        # debug part 
-        print(f"Running year for year: {year}")
 
     ## take intersection of common stations
     common_stations = list(

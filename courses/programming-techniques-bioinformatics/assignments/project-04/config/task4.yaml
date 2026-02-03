@@ -1,5 +1,5 @@
 # years config
-years: [2021, 2024]
+years: [2014, 2018, 2024]
 # analysis config
 cities: [Warszawa, Katowice]
 daily_mean: 15 
@@ -8,4 +8,4 @@ daily_mean: 15
 entrez_email: "maxstrozyk@gmail.com"
 pubmed:
   query: "PM2.5 air pollution"
-  retmax: 200
+  retmax: 1000

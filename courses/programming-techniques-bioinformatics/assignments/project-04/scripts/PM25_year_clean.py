@@ -19,16 +19,20 @@ from analyse_data import map_old_to_new_codes, get_daily_exceedances
 ### -------------------- ### 
 # data addresses
 gios_url_ids = {
+    2014: "302",
     2015: "236", 
     2018: "603",
+    2019: "322",
     2021: "486",
     2024: "582"
 }
 gios_pm25_file = {
+    2014: "2014_PM2.5_1g.xlsx",
     2015: "2015_PM25_1g.xlsx",
     2018: "2018_PM25_1g.xlsx",
+    2019: "2019_PM25_1g.xlsx",
     2021: "2021_PM25_1g.xlsx",
-    2024: "2024_PM25_1g.xlsx"
+    2024: "2024_PM25_1g.xlsx",
 }
 # set path for script ()
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -39,14 +43,11 @@ PROJECT_ROOT = SCRIPT_DIR.parents[0]
 ### -------------------- ### 
 
 def main(year: int, daily_mean: str) -> None:
+    print(f'Download and clean PM2.5 data for {year}')
     # variables
     ## creating dir for data
     output_dir = PROJECT_ROOT / "results" / "pm25" / str(year)
     output_dir.mkdir(parents=True, exist_ok=True)
-    print(f'output dir: {output_dir}')
-    
-    # debug part 
-    print(f"Running year for year: {year}")
 
     # clean files
     ## download data
