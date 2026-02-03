@@ -8,6 +8,16 @@ Main objectives:
 - Calculate monthly averages of PM2.5 concentrations
 - Visualize trends using heatmaps
 - Identify days on which PM2.5 concentration exceeded the accepted norm
+
+## Snakefile pipeline
+
+Our notebook had pipeline
+- clean data for every year
+- join data
+- make plots
+
+To create his in 
+
 ## Python and github functionality 
 We use additional github and python functionality, creating tests, and make them automatically run while doing `push` and `pull` operations.
 

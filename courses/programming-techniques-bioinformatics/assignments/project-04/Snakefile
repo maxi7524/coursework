@@ -1,0 +1,78 @@
+configfile: "config/task4.yaml"
+
+YEARS = config["years"]
+
+rule all:
+    input:
+        "results/report_task4.md"
+
+
+############################
+# PM2.5 — per year
+############################
+
+# rule for generating data for every year
+rule pm25_year_data:
+    input:
+        "config/task4.yaml"
+    output:
+        "results/pm25/{year}/clean_data.csv",
+        "results/pm25/{year}/daily_exceedances.csv" # TODO - tutaj trzeba te pliki związne 
+    shell:
+        """
+        python scripts/PM25_year_clean.py \
+            --year {wildcards.year} \
+            --config config/task4.yaml
+        """
+
+
+
+# ############################
+# # PubMed — per year
+# ############################
+# # rule for evaluating pubmed papers
+# rule pubmed_year:
+#     input:
+#         "config/task4.yaml"
+#     output:
+#         papers="results/literature/{year}/pubmed_papers.csv",
+#         summary="results/literature/{year}/summary_by_year.csv",
+#         journals="results/literature/{year}/top_journals.csv"
+#     params:
+#         year=lambda wc: wc.year
+#     shell:
+#         """
+#         python src/literature/pubmed_fetch.py \
+#             --year {params.year} \
+#             --config config/task4.yaml
+#         """
+
+
+############################
+# Report — only selected years
+############################
+# rule  for joining results into .md report
+rule report_task4:
+    input:
+        pm25=expand(
+            "results/pm25/{year}/daily_exceedances.csv",
+            year=YEARS
+        ),
+        # pubmed=expand(
+        #     "results/literature/{year}/pubmed_papers.csv",
+        #     year=YEARS
+        # )
+    output:
+        "results/report_task4.md"
+    shell:
+        """
+        echo "zrobione" > results/report_task4.md
+        """
+        # """
+        # python src/report/build_report.py \
+        #     --years {",".join(YEARS)} \
+        #     --config config/task4.yaml \
+        #     --output {output}
+        # """
+
+# rule for joining results into .md report

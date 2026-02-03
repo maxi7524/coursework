@@ -80,7 +80,7 @@ def clean_gios_data2(df_raw: pd.DataFrame) -> pd.DataFrame:
     # Rename datetime column and parse dates
     df.rename(columns={df.columns[0]: "Data"}, inplace=True)
 
-    df["Data"] = pd.to_datetime(df["Data"], errors="coerce")
+    df["Data"] = pd.to_datetime(df["Data"], format="%Y-%m-%d %H:%M:%S", errors="coerce")
     df = df[df["Data"].notna()]  # keep only valid datetime rows
 
     # Convert measurement values to float
