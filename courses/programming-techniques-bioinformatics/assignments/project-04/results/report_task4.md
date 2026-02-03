@@ -2,7 +2,7 @@
 
 ## Wyniki 
 
-### Rok 2014 
+### Wyniki rok 2014 
 
 #### PM 25 
 
@@ -23,68 +23,26 @@
 |   year |   n_papers |
 |-------:|-----------:|
 |   2014 |        526 |
-|   2018 |        302 |
 |   2024 |        665 |
 
 
 
-| n_papers                                                          |   count |
-|:------------------------------------------------------------------|--------:|
-| The Science of the total environment                              |      96 |
-| Environmental science and pollution research international        |      86 |
-| Environmental science & technology                                |      59 |
-| PloS one                                                          |      58 |
-| International journal of environmental research and public health |      55 |
-| Environmental health perspectives                                 |      52 |
-| Environmental research                                            |      50 |
-| Huan jing ke xue= Huanjing kexue                                  |      48 |
-| Environmental pollution (Barking, Essex : 1987)                   |      38 |
-| Environmental monitoring and assessment                           |      32 |
+| n_papers                                                   |   count |
+|:-----------------------------------------------------------|--------:|
+| The Science of the total environment                       |      87 |
+| Environmental science & technology                         |      59 |
+| Environmental science and pollution research international |      57 |
+| Environmental health perspectives                          |      48 |
+| Environmental research                                     |      41 |
+| PloS one                                                   |      34 |
+| Huan jing ke xue= Huanjing kexue                           |      34 |
+| Environmental monitoring and assessment                    |      29 |
+| Scientific reports                                         |      25 |
+| Environmental pollution (Barking, Essex : 1987)            |      24 |
 
 ![PM2.5 years trend](report_files/papers_per_year.png)
 
-### Rok 2018 
-
-#### PM 25 
-
-| 1            |   0 |
-|:-------------|----:|
-| DsJelGorOgin | 198 |
-| DsWrocAlWisn | 232 |
-| DsWrocWybCon | 196 |
-| KpBydPlPozna | 239 |
-| KpBydWarszaw | 238 |![PM2.5 years trend](report_files/plot_years_trend_cities.png)
-
-
-
-#### Literatura 
-
-
-
-|   year |   n_papers |
-|-------:|-----------:|
-|   2014 |        526 |
-|   2018 |        302 |
-|   2024 |        665 |
-
-
-
-| n_papers                                                          |   count |
-|:------------------------------------------------------------------|--------:|
-| The Science of the total environment                              |      96 |
-| Environmental science and pollution research international        |      86 |
-| Environmental science & technology                                |      59 |
-| PloS one                                                          |      58 |
-| International journal of environmental research and public health |      55 |
-| Environmental health perspectives                                 |      52 |
-| Environmental research                                            |      50 |
-| Huan jing ke xue= Huanjing kexue                                  |      48 |
-| Environmental pollution (Barking, Essex : 1987)                   |      38 |
-| Environmental monitoring and assessment                           |      32 |
-
-![PM2.5 years trend](report_files/papers_per_year.png)
-
-### Rok 2024 
+### Wyniki rok 2024 
 
 #### PM 25 
 
@@ -105,23 +63,22 @@
 |   year |   n_papers |
 |-------:|-----------:|
 |   2014 |        526 |
-|   2018 |        302 |
 |   2024 |        665 |
 
 
 
-| n_papers                                                          |   count |
-|:------------------------------------------------------------------|--------:|
-| The Science of the total environment                              |      96 |
-| Environmental science and pollution research international        |      86 |
-| Environmental science & technology                                |      59 |
-| PloS one                                                          |      58 |
-| International journal of environmental research and public health |      55 |
-| Environmental health perspectives                                 |      52 |
-| Environmental research                                            |      50 |
-| Huan jing ke xue= Huanjing kexue                                  |      48 |
-| Environmental pollution (Barking, Essex : 1987)                   |      38 |
-| Environmental monitoring and assessment                           |      32 |
+| n_papers                                                   |   count |
+|:-----------------------------------------------------------|--------:|
+| The Science of the total environment                       |      87 |
+| Environmental science & technology                         |      59 |
+| Environmental science and pollution research international |      57 |
+| Environmental health perspectives                          |      48 |
+| Environmental research                                     |      41 |
+| PloS one                                                   |      34 |
+| Huan jing ke xue= Huanjing kexue                           |      34 |
+| Environmental monitoring and assessment                    |      29 |
+| Scientific reports                                         |      25 |
+| Environmental pollution (Barking, Essex : 1987)            |      24 |
 
 ![PM2.5 years trend](report_files/papers_per_year.png)
 

@@ -10,13 +10,27 @@ Main objectives:
 - Identify days on which PM2.5 concentration exceeded the accepted norm
 
 ## Snakefile pipeline
+### Initialization
+To run Snakefile you first need configure settings:
+```shell
+config/task4.yaml
+```
+Then you need to run it, by:
+```shell
+snakemake -s Snakefile --cores 4
+```
 
-Our notebook had pipeline
-- clean data for every year
-- join data
-- make plots
+### Debugging 
+I added printing for every script running in rule, that way i assured script was not activate.
 
-To create his in 
+### Parametr --rerun-trigers
+Parametr `--rerun-triggers` określa metodę, na podstawie której Snakemake decyduje, czy dana reguła (rule) wymaga ponownego uruchomienia, w zależności od zmian w plikach wejściowych w przypadku zmian w danych wejściowych lub konfiguracji workflow.
+
+- mtime (domyślne ustawienie): Reguła jest ponownie uruchamiana, jeśli którykolwiek z plików wejściowych ma nowszy czas modyfikacji niż plik wyjściowy.
+
+- checksum: oblicza sumy kontrolne (hash) plików wejściowych i uruchamia regułę gdy zawartość plików uległa zmianie. 
+
+
 
 ## Python and github functionality 
 We use additional github and python functionality, creating tests, and make them automatically run while doing `push` and `pull` operations.

@@ -121,20 +121,20 @@ rule report_task4:
     input:
         CONFIG_PATH, 
         # pm25
-        ## data files
-        clean=expand(PM25_FILES["clean"], year=YEARS),
+        # ## data files
+        # clean=expand(PM25_FILES["clean"], year=YEARS),
         exceed=expand(PM25_FILES["exceed"], year=YEARS),
 
         ## plots 
         plot_years_trend=REPORT_DIR + "/plot_years_trend_cities.png",
 
         # literature
-        ## obtain year data
-        pubmed_files=expand(
-            LIT_DIR + "/{year}/{filename}.csv",
-            filename=["pubmed_papers", "summary_by_year", "top_journals"],
-            year=YEARS
-        ),
+        # ## obtain year data
+        # pubmed_files=expand(
+        #     LIT_DIR + "/{year}/{filename}.csv",
+        #     filename=["pubmed_papers", "summary_by_year", "top_journals"],
+        #     year=YEARS
+        # ),
 
         ## obtain analysis file
         pubmed_analysis=list(PUBMED_AGG.values())

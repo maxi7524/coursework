@@ -47,7 +47,7 @@ def main(years: list[int], cities: list[str], daily_mean: int, output) -> None:
         # text (divided for years)
         for year in years:
             # header
-            f.write(f"### Rok {year} \n\n")        
+            f.write(f"### Wyniki rok {year} \n\n")        
             
             f.write(f"#### PM 25 \n\n")        
             ## pm25 part
