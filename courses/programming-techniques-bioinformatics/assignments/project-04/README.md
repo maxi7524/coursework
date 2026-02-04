@@ -9,8 +9,6 @@ Main objectives:
 - Visualize trends using heatmaps
 - Identify days on which PM2.5 concentration exceeded the accepted norm
 
-
-
 ## Snakefile Pipeline
 
 ### Description
@@ -19,9 +17,7 @@ Our goal is to analyze PM2.5 concentration. The pipeline consists of three parts
 
 1. Download and clean data from [https://powietrze.gios.gov.pl](https://powietrze.gios.gov.pl) for a given year
 2. Download and analyze literature from PubMed for the given year
-3. Perform an integrated analysis and generate a Markdown file with a short summary
-
-
+3. Perform an integrated analysis and generate a Markdown file with a short
 
 The dependencies are as follows:
 
