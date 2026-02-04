@@ -56,7 +56,7 @@ rule pm25_year_data:
         exceed=PM25_FILES["exceed"]  
     shell:
         """
-        python scripts/PM25_year_clean.py \
+        python -m scripts.PM25_year_clean \
             --year {wildcards.year} \
             --config {CONFIG_PATH}
         """
@@ -71,7 +71,7 @@ rule pm25_plots:
         plot_years_trend = REPORT_DIR + "/plot_years_trend_cities.png"
     shell:
         """
-        python scripts/PM25_analysis.py \
+        python -m scripts.PM25_analysis \
             --config {CONFIG_PATH}
         """
 
@@ -91,7 +91,7 @@ rule pubmed_year_data:
         year=lambda wc: wc.year
     shell:
         """
-        python scripts/literature_pubmed_fetch.py \
+        python -m scripts.literature_pubmed_fetch \
             --year {params.year} \
             --config {CONFIG_PATH}
         """
@@ -107,7 +107,7 @@ rule pubmed_analysis:
         papers_per_year = PUBMED_AGG["papers_per_year"]
     shell:
         """
-        python scripts/literature_analysis.py \
+        python -m scripts.literature_analysis \
             --config {CONFIG_PATH}
         """
 
@@ -142,7 +142,7 @@ rule report_task4:
         f"{RESULTS_DIR}/report_task4.md"
     shell:
         """
-        python scripts/build_report.py \
+        python -m scripts.build_report \
             --config {CONFIG_PATH} \
             --output {output}
         """

@@ -14,7 +14,7 @@ from functools import reduce
 
 
 # functions from project 1 and 3  
-from analyse_data import years_trend_cities
+from .analyse_data import years_trend_cities
 
 ### -------------------- ###
 ###  Variables

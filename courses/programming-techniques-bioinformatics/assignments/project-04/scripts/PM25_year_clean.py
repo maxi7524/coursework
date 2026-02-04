@@ -11,8 +11,8 @@ from pathlib import Path
 
 
 # functions from project 1 and 3  
-from load_data import download_gios_archive, clean_gios_data2, clean_column_names
-from analyse_data import map_old_to_new_codes, get_daily_exceedances
+from .load_data import download_gios_archive, clean_gios_data2, clean_column_names
+from .analyse_data import map_old_to_new_codes, get_daily_exceedances
 
 ### -------------------- ###
 ###  Variables

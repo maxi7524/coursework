@@ -13,7 +13,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # functions from project 1 and 3  
-from analyse_data import years_trend_cities
+from .analyse_data import years_trend_cities
 
 ### -------------------- ###
 ###  Variables

@@ -4,19 +4,19 @@ Poniższy raport zawiera analizę stężeń PM2.5 w Polsce oraz przegląd publik
 
 ## Wyniki Analiz 
 
-### Rok 2014 
+### Rok 2019 
 
 #### Analiza Stężeń PM2.5 
 
-Tabela poniżej przedstawia 5 stacji pomiarowych z największą liczbą przekroczeń dziennych normą PM2.5 (wartość 15 µg/m³) w roku 2014:
+Tabela poniżej przedstawia 5 stacji pomiarowych z największą liczbą przekroczeń dziennych normą PM2.5 (wartość 15 µg/m³) w roku 2019:
 
 | Nazwa stacji   |   Liczba przekroczonych dni |
 |:---------------|----------------------------:|
-| DsWrocAlWisn   |                         255 |
-| KpWiktorowoG   |                         215 |
-| KpBydPlPozna   |                         218 |
-| KpBydWarszaw   |                         178 |
-| KpToruDziewu   |                         167 |
+| DsDusznikMOB   |                         176 |
+| DsJaworMOB     |                         155 |
+| DsJelGorOgin   |                         169 |
+| DsWrocAlWisn   |                         180 |
+| DsWrocWybCon   |                         155 |
 
 #### Analiza Publikacji Naukowych 
 
@@ -26,23 +26,23 @@ Poniżej znajduje się podsumowanie publikacji naukowych dotyczących zanieczysz
 
 |   year |   n_papers |
 |-------:|-----------:|
-|   2014 |        526 |
+|   2019 |        418 |
 |   2024 |        665 |
 
 **10 głównych czasopism publikujących artykuły na temat zanieczyszczenia powietrza:**
 
-| journal                                                    |   n_papers |
-|:-----------------------------------------------------------|-----------:|
-| The Science of the total environment                       |         87 |
-| Environmental science & technology                         |         59 |
-| Environmental science and pollution research international |         57 |
-| Environmental health perspectives                          |         48 |
-| Environmental research                                     |         41 |
-| PloS one                                                   |         34 |
-| Huan jing ke xue= Huanjing kexue                           |         34 |
-| Environmental monitoring and assessment                    |         29 |
-| Scientific reports                                         |         25 |
-| Environmental pollution (Barking, Essex : 1987)            |         24 |
+| journal                                                           |   n_papers |
+|:------------------------------------------------------------------|-----------:|
+| International journal of environmental research and public health |         63 |
+| Environmental science and pollution research international        |         62 |
+| Huan jing ke xue= Huanjing kexue                                  |         48 |
+| Environmental monitoring and assessment                           |         34 |
+| Environmental science & technology                                |         32 |
+| The Science of the total environment                              |         30 |
+| PloS one                                                          |         29 |
+| Scientific reports                                                |         26 |
+| Environmental health perspectives                                 |         26 |
+| Environmental research                                            |         25 |
 
 ### Rok 2024 
 
@@ -66,23 +66,23 @@ Poniżej znajduje się podsumowanie publikacji naukowych dotyczących zanieczysz
 
 |   year |   n_papers |
 |-------:|-----------:|
-|   2014 |        526 |
+|   2019 |        418 |
 |   2024 |        665 |
 
 **10 głównych czasopism publikujących artykuły na temat zanieczyszczenia powietrza:**
 
-| journal                                                    |   n_papers |
-|:-----------------------------------------------------------|-----------:|
-| The Science of the total environment                       |         87 |
-| Environmental science & technology                         |         59 |
-| Environmental science and pollution research international |         57 |
-| Environmental health perspectives                          |         48 |
-| Environmental research                                     |         41 |
-| PloS one                                                   |         34 |
-| Huan jing ke xue= Huanjing kexue                           |         34 |
-| Environmental monitoring and assessment                    |         29 |
-| Scientific reports                                         |         25 |
-| Environmental pollution (Barking, Essex : 1987)            |         24 |
+| journal                                                           |   n_papers |
+|:------------------------------------------------------------------|-----------:|
+| International journal of environmental research and public health |         63 |
+| Environmental science and pollution research international        |         62 |
+| Huan jing ke xue= Huanjing kexue                                  |         48 |
+| Environmental monitoring and assessment                           |         34 |
+| Environmental science & technology                                |         32 |
+| The Science of the total environment                              |         30 |
+| PloS one                                                          |         29 |
+| Scientific reports                                                |         26 |
+| Environmental health perspectives                                 |         26 |
+| Environmental research                                            |         25 |
 
 ## Analizy Łączne 
 
