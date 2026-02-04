@@ -9,28 +9,59 @@ Main objectives:
 - Visualize trends using heatmaps
 - Identify days on which PM2.5 concentration exceeded the accepted norm
 
-## Snakefile pipeline
+
+
+## Snakefile Pipeline
+
+### Description
+
+Our goal is to analyze PM2.5 concentration. The pipeline consists of three parts:
+
+1. Download and clean data from [https://powietrze.gios.gov.pl](https://powietrze.gios.gov.pl) for a given year
+2. Download and analyze literature from PubMed for the given year
+3. Perform an integrated analysis and generate a Markdown file with a short summary
+
+
+
+The dependencies are as follows:
+
+* 1 → 3
+* 2 → 3
+
 ### Initialization
-To run Snakefile you first need configure settings:
+
+To run the Snakefile, you first need to configure the settings in:
+
 ```shell
 config/task4.yaml
 ```
-Then you need to run it, by:
+
+Then run the pipeline using:
+
 ```shell
 snakemake -s Snakefile --cores 4
 ```
 
-### Debugging 
-I added printing for every script running in rule, that way i assured script was not activate.
+### Debugging
 
-### Parametr --rerun-trigers
-Parametr `--rerun-triggers` określa metodę, na podstawie której Snakemake decyduje, czy dana reguła (rule) wymaga ponownego uruchomienia, w zależności od zmian w plikach wejściowych w przypadku zmian w danych wejściowych lub konfiguracji workflow.
-
-- mtime (domyślne ustawienie): Reguła jest ponownie uruchamiana, jeśli którykolwiek z plików wejściowych ma nowszy czas modyfikacji niż plik wyjściowy.
-
-- checksum: oblicza sumy kontrolne (hash) plików wejściowych i uruchamia regułę gdy zawartość plików uległa zmianie. 
+I added print statements to every script executed within each rule. This allowed me to verify whether a script was actually being executed and also verify which configuration was used.
 
 
+
+At the top of the output, the `Job stats` section shows how many times each rule needs to be executed.  
+
+### Parameter `--rerun-triggers`
+
+The `--rerun-triggers` parameter defines the method Snakemake uses to decide whether a rule should be re-executed, based on changes in input files or workflow configuration.
+
+* **mtime** (default):
+
+  A rule is re-executed if any input file has a more recent modification time than the output file.
+
+
+* **checksum**:
+ 
+  Snakemake computes checksums (hashes) of input files and reruns the rule if the file contents have changed.
 
 ## Python and github functionality 
 We use additional github and python functionality, creating tests, and make them automatically run while doing `push` and `pull` operations.

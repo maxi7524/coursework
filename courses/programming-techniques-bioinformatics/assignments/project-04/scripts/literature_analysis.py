@@ -55,8 +55,8 @@ def top_journals_global(df, n=10):
         df["journal"]
         .value_counts()
         .head(n)
-        .reset_index()
-        .rename(columns={"index": "journal", "journal": "n_papers"})
+        .reset_index(name="n_papers")
+        .rename(columns={"index": "journal"})
     )
 
 def example_titles(df, n=5):

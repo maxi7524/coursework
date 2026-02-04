@@ -31,24 +31,39 @@ OUTDIR_PATH.mkdir(parents=True, exist_ok=True)
 ### -------------------- ### 
 
 def pubmed_search(query, year, retmax):
+    '''
+    Function return pubmed ids for related articles for given query and year
+    '''
     handle = Entrez.esearch(
         db="pubmed",
         term=query,
         mindate=str(year),
         maxdate=str(year),
-        datetype="pdat",
-        retmax=retmax
+        datetype="pdat", # publication date
+        retmax=retmax, # default 20
+        sort="pub_date" # deterministic approach - sorted results will always be returned in same order
     )
     record = Entrez.read(handle)
     return record["IdList"]
 
 
 def fetch_summaries(pmids):
+    '''
+    Function takes ids from pubmed and metadata summaries for them
+    
+    :param pmids: dict  with pubmed ids
+    '''
+
     handle = Entrez.esummary(db="pubmed", id=",".join(pmids))
     return Entrez.read(handle)
 
 
 def normalize_records(records):
+    '''
+    It returns df with interpretable names
+    
+    :param records: dict from readed esummary files, 
+    '''
     rows = []
     for r in records:
         rows.append({
@@ -74,8 +89,8 @@ def top_journals(df, n=10):
         df["journal"]
         .value_counts()
         .head(n)
-        .reset_index()
-        .rename(columns={"index": "journal", "journal": "n_papers"})
+        .reset_index(name="n_papers")
+        .rename(columns={"index": "journal"})
     )
 
 ### -------------------- ###

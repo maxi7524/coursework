@@ -77,13 +77,13 @@ def main(year: int, daily_mean: str) -> None:
     # daily_exceedances
     ## get df
     year_exc, _ = get_daily_exceedances(year_clean_df, daily_mean)
-
-    ## save daily_exceedances file
-    year_exc.to_csv(
-        output_dir / f"daily_exceedances.csv",
-        index=True, 
-        date_format="%Y-%m-%d %H:%M:%S"
-    )
+    year_exc.to_frame(name="Liczba przekroczonych dni") \
+        .rename_axis("Nazwa stacji") \
+        .to_csv(
+            output_dir / f"daily_exceedances.csv",
+            index=True, 
+            date_format="%Y-%m-%d %H:%M:%S"
+        )
 
 if __name__ == "__main__":
     # args parser
