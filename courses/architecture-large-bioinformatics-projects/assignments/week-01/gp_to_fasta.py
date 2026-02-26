@@ -162,7 +162,7 @@ def gp_file_parser(file_path: Path | str) -> list:
 
 
 
-def main(gp_path: Path | str, fasta_path: Path | str, flags: dict) -> None:
+def gp_to_fasta(gp_path: Path | str, fasta_path: Path | str, flags: dict) -> None:
     # params 
     ## paths
     gp_path = Path(gp_path)
@@ -205,15 +205,53 @@ def main(gp_path: Path | str, fasta_path: Path | str, flags: dict) -> None:
                 # file.write()
             print(f"[CLI: gp to fasta]: processed successfully")
 
+# ------------------------
+# parser 
+# ------------------------
+
+def main():
+    '''
+    argparser for CLI of go_to_fasta
+    '''
+    parser = argparse.ArgumentParser(description="Convert .gp (GenBank) files to .fasta format.")
+    
+    # Positional arguments (paths)
+    parser.add_argument("input", help="Path to a .gp file or a directory containing .gp files")
+    parser.add_argument("output", help="Path to the output .fasta file")
+    
+    #  Flags (optional)
+    parser.add_argument("--org_style", choices=['full', 'abbreviate', 'short'], default='abbreviate',
+                        help="Style of the organism name (default: abbreviate)")
+    parser.add_argument("--id", choices=['locus', 'gi', 'none'], default='locus',
+                        help="Which ID to include in the header (default: locus)")
+    parser.add_argument("--separator", default='-', help="Separator for header parts (default: '-')")
+    parser.add_argument("--no_genename", action="store_false", dest="genename",
+                        help="Do not include the definition/genename in the header")
+
+    args = parser.parse_args()
+
+    # packing flags to dict
+    flags = {
+        'org_style': args.org_style,
+        'genename': args.genename,
+        'id': args.id,
+        'separator': args.separator
+    }
+
+
+    gp_to_fasta(args.input, args.output, flags)
+
+    
 
 if __name__ == '__main__':
-    path_for_multiple = Path('data') / 'before_conversion'
-    path_for_single = Path('data') / 'before_conversion' / 'sequence.gp'
-    path_for_fasta = Path('data') / 'after_conversion' / 'sequences.fasta'
-    flags = {
-        'org_style': 'full',  # 'full' | 'abbreviate' | 'short'
-        'genename': False,
-        'id': 'locus',       # to add locus (what is GI id ?? )
-        'separator': '-',        # separator
-    }
-    main(path_for_multiple, path_for_fasta, flags)
+    # path_for_multiple = Path('data') / 'before_conversion'
+    # path_for_single = Path('data') / 'before_conversion' / 'sequence.gp'
+    # path_for_fasta = Path('data') / 'after_conversion' / 'sequences.fasta'
+    # flags = {
+    #     'org_style': 'full',  # 'full' | 'abbreviate' | 'short'
+    #     'genename': False,
+    #     'id': 'locus',       # to add locus (what is GI id ?? )
+    #     'separator': '-',        # separator
+    # }
+    # gp_to_fasta(path_for_multiple, path_for_fasta, flags)
+    main()
