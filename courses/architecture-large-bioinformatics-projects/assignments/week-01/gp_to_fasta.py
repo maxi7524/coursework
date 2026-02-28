@@ -59,7 +59,7 @@ def add_prefix(gp_object: dict, flags: dict) -> str:
     parts = []
 
     # 1. Handle Organism Name
-    raw_org = gp_object.get('organism', 'Unknown_organism')
+    raw_org = gp_object.get('organism', '')
     org_style = flags.get('org_style', 'full')
     
     # Split "Homo sapiens" -> ["Homo", "sapiens"]
@@ -81,11 +81,12 @@ def add_prefix(gp_object: dict, flags: dict) -> str:
         else:
             parts.append(raw_org[:6])
 
-    # 2. Handle ID (Locus)
-    if flags.get('id', 'locus'):
+    # 2. Handle ID (Locus) 
+    if flags.get('id', '') == 'locus':
         parts.append(gp_object.get('locus', ''))
-    elif flags.get('id', 'GI'):
-        parts.append(gp_object.get('locus', ''))
+    elif flags.get('id', '') == 'gi':
+        if gp_object.get('gi', ''):
+            parts.append(gp_object.get('gi', ''))
 
 
     # 3. Handle Definition
