@@ -229,7 +229,7 @@ def gp_to_fasta(input_paths: list, out: Path | str, flags: dict) -> None:
                 print(f"[CLI: gp to fasta]: appending '{gp_file.name}' to '{out_path.name}' ...")
                 
                 for obj in file_results:
-                    file.write('> ' + add_prefix(obj, flags) + '\n')
+                    file.write('>' + add_prefix(obj, flags) + '\n')
                     file.write(obj['origin'].upper() + '\n\n')
                     
     print("[CLI: gp to fasta]: processed successfully")
