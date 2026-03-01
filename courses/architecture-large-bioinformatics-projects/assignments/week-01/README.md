@@ -1,13 +1,14 @@
 
 ## Implementation
-The script operates in two modes:
-- **File mode**: When provided with a specific `.gp` file, it processes only that single file.
-- **Folder mode**: When provided with a directory, it aggregates all `.gp` files within that folder and joins them into a single output file.
+The script processes inputs and outputs dynamically based on the provided paths:
+- **Inputs**: You can provide one or more paths. These can be specific `.gp` files, directories (which will aggregate all `.gp` files within), or wildcards (e.g., `*.gp`).
+- **Output - Single File Mode**: If the final path has a file extension (e.g., `.fasta`), all processed sequences from all inputs are aggregated and joined into this single output file.
+- **Output - Multiple Files Mode**: If the final path has no extension or points to an existing directory, the script generates a separate `.fasta` file for each input `.gp` file inside that directory.
 
 ## Run
 To run the script, use the following base command:
 ```shell
-python3 gp_to_fasta.py <input_path> <output_path>
+python3 gp_to_fasta.py <input_paths...> <output_path>
 ```
 Available Flags:
 - `--org_style`: Determines the format of the organism's name.
@@ -33,6 +34,10 @@ python3 gp_to_fasta.py data/before_conversion/sequence.gp data/after_conversion/
 folder run
 ```shell
 python3 gp_to_fasta.py data/before_conversion data/after_conversion/run_folder.fasta
+```
+separate files run - here we do not provide suffix so we obtain *.fasta files
+```shell
+python3 gp_to_fasta.py data/before_conversion/*.gp data/after_conversion_separate
 ```
 
 ### Flags
