@@ -219,8 +219,8 @@ def gp_to_fasta(input_paths: list, out: Path | str, flags: dict) -> None:
             print(f"[CLI: gp to fasta]: converting '{gp_file.name}' -> '{current_out_path.name}' ...")
             with open(current_out_path, 'w', encoding='utf-8') as file:
                 for obj in file_results:
-                    file.write(add_prefix(obj, flags) + '\n')
-                    file.write('> ' + obj['origin'].upper() + '\n\n')
+                    file.write('>' + add_prefix(obj, flags) + '\n')
+                    file.write(obj['origin'].upper() + '\n\n')
     else:
         print(f"[CLI: gp to fasta]: Mode - Single aggregated file (File: '{out_path}')")
         with open(out_path, 'w', encoding='utf-8') as file:
@@ -229,8 +229,8 @@ def gp_to_fasta(input_paths: list, out: Path | str, flags: dict) -> None:
                 print(f"[CLI: gp to fasta]: appending '{gp_file.name}' to '{out_path.name}' ...")
                 
                 for obj in file_results:
-                    file.write(add_prefix(obj, flags) + '\n')
-                    file.write('> ' + obj['origin'].upper() + '\n\n')
+                    file.write('> ' + add_prefix(obj, flags) + '\n')
+                    file.write(obj['origin'].upper() + '\n\n')
                     
     print("[CLI: gp to fasta]: processed successfully")
 
