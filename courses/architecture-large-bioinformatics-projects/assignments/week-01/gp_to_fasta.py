@@ -48,11 +48,12 @@ def add_prefix(gp_object: dict, flags: dict) -> str:
     Generates a formatted FASTA header string based on provided flags.
     
     Args:
-        gp_object (dict): Dictionary containing 'locus', 'definition', 'organism'.
+        gp_object (dict): Dictionary containing sequence metadata: 
+                          'locus', 'gi', 'definition', and 'organism'.
         flags (dict): Configuration flags:
-            - 'org_style': 'full', 'abbrev', 'short'
-            - 'id': locus | GI (whether to include locus)
-            - 'genename': bool (whether to include genename)
+            - 'org_style': 'full', 'abbreviate', 'short'
+            - 'id': 'locus' | 'gi' | 'none'
+            - 'genename': bool (whether to include definition/genename)
             - 'separator': char (e.g., '-', '|')
     """
     separator = flags.get('separator', '-')
@@ -123,6 +124,8 @@ def gp_file_parser(file_path: Path | str) -> list:
         locus = re.search(r'^\s*(\S+)', locus).group(1)
         #### DEFINITION: (for Genename flag)
         definition = gp_matcher('DEFINITION', raw_object)
+        ##### Get rid of white symbols (\n for long names are problematic)
+        definition = " ".join(definition.split())
         
         #### GI idx 
         gi = gp_matcher('VERSION', raw_object)
