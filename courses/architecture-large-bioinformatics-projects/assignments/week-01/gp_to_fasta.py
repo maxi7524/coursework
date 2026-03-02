@@ -1,5 +1,6 @@
 import os 
 import re 
+import glob
 import argparse
 from pathlib import Path
 
@@ -48,11 +49,12 @@ def add_prefix(gp_object: dict, flags: dict) -> str:
     Generates a formatted FASTA header string based on provided flags.
     
     Args:
-        gp_object (dict): Dictionary containing 'locus', 'definition', 'organism'.
+        gp_object (dict): Dictionary containing sequence metadata: 
+                          'locus', 'gi', 'definition', and 'organism'.
         flags (dict): Configuration flags:
-            - 'org_style': 'full', 'abbrev', 'short'
-            - 'id': locus | GI (whether to include locus)
-            - 'genename': bool (whether to include genename)
+            - 'org_style': 'full', 'abbreviate', 'short'
+            - 'id': 'locus' | 'gi' | 'none'
+            - 'genename': bool (whether to include definition/genename)
             - 'separator': char (e.g., '-', '|')
     """
     separator = flags.get('separator', '-')
@@ -123,6 +125,8 @@ def gp_file_parser(file_path: Path | str) -> list:
         locus = re.search(r'^\s*(\S+)', locus).group(1)
         #### DEFINITION: (for Genename flag)
         definition = gp_matcher('DEFINITION', raw_object)
+        ##### Get rid of white symbols (\n for long names are problematic)
+        definition = " ".join(definition.split())
         
         #### GI idx 
         gi = gp_matcher('VERSION', raw_object)
@@ -163,48 +167,73 @@ def gp_file_parser(file_path: Path | str) -> list:
 
 
 
-def gp_to_fasta(gp_path: Path | str, fasta_path: Path | str, flags: dict) -> None:
+def gp_to_fasta(input_paths: list, out: Path | str, flags: dict) -> None:
     # params 
     ## paths
-    gp_path = Path(gp_path)
-    fasta_path = Path(fasta_path)
-    fasta_path.parent.mkdir(parents=True, exist_ok=True)
-    ## list with files 
-    gp_files_list = list()
-
-    # obtain files
-    ## case: obtain file if it is file and ends with .gp
-    if gp_path.is_file() and gp_path.suffix == '.gp':
-        gp_files_list = [gp_path]
-    
-    ##  case: obtain folder path and extract files from there 
-    elif gp_path.is_dir():
-        gp_files_list = list(gp_path.glob('*.gp'))
-    
-    ## case: 
+    out_path = Path(out)
+    ### check if out is dir (-> *.gp) or file path (-> file_name.fasta)
+    is_out_dir = out_path.is_dir() or not out_path.suffix
+    ### make right dir
+    if is_out_dir:
+        out_path.mkdir(parents=True, exist_ok=True)
     else:
-        print(f"[CLI: gp to fasta]: Given path '{gp_path}' does not exists for there are not .gp files")
-        return 0
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # collect all .gp files 
+    gp_files_list = []
+    for ipath in input_paths:
+        ipath_str = str(ipath)
+        
+        if '*' in ipath_str or '?' in ipath_str:
+            matched = [Path(p) for p in glob.glob(ipath_str) if Path(p).suffix == '.gp']
+            gp_files_list.extend(matched)
+            continue
+            
+        p = Path(ipath)
+        ## obtain file
+        if p.is_file() and p.suffix == '.gp':
+            gp_files_list.append(p)
+        ## obtain folder
+        elif p.is_dir():
+            gp_files_list.extend(list(p.glob('*.gp')))
+        else:
+            print(f"[CLI: gp to fasta]: Warning - '{p}' does not exist or is not a .gp file")
+    
+    ## remove duplicates
+    gp_files_list = list(set(gp_files_list))
 
-    ## summary: 
-    print(f"[CLI: gp to fasta]: Found {len(gp_files_list)} gp files to process")
+    ## case: not gp files
+    if not gp_files_list:
+        print("[CLI: gp to fasta]: No .gp files found to process. Exiting.")
+        return
+    ## summary
+    print(f"[CLI: gp to fasta]: Found {len(gp_files_list)} gp files to process.")
 
     # process files
-    with open(fasta_path, 'w', encoding='utf-8') as file:
+    if is_out_dir:
+        print(f"[CLI: gp to fasta]: Mode - Multiple files (Directory: '{out_path}')")
         for gp_file in gp_files_list:
-            ## parse result from file 
             file_results = gp_file_parser(gp_file)
-            print(f"[CLI: gp to fasta]: appending '{gp_file.name}', with {len(file_results)} sequences to {fasta_path.name} ...")
-            ## write all lines for file 
-            for object in file_results:
-                ### add this prefiks 
-                prefiks = add_prefix(object, flags)
-                file.write(prefiks + '\n')
-                ### origin 
-                file.write('> ' + object['origin'].upper() + '\n\n')
-                ### empty line between sequences
-                # file.write()
-            print(f"[CLI: gp to fasta]: processed successfully")
+            current_out_path = out_path / f"{gp_file.stem}.fasta"
+            
+            print(f"[CLI: gp to fasta]: converting '{gp_file.name}' -> '{current_out_path.name}' ...")
+            with open(current_out_path, 'w', encoding='utf-8') as file:
+                for obj in file_results:
+                    file.write('>' + add_prefix(obj, flags) + '\n')
+                    file.write(obj['origin'].upper() + '\n\n')
+    else:
+        print(f"[CLI: gp to fasta]: Mode - Single aggregated file (File: '{out_path}')")
+        with open(out_path, 'w', encoding='utf-8') as file:
+            for gp_file in gp_files_list:
+                file_results = gp_file_parser(gp_file)
+                print(f"[CLI: gp to fasta]: appending '{gp_file.name}' to '{out_path.name}' ...")
+                
+                for obj in file_results:
+                    file.write('>' + add_prefix(obj, flags) + '\n')
+                    file.write(obj['origin'].upper() + '\n\n')
+                    
+    print("[CLI: gp to fasta]: processed successfully")
+
 
 # ------------------------
 # parser 
@@ -215,12 +244,13 @@ def main():
     argparser for CLI of go_to_fasta
     '''
     parser = argparse.ArgumentParser(description="Convert .gp (GenBank) files to .fasta format.")
+
+    # obtain args
+    ## obtain paths
+    parser.add_argument("paths", nargs='+', help="Input .gp files, folders or wildcards (e.g. *.gp). The LAST path is the output .fasta file.")
     
-    # Positional arguments (paths)
-    parser.add_argument("input", help="Path to a .gp file or a directory containing .gp files")
-    parser.add_argument("output", help="Path to the output .fasta file")
-    
-    #  Flags (optional)
+
+    ##  Flags (optional)
     parser.add_argument("--org_style", choices=['full', 'abbreviate', 'short'], default='abbreviate',
                         help="Style of the organism name (default: abbreviate)")
     parser.add_argument("--id", choices=['locus', 'gi', 'none'], default='locus',
@@ -229,9 +259,16 @@ def main():
     parser.add_argument("--no_genename", action="store_false", dest="genename",
                         help="Do not include the definition/genename in the header")
 
+    # unpack args
     args = parser.parse_args()
+    ## sanity check
+    if len(args.paths) < 2:
+        parser.error("You must provide at least one input path and one output path.")
+    ## split paths (last value)
+    output_path = args.paths[-1]
+    input_paths = args.paths[:-1]
 
-    # packing flags to dict
+    ## packing flags to dict
     flags = {
         'org_style': args.org_style,
         'genename': args.genename,
@@ -239,12 +276,12 @@ def main():
         'separator': args.separator
     }
 
-
-    gp_to_fasta(args.input, args.output, flags)
+    gp_to_fasta(input_paths, output_path, flags)
 
     
 
 if __name__ == '__main__':
+    # OLD - left for eventually debugging
     # path_for_multiple = Path('data') / 'before_conversion'
     # path_for_single = Path('data') / 'before_conversion' / 'sequence.gp'
     # path_for_fasta = Path('data') / 'after_conversion' / 'sequences.fasta'
