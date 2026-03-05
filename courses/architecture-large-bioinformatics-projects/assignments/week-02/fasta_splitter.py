@@ -47,9 +47,9 @@ def write_fasta_chunk(output_file: Path, sequences: list):
 
 def fasta_split(input_paths: list, output_path: str, max_length: int, size: int, mode: str) -> None:
     """Function that splits FASTA files into smaller chunks."""
-    
+    # parameters
     out_path = Path(output_path)
-    # Ensure the output directory exists
+    ## Ensure the output directory exists
     out_path.mkdir(parents=True, exist_ok=True)
     
     # collect .fasta files 
@@ -59,7 +59,7 @@ def fasta_split(input_paths: list, output_path: str, max_length: int, size: int,
 
         ## regex check (wildcards)
         if '*' in ipath_str or '?' in ipath_str:
-            matched = [Path(p) for p in glob.glob(ipath_str) if Path(p).suffix in ['.fasta', '.fas', '.fa']]
+            matched = [Path(p) for p in glob.glob(ipath_str) if Path(p).suffix in ['.fasta']]
             fasta_files_list.extend(matched)
             continue
 
