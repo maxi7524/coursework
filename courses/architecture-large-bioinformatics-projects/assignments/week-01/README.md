@@ -15,6 +15,7 @@ Available Flags:
     - `full`: Uses the complete organism name (e.g., Homo sapiens).
     - `abbreviate` (default): Uses the abbreviated name (e.g., Homo Sapiens $\rightarrow$ H. sapiens).
     - `short`: Uses a short name consisting of the first 3 letters of the genus and species (e.g., *Hom*o *Sap*iens $\rightarrow$ Homsap).
+    - `none`: Excludes the organism name.
 - `--id`: Determines which identifier to include in the FASTA header.
     - `locus` (default): Uses the locus index.
     - `gi`: Uses the GI index

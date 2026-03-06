@@ -6,6 +6,12 @@ import logging
 import subprocess
 from pathlib import Path
 
+
+
+# ------------------------
+# helpers
+# ------------------------
+
 def parse_fasta(file_path: Path):
     header = ""
     seq = []
@@ -28,6 +34,10 @@ def clean_header_to_filename(header: str) -> str:
     clean_header = header.strip().lstrip('>')
     safe_name = re.sub(r'[^A-Za-z0-9_\-]', '_', clean_header)
     return f"{safe_name}_esmfold_v1.pdb"
+
+# ------------------------
+#  main functions
+# ------------------------
 
 def run_esm_for_sequence(seq: str, rtn_path: Path, prefix: str) -> bool:
     command = [

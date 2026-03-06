@@ -112,7 +112,7 @@ def fasta_split(input_paths: list, output_path: str, max_length: int, size: int,
                 start_idx = i
                 end_idx = i + len(chunk) - 1
                 
-                # Format: prefix_000-019.fasta
+                ## Format: prefix_000-019.fasta
                 idx_str = f"{start_idx:0{pad_width}d}-{end_idx:0{pad_width}d}"
                 out_name = out_path / f"{file_stem}_{idx_str}.fasta"
                 write_fasta_chunk(out_name, chunk)

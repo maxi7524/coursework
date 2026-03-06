@@ -4,6 +4,13 @@ import argparse
 import logging
 import subprocess
 from pathlib import Path
+import sys
+
+# ------------------------
+# params 
+# ------------------------
+
+predictESM_py_path = "/home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/predictESM.py"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -13,6 +20,11 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+
+# ------------------------
+# Helpers
+# ------------------------
+
 
 def merge_results(output_dir: Path, fasta_files: list):
     """
@@ -67,6 +79,10 @@ def merge_results(output_dir: Path, fasta_files: list):
     logging.info("[SCAN FASTA 4ESM: MERGE] Merge complete. Project organized.")
 
 
+# ------------------------
+#  main functions
+# ------------------------
+
 def main():
     parser = argparse.ArgumentParser(description='Scans for unprocessed FASTA files to run ESM prediction.')
     parser.add_argument('input_folder', type=str, help="Folder with separated .fasta files")
@@ -96,7 +112,7 @@ def main():
         part_folder = output_dir / fasta.stem
         done_marker = part_folder / ".done"
         
-        # Extract the base prefix to check if the final merged folder exists
+        ## Extract the base prefix to check if the final merged folder exists
         if '_' in fasta.stem:
             prefix = '_'.join(fasta.stem.split('_')[:-1])
         else:
@@ -105,7 +121,7 @@ def main():
         final_folder = output_dir / prefix
         is_merged = final_folder.exists() and final_folder.is_dir()
         
-        # If there is no .done marker AND the final merged folder does not exist, it needs processing
+        ## If there is no .done marker AND the final merged folder does not exist, it needs processing
         if not done_marker.exists() and not is_merged:
             unprocessed_files.append((fasta, part_folder))
 
@@ -115,10 +131,9 @@ def main():
         # Run only one process per execution
         fasta_to_run, folder_to_run = unprocessed_files[0]
         logging.info(f"[SCAN FASTA 4ESM: SCANNER] Found unprocessed file: {fasta_to_run.name}. Triggering predictESM...")
-        
-        import sys
-        # Provide the final path to predictESM.py
-        subprocess.run([sys.executable, "predictESM.py", str(fasta_to_run), str(folder_to_run)])
+       
+        # Provide the final path to predictESM.py (by system)
+        subprocess.run([sys.executable, predictESM_py_path, str(fasta_to_run), str(folder_to_run)])
         
         logging.info(f"[SCAN FASTA 4ESM: SCANNER] Exiting after processing {fasta_to_run.name}.")
     else:
@@ -136,3 +151,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    

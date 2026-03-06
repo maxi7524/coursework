@@ -52,7 +52,7 @@ def add_prefix(gp_object: dict, flags: dict) -> str:
         gp_object (dict): Dictionary containing sequence metadata: 
                           'locus', 'gi', 'definition', and 'organism'.
         flags (dict): Configuration flags:
-            - 'org_style': 'full', 'abbreviate', 'short'
+            - 'org_style': 'full' | 'abbreviate' | 'short' | 'none'
             - 'id': 'locus' | 'gi' | 'none'
             - 'genename': bool (whether to include definition/genename)
             - 'separator': char (e.g., '-', '|')
@@ -82,6 +82,9 @@ def add_prefix(gp_object: dict, flags: dict) -> str:
             parts.append(short_name)
         else:
             parts.append(raw_org[:6])
+    else: 
+        # (none)
+        pass 
 
     # 2. Handle ID (Locus) 
     if flags.get('id', '') == 'locus':
@@ -220,7 +223,7 @@ def gp_to_fasta(input_paths: list, out: Path | str, flags: dict) -> None:
             with open(current_out_path, 'w', encoding='utf-8') as file:
                 for obj in file_results:
                     file.write('>' + add_prefix(obj, flags) + '\n')
-                    file.write(obj['origin'].upper() + '\n\n')
+                    file.write(obj['origin'].upper() + '\n')
     else:
         print(f"[CLI: gp to fasta]: Mode - Single aggregated file (File: '{out_path}')")
         with open(out_path, 'w', encoding='utf-8') as file:
@@ -230,7 +233,7 @@ def gp_to_fasta(input_paths: list, out: Path | str, flags: dict) -> None:
                 
                 for obj in file_results:
                     file.write('>' + add_prefix(obj, flags) + '\n')
-                    file.write(obj['origin'].upper() + '\n\n')
+                    file.write(obj['origin'].upper() + '\n')
                     
     print("[CLI: gp to fasta]: processed successfully")
 
@@ -251,7 +254,7 @@ def main():
     
 
     ##  Flags (optional)
-    parser.add_argument("--org_style", choices=['full', 'abbreviate', 'short'], default='abbreviate',
+    parser.add_argument("--org_style", choices=['full', 'abbreviate', 'short', 'none'], default='abbreviate',
                         help="Style of the organism name (default: abbreviate)")
     parser.add_argument("--id", choices=['locus', 'gi', 'none'], default='locus',
                         help="Which ID to include in the header (default: locus)")
