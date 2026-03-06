@@ -22,13 +22,12 @@ def merge_results(output_dir: Path, fasta_files: list):
     
     main_log_path = output_dir / "main_predict.log"
 
-    # Extract prefixes (assuming format: Mycoplasma_genitalium_part_1 -> Mycoplasma_genitalium)
+    # Extract prefixes securely by dropping the trailing index block (e.g., 'Mycgen_000-019' -> 'Mycgen')
     prefixes = set()
     for f in fasta_files:
-        if '_part_' in f.stem:
-            prefix = f.stem.split('_part_')[0]
-        elif '_' in f.stem:
-            prefix = '_'.merge(f.stem.split('_')[:-1])
+        if '_' in f.stem:
+            # Join everything except the last element which contains the '000-019' part
+            prefix = '_'.join(f.stem.split('_')[:-1])
         else:
             prefix = f.stem
         prefixes.add(prefix)
@@ -92,13 +91,25 @@ def main():
 
     unprocessed_files = []
     
-    # Check status using the .done marker file in the target folder
+    # Check status using the .done marker file OR if the prefix has already been merged
     for fasta in fasta_files:
         part_folder = output_dir / fasta.stem
         done_marker = part_folder / ".done"
         
-        if not done_marker.exists():
+        # Extract the base prefix to check if the final merged folder exists
+        if '_' in fasta.stem:
+            prefix = '_'.join(fasta.stem.split('_')[:-1])
+        else:
+            prefix = fasta.stem
+            
+        final_folder = output_dir / prefix
+        is_merged = final_folder.exists() and final_folder.is_dir()
+        
+        # If there is no .done marker AND the final merged folder does not exist, it needs processing
+        if not done_marker.exists() and not is_merged:
             unprocessed_files.append((fasta, part_folder))
+
+
 
     if unprocessed_files:
         # Run only one process per execution

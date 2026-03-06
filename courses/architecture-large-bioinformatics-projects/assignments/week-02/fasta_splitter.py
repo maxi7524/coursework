@@ -89,52 +89,56 @@ def fasta_split(input_paths: list, output_path: str, max_length: int, size: int,
     
     if mode == 'separate':
         for file_path in fasta_files_list:
-            file_stem = file_path.stem # e.g., turns 'file1.fasta' into 'file1'
-            current_chunk = 1
-            current_seqs = []
+            file_stem = file_path.stem
             
+            # First pass: collect all valid sequences to know the total count for dynamic zero-padding
+            valid_seqs = []
             for header, seq in parse_fasta(file_path):
                 # Skip sequences longer than max_length (if set)
                 if max_length > 0 and len(seq) > max_length:
                     continue
-                
-                current_seqs.append((header, seq))
-                
-                # Save when the desired size is reached
-                if len(current_seqs) == size:
-                    out_name = out_path / f"{file_stem}_part_{current_chunk}.fasta"
-                    write_fasta_chunk(out_name, current_seqs)
-                    current_chunk += 1
-                    current_seqs = []
+                valid_seqs.append((header, seq))
             
-            # Save the remainder (e.g., the last 13 sequences if size=20 and there were 53 in the file)
-            if current_seqs:
-                out_name = out_path / f"{file_stem}_part_{current_chunk}.fasta"
-                write_fasta_chunk(out_name, current_seqs)
+            total_seqs = len(valid_seqs)
+            if total_seqs == 0:
+                continue
+            
+            # Calculate padding width based on the highest index (total_seqs - 1)
+            pad_width = len(str(total_seqs - 1))
+            
+            # Split into chunks and save with correct index ranges
+            for i in range(0, total_seqs, size):
+                chunk = valid_seqs[i:i + size]
+                start_idx = i
+                end_idx = i + len(chunk) - 1
                 
-    elif mode == 'join':
-        current_chunk = 1
-        current_seqs = []
-        
+                # Format: prefix_000-019.fasta
+                idx_str = f"{start_idx:0{pad_width}d}-{end_idx:0{pad_width}d}"
+                out_name = out_path / f"{file_stem}_{idx_str}.fasta"
+                write_fasta_chunk(out_name, chunk)
+                
+    elif mode == 'merge':
+        # Collect all valid sequences from all files
+        valid_seqs = []
         for file_path in fasta_files_list:
             for header, seq in parse_fasta(file_path):
-                # Skip sequences longer than max_length (if set)
                 if max_length > 0 and len(seq) > max_length:
                     continue
+                valid_seqs.append((header, seq))
+        
+        total_seqs = len(valid_seqs)
+        if total_seqs > 0:
+            pad_width = len(str(total_seqs - 1))
+            
+            for i in range(0, total_seqs, size):
+                chunk = valid_seqs[i:i + size]
+                start_idx = i
+                end_idx = i + len(chunk) - 1
                 
-                current_seqs.append((header, seq))
-                
-                # Save when the desired size is reached
-                if len(current_seqs) == size:
-                    out_name = out_path / f"part_{current_chunk}.fasta"
-                    write_fasta_chunk(out_name, current_seqs)
-                    current_chunk += 1
-                    current_seqs = []
-                    
-        # Save the remainder collected from all files
-        if current_seqs:
-            out_name = out_path / f"part_{current_chunk}.fasta"
-            write_fasta_chunk(out_name, current_seqs)
+                # Format: merged_000-019.fasta
+                idx_str = f"{start_idx:0{pad_width}d}-{end_idx:0{pad_width}d}"
+                out_name = out_path / f"merged_{idx_str}.fasta"
+                write_fasta_chunk(out_name, chunk)
             
     print(f"[CLI: fasta splitter]: Finished! Output files are located in: {out_path.absolute()}")
 
@@ -158,8 +162,8 @@ def main():
     parser.add_argument('-m', '--max_length', type=int, default=0, help="Maximum sequence length (longer sequences will be skipped). 0 = no limit.") 
     parser.add_argument('-s', '--size', type=int, default=20, help="Number of sequences in a single output file.")
     
-    parser.add_argument('--mode', choices=['separate', 'join'], default='separate', 
-                        help="'separate' mode distinguishes input files. 'join' mode merges everything together.")
+    parser.add_argument('--mode', choices=['separate', 'merge'], default='separate', 
+                        help="'separate' mode distinguishes input files. 'merge' mode merges everything together.")
 
     args = parser.parse_args()
 

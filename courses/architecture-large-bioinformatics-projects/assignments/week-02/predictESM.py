@@ -70,25 +70,31 @@ def main():
         ]
     )
 
-    prefix = file_path.stem
-    logging.info(f"[PREDICT ESM {prefix}] --- Started processing file: {file_path.name} ---")
+    # Extract base prefix for cleaner logging (e.g., from 'Mycgen_000-019' to 'Mycgen')
+    full_stem = file_path.stem
+    if '_' in full_stem:
+        base_prefix = '_'.join(full_stem.split('_')[:-1])
+    else:
+        base_prefix = full_stem
+
+    logging.info(f"[PREDICT ESM {base_prefix}] --- Started processing file: {file_path.name} ---")
     
     for header, seq in parse_fasta(file_path):
         safe_filename = clean_header_to_filename(header)
         rtn_path = output_folder / safe_filename
         
         if rtn_path.exists():
-            logging.info(f"[PREDICT ESM {prefix}] File {rtn_path.name} already exists. Skipping.")
+            logging.info(f"[PREDICT ESM {base_prefix}] File {rtn_path.name} already exists. Skipping.")
             continue
             
-        success = run_esm_for_sequence(seq, rtn_path, prefix)
+        success = run_esm_for_sequence(seq, rtn_path, base_prefix)
         if success:
             time.sleep(5) 
 
     # When the entire file is successfully processed, create the '.done' marker
     done_marker = output_folder / ".done"
     done_marker.touch()
-    logging.info(f"[PREDICT ESM {prefix}] --- Finished processing file. Part marker created. ---")
+    logging.info(f"[PREDICT ESM {base_prefix}] --- Finished processing file. Part marker created. ---")
 
 if __name__ == "__main__":
     main()
