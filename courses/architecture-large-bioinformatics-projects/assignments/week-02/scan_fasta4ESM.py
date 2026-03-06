@@ -71,8 +71,8 @@ def main():
     parser = argparse.ArgumentParser(description='Scans for unprocessed FASTA files to run ESM prediction.')
     parser.add_argument('input_folder', type=str, help="Folder with separated .fasta files")
     parser.add_argument('output_folder', type=str, help="Folder for output data")
-    parser.add_argument('--mode', choices=['separate', 'merge'], default='merge', 
-                        help="'separate' leaves part folders, 'merge' merges them (default).")
+    parser.add_argument('--mode', choices=['separate', 'merge'], default='separate', 
+                        help="'separate' leaves part folders (default), 'merge' merges them.")
     args = parser.parse_args()
 
     input_dir = Path(args.input_folder)
