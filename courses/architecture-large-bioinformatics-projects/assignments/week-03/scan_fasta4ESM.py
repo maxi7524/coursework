@@ -1,0 +1,155 @@
+import os
+import shutil
+import argparse
+import logging
+import subprocess
+from pathlib import Path
+import sys
+
+# ------------------------
+# params 
+# ------------------------
+
+predictESM_py_path = "/home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_3/predictESM.py"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(message)s",
+    handlers=[
+        logging.FileHandler("scan_manager.log"),
+        logging.StreamHandler()
+    ]
+)
+
+# ------------------------
+# Helpers
+# ------------------------
+
+
+def merge_results(output_dir: Path, fasta_files: list):
+    """
+    Merges results from subfolders into main prefix folders and concatenates logs.
+    """
+    logging.info("[SCAN FASTA 4ESM: MERGE] All processes finished. Starting merge operation...")
+    
+    main_log_path = output_dir / "main_predict.log"
+
+    # Extract prefixes securely by dropping the trailing index block (e.g., 'Mycgen_000-019' -> 'Mycgen')
+    prefixes = set()
+    for f in fasta_files:
+        if '_' in f.stem:
+            # Join everything except the last element which contains the '000-019' part
+            prefix = '_'.join(f.stem.split('_')[:-1])
+        else:
+            prefix = f.stem
+        prefixes.add(prefix)
+
+    for prefix in prefixes:
+        final_folder = output_dir / prefix
+        final_folder.mkdir(parents=True, exist_ok=True)
+        
+        # Find folders that belong to this prefix and are finished (contain .done file)
+        part_folders = [d for d in output_dir.iterdir() if d.is_dir() and d.name.startswith(prefix) and (d / ".done").exists()]
+        
+        if not part_folders:
+            continue
+            
+        logging.info(f"[SCAN FASTA 4ESM: MERGE] Merging {len(part_folders)} folders into {final_folder.name}/")
+        
+        for folder in part_folders:
+            # Merge logs
+            part_log = folder / "predict.log"
+            if part_log.exists():
+                with open(main_log_path, 'a') as main_log, open(part_log, 'r') as p_log:
+                    main_log.write(f"\n--- Log from {folder.name} ---\n")
+                    main_log.write(p_log.read())
+
+            # Move PDB files
+            for pdb_file in folder.glob("*.pdb"):
+                destination = final_folder / pdb_file.name
+                if not destination.exists():
+                    shutil.move(str(pdb_file), str(destination))
+                else:
+                    pdb_file.unlink()
+            
+            # Remove the empty part folder
+            shutil.rmtree(folder)
+            logging.info(f"[SCAN FASTA 4ESM: MERGE] Removed temporary folder {folder.name}")
+
+    logging.info("[SCAN FASTA 4ESM: MERGE] Merge complete. Project organized.")
+
+
+# ------------------------
+#  main functions
+# ------------------------
+
+def main():
+    parser = argparse.ArgumentParser(description='Scans for unprocessed FASTA files to run ESM prediction.')
+    parser.add_argument('input_folder', type=str, help="Folder with separated .fasta files")
+    parser.add_argument('output_folder', type=str, help="Folder for output data")
+    parser.add_argument('--mode', choices=['separate', 'merge'], default='separate', 
+                        help="'separate' leaves part folders (default), 'merge' merges them.")
+    args = parser.parse_args()
+
+    input_dir = Path(args.input_folder)
+    output_dir = Path(args.output_folder)
+
+    if not input_dir.exists() or not input_dir.is_dir():
+        logging.error(f"[SCAN FASTA 4ESM: SCANNER] Input directory '{input_dir}' not found.")
+        return
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    fasta_files = sorted(list(input_dir.glob("*.fasta")) + list(input_dir.glob("*.fas")))
+    if not fasta_files:
+        logging.info("[SCAN FASTA 4ESM: SCANNER] No FASTA files found.")
+        return
+
+    unprocessed_files = []
+    
+    # Check status using the .done marker file OR if the prefix has already been merged
+    for fasta in fasta_files:
+        part_folder = output_dir / fasta.stem
+        done_marker = part_folder / ".done"
+        
+        ## Extract the base prefix to check if the final merged folder exists
+        if '_' in fasta.stem:
+            prefix = '_'.join(fasta.stem.split('_')[:-1])
+        else:
+            prefix = fasta.stem
+            
+        final_folder = output_dir / prefix
+        is_merged = final_folder.exists() and final_folder.is_dir()
+        
+        ## If there is no .done marker AND the final merged folder does not exist, it needs processing
+        if not done_marker.exists() and not is_merged:
+            unprocessed_files.append((fasta, part_folder))
+
+
+
+    if unprocessed_files:
+        # Run only one process per execution
+        fasta_to_run, folder_to_run = unprocessed_files[0]
+        logging.info(f"[SCAN FASTA 4ESM: SCANNER] Found unprocessed file: {fasta_to_run.name}. Triggering predictESM...")
+       
+        # Provide the final path to predictESM.py (by system)
+        subprocess.run([sys.executable, predictESM_py_path, str(fasta_to_run), str(folder_to_run)])
+        
+        logging.info(f"[SCAN FASTA 4ESM: SCANNER] Exiting after processing {fasta_to_run.name}.")
+    else:
+        logging.info("[SCAN FASTA 4ESM: SCANNER] All files processed.")
+        
+        if args.mode == 'merge':
+            # Check if there are any folders with `.done` that need merging
+            part_folders_exist = any((d / ".done").exists() for d in output_dir.iterdir() if d.is_dir())
+            if part_folders_exist:
+                merge_results(output_dir, fasta_files)
+            else:
+                logging.info("[SCAN FASTA 4ESM: SCANNER] Everything is already merged.")
+        else:
+            logging.info("[SCAN FASTA 4ESM: SCANNER] Mode is 'separate'. Files and logs remain in part folders.")
+
+if __name__ == "__main__":
+    main()
+
+    
