@@ -2,6 +2,7 @@ import argparse
 import time
 import pandas as pd
 import os
+import shutil
 
 class BaseMethodRunner:
     """
@@ -13,13 +14,16 @@ class BaseMethodRunner:
         self.args = self._parse_args()
         self.start_time = None
         self.end_time = None
+        # folder for tmp file 
+        self.tmp_dir = os.path.join(os.path.dirname(self.args.out_results), f".tmp_{self.method_name}")
 
     def _parse_args(self):
-        parser = argparse.ArgumentParser(description=f"Wrapper for {self.method_name}")
-        parser.add_argument("--query_fasta", help="Path to input FASTA file (for sequence methods)")
-        parser.add_argument("--target_db", help="Path to target BLAST DB (for sequence methods)")
-        parser.add_argument("--query_pdb_dir", help="Path to dir with query PDBs (for structure methods)")
-        parser.add_argument("--target_pdb_dir", help="Path to dir with target PDBs (for structure methods)")
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--query_fasta", help="Path to query FASTA file")
+        parser.add_argument("--target_fasta", help="Path to target FASTA file (to build sequence DB)")
+        parser.add_argument("--query_pdb_dir", help="Path to query PDBs")
+        parser.add_argument("--target_pdb_dir", help="Path to target PDBs (to build structure DB)")
+        parser.add_argument("--binary_db_dir", required=True, help="Path to store persistent binary databases")
         parser.add_argument("--out_results", required=True, help="Path to save output CSV")
         parser.add_argument("--out_meta", required=True, help="Path to save metadata CSV")
         return parser.parse_args()
@@ -28,14 +32,23 @@ class BaseMethodRunner:
         """Main execution flow."""
         print(f"Starting {self.method_name}...")
         
-        # Ensure output directories exist
+        # create dirs 
         os.makedirs(os.path.dirname(self.args.out_results), exist_ok=True)
+        os.makedirs(self.tmp_dir, exist_ok=True)
+        os.makedirs(self.args.binary_db_dir, exist_ok=True)
+  
         
         self.start_time = time.time()
         
         # This method MUST be implemented by the child class
-        results_df, total_queries = self.execute_tool()
-        
+        try: 
+            results_df, total_queries = self.execute_tool()
+        finally:
+            # removing temp file 
+            if os.path.exists(self.tmp_dir):
+                shutil.rmtree(self.tmp_dir)
+
+
         self.end_time = time.time()
         
         # Calculate additional information
