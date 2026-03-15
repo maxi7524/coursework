@@ -56,7 +56,9 @@ class TmAlignRunner(BaseMethodRunner):
             # df = df[(df['TM1'] > 0.5) | (df['TM2'] > 0.5)] # later in analysis
         except:
             df = pd.DataFrame(columns=['query', 'target', 'TM1', 'TM2'])
-            
+        
+        # IMPORTANT: it saves so strange last row, - need to remove it because it destroy metadata
+        df = df.iloc[:-1, :]
         return df, total_queries
 
 if __name__ == "__main__":

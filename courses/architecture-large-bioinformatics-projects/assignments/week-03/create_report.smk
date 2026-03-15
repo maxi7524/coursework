@@ -66,14 +66,18 @@ rule generate_report:
         report="reports/{experiment}/{probe}_report.md"
     log:
         "logs/{experiment}/{probe}/report/generate_report.log"
+    params:
+        # we create join strings to parse them later 
+        seq_methods_str = ','.join(SEQUENCE_METHODS),
+        struct_methods_str = ','.join(STRUCTURE_METHODS)
     shell:
         """
         python3 scripts/sequence_comparison/generate_md_report.py \\
             --experiment {wildcards.experiment} \\
             --probe {wildcards.probe} \\
             --fasta_sequences_file data/{wildcards.experiment}/clean/{wildcards.probe}_clean.fasta \\
-            --methods_sequence {','.join(SEQUENCE_METHODS)} \\
-            --methods_structure {','.join(STRUCTURE_METHODS)} \\
+            --methods_sequence {params.seq_methods_str} \\
+            --methods_structure {params.struct_methods_str} \\
             --results_dir results/{wildcards.experiment}/report/{wildcards.probe} \\
             --out_report {output.report} \\
             > {log} 2>&1
