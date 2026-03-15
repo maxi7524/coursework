@@ -12,12 +12,14 @@ METHODS = SEQUENCE_METHODS + STRUCTURE_METHODS
 
 
 ## Define the names of our experiments (subfolders in the data/ directory)
-EXPERIMENTS = ["synthethic_bacterium"]  # 
+EXPERIMENTS = ["Mycgen"]  # 
 ## Define the names of our probes (fasta files in data/experiment/clean/)
-PROBES = ['CP014940.1']
+PROBES = ['Mycoplasmoides_genitalium_G37']
 
-## GLOBAL PARAMS
-TARGET_DB = ['data/blastdb/CP014940/CPO149940']
+## Define reference base (TARGET)
+TARGET_FASTA = 'data/synthethic_bacterium/clean/CP014940.1_clean.fasta'
+TARGET_PDB_DIR = 'data/synthethic_bacterium/4ESM/CP014940.1/'
+BINARY_DB_DIR = 'data/synthethic_bacterium/binary_datasets/CP014940.1'
 
 # --- SNAKEMAKE RULES ---
 
@@ -44,10 +46,10 @@ rule run_method:
         """
         python3 scripts/sequence_comparison/run_{wildcards.method}.py \
             --query_fasta {input.fasta_file} \
-            --target_fasta data/{wildcards.experiment}/clean/{wildcards.probe}_clean.fasta \
+            --target_fasta {TARGET_FASTA} \
             --query_pdb_dir {input.pdb_dir} \
-            --target_pdb_dir data/{wildcards.experiment}/4ESM/{wildcards.probe}/ \
-            --binary_db_dir data/{wildcards.experiment}/binary_datasets/{wildcards.probe}/{wildcards.method}/{wildcards.probe} \
+            --target_pdb_dir {TARGET_PDB_DIR} \
+            --binary_db_dir {BINARY_DB_DIR}/{wildcards.method}/ \
             --out_results {output.results} \
             --out_meta {output.metadata} \
             > {log} 2>&1
@@ -69,9 +71,9 @@ rule generate_report:
         python3 scripts/sequence_comparison/generate_md_report.py \\
             --experiment {wildcards.experiment} \\
             --probe {wildcards.probe} \\
-            --fasta_sequence_file data/{wildcards.experiment}/clean/{wildcards.probe}_clean.fasta \\
+            --fasta_sequences_file data/{wildcards.experiment}/clean/{wildcards.probe}_clean.fasta \\
             --methods_sequence {','.join(SEQUENCE_METHODS)} \\
-            --methods_structure {','.join(STRUCTURE_METHODS)} \\}
+            --methods_structure {','.join(STRUCTURE_METHODS)} \\
             --results_dir results/{wildcards.experiment}/report/{wildcards.probe} \\
             --out_report {output.report} \\
             > {log} 2>&1

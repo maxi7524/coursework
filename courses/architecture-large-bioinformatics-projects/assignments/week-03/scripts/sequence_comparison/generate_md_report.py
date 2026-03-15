@@ -1,20 +1,12 @@
 import argparse
 import pandas as pd
+import numpy as np
 import os
 import glob
 from pathlib import Path
 
 # debug version 
-def parse_args(args_in=None):
-    parser = argparse.ArgumentParser(description="Generate Markdown report from method results.")
-    parser.add_argument("--experiment", required=True, help="Name of the experiment")
-    parser.add_argument("--probe", required=True, help="Name of the probe/fasta file")
-    parser.add_argument("--fasta_sequences_file", required=True, help="Path to file containing FASTA sequences")
-    parser.add_argument("--methods_sequence", required=True, help="Comma-separated list of sequence methods to include in the report")
-    parser.add_argument("--methods_structure", required=True, help="Comma-separated list of structure methods to include in the report")
-    parser.add_argument("--results_dir", required=True, help="Directory containing CSV outputs")
-    parser.add_argument("--out_report", required=True, help="Path to save the Markdown report")
-    return parser.parse_args()
+
 
 ## running parser in interactive 
 # mock_args = [
@@ -30,6 +22,9 @@ def parse_args(args_in=None):
 # sys.argv = ['random_skrypt.py'] +  mock_args
 # args = parse_args()
 
+# --- helpers --- #
+
+
 def load_and_concat(method_list, file_dict):
     """
     Helper method for iterating through `file_dict` with method list condition
@@ -37,8 +32,13 @@ def load_and_concat(method_list, file_dict):
     dfs = []
     for method in method_list:
         if method in file_dict:
-            df = pd.read_csv(file_dict[method])
-            # method column is included 
+            #TODO different methods would need special loading !!!
+            if method == 'tmalign':
+                df = tmalign_loader(file_dict[method])
+            else:
+                df = pd.read_csv(file_dict[method])
+            
+            # method column is included - we not need to add it
             dfs.append(df)
         else:
             print("[GENERATE REPORT]: No file for {method}")
@@ -64,6 +64,44 @@ def parse_fasta(file_path: Path | str):
                 seq.append(line)
         if header:
             yield header, "".join(seq)
+
+# --- analysis ---
+
+def tmalign_loader(path: Path | str):
+    '''
+    Function for loading output from tmalign to make it comparable
+    '''
+    df = pd.read_csv(path)
+    df_out = pd.DataFrame(
+        # query, and target 
+        df['query'],
+        df['target'],
+        # TM = max(TM1, TM2) - we can obtain homologous on certain part
+        df[['TM1', 'TM2']].max(axis=1),
+        # evalue - we can not provide it (what is probability of obtaining this sequence at random - we compare here two structure)
+        pd.Series(np.zeros(len(df), dtype=float), name='evalue'),
+        # method - pass
+        df['method'],
+        columns=['query', 'target', 'tmscore', 'evalue', 'method']
+    )
+    return df_out
+ 
+
+
+
+
+# --- main functions ---
+
+def parse_args(args_in=None):
+    parser = argparse.ArgumentParser(description="Generate Markdown report from method results.")
+    parser.add_argument("--experiment", required=True, help="Name of the experiment")
+    parser.add_argument("--probe", required=True, help="Name of the probe/fasta file")
+    parser.add_argument("--fasta_sequences_file", required=True, help="Path to file containing FASTA sequences")
+    parser.add_argument("--methods_sequence", required=True, help="Comma-separated list of sequence methods to include in the report")
+    parser.add_argument("--methods_structure", required=True, help="Comma-separated list of structure methods to include in the report")
+    parser.add_argument("--results_dir", required=True, help="Directory containing CSV outputs")
+    parser.add_argument("--out_report", required=True, help="Path to save the Markdown report")
+    return parser.parse_args()
 
 
 def generate_report():
@@ -101,7 +139,7 @@ def generate_report():
     ### structure 
     df_structure = load_and_concat(struct_methods, output_dict)
     ### fasta files information:
-    df_fasta = pd.DataFram(
+    fasta_queries = pd.DataFrame(
         [head for head, sequence in parse_fasta(args.fasta_sequences_file)],
         columns=['query']
     ) 
