@@ -1,6 +1,7 @@
 import os
 import requests
 import argparse
+from pathlib import Path
 
 def download_file(url, folder):
     """Downloads a file from a URL to a specific folder."""
@@ -24,14 +25,18 @@ def main():
 
     # URLs for Exercise 1 (Metadata) and Exercise 2b (Sequences)
     urls = [
-        "https://files.rcsb.org/pub/pdb/derived_data/index/entries.idx", # IDs, Methods, Dates, Resolution
-        "https://files.rcsb.org/pub/pdb/derived_data/pdb_entry_type.txt", # To filter 'protein' only entries
-        "https://files.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt.gz"   # Sequences for length/AA content
+        "https://files.rcsb.org/pub/pdb/derived_data/index/entries.idx",    # IDs, Methods, Dates, Resolution
+        "https://files.rcsb.org/pub/pdb/derived_data/pdb_entry_type.txt",   # To filter 'protein' only entries
+        "https://files.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt.gz"     # Sequences for length/AA content
     ]
 
     for url in urls:
         try:
             download_file(url, args.out)
+            url_path = Path(url)
+            if url_path.suffix == '.gz':
+                print(f"Unzipping {url_path}...")
+                os.system(f"gunzip {os.path.join(args.out, url_path.name)}")
         except Exception as e:
             print(f"Failed to download {url}: {e}")
 
