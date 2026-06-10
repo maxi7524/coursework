@@ -53,6 +53,34 @@ def generate_hmm_data(
         
     return states, observations
 
+def generate_continuous_hmm_data(
+    alpha_param: float, 
+    sim_length: int, 
+    sigma_x: float = 1.0, 
+    sigma_y: float = 3.0
+) -> tuple[np.ndarray, np.ndarray]:
+    """
+    Generate true hidden states and observed emissions for a continuous Gaussian HMM.
+    
+    :param alpha_param: Autoregressive coefficient for state transition.
+    :param sim_length: Length of the simulation sequence.
+    :param sigma_x: Standard deviation of the process noise (sqrt(1) = 1.0).
+    :param sigma_y: Standard deviation of the observation noise (sqrt(9) = 3.0).
+    :return: Tuple of (true_states, observations), shapes: (sim_length,), (sim_length,)
+    """
+    states = np.zeros(sim_length)
+    observations = np.zeros(sim_length)
+    
+    # t = 0: Załóżmy start z rozkładu stacjonarnego lub po prostu z N(0, sigma_x^2)
+    states[0] = np.random.normal(0, sigma_x)
+    observations[0] = np.random.normal(states[0], sigma_y)
+    
+    for t in range(1, sim_length):
+        states[t] = np.random.normal(alpha_param * states[t-1], sigma_x)
+        observations[t] = np.random.normal(states[t], sigma_y)
+        
+    return states, observations
+
 def forward_filtering_backward_sampling(
     initial_dist: np.ndarray, 
     transition_matrix: np.ndarray, 
@@ -192,6 +220,71 @@ def particle_filter_sis_pfs(
             empirical_dists[t, s] = np.sum(weights[particles[:, t] == s])
             
     return particles, empirical_dists
+
+
+def particle_filter_continuous(
+    alpha_param: float,
+    observations: np.ndarray,
+    num_particles: int,
+    sigma_x: float = 1.0,
+    sigma_y: float = 3.0,
+    use_resampling: bool = True
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Continuous Sequential Importance Sampling / Particle Filter for Gaussian HMM.
+    
+    :return: Tuple of (particles, estimated_means, estimated_stds)
+    """
+    sim_length = len(observations)
+    particles = np.zeros((num_particles, sim_length))
+    
+    # Tablice na statystyki rozkładu filtrującego w czasie t
+    est_means = np.zeros(sim_length)
+    est_stds = np.zeros(sim_length)
+    
+    # Inicjalizacja wag i cząsteczek dla t = 0
+    weights = np.ones(num_particles) / num_particles
+    particles[:, 0] = np.random.normal(0, sigma_x, size=num_particles)
+    
+    # Ewaluacja wag za pomocą gęstości Gaussa: N(observations[0]; mean=particles, std=sigma_y)
+    # Wzór na gęstość: (1 / sqrt(2*pi*sigma^2)) * exp(-(y - x)^2 / (2*sigma^2))
+    likelihood = (1.0 / (sigma_y * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((observations[0] - particles[:, 0]) / sigma_y)**2)
+    weights *= likelihood
+    weights /= np.sum(weights)
+    
+    # Zapisz średnią ważoną i odchylenie standardowe populacji jako nasz ciągły rozkład
+    est_means[0] = np.sum(particles[:, 0] * weights)
+    est_stds[0] = np.sqrt(np.sum(weights * (particles[:, 0] - est_means[0])**2))
+    
+    for t in range(1, sim_length):
+        if use_resampling:
+            # Resampling wielomianowy cząsteczek
+            cdf = np.cumsum(weights)
+            r = np.random.rand(num_particles, 1)
+            resample_idx = np.sum(r > cdf, axis=1)
+            
+            particles = particles[resample_idx, :]
+            weights = np.ones(num_particles) / num_particles
+            
+        # Krok przejścia (Propagacja do przodu): X_t ~ N(alpha * X_{t-1}, sigma_x^2)
+        mean_transitions = alpha_param * particles[:, t-1]
+        particles[:, t] = np.random.normal(mean_transitions, sigma_x)
+        
+        # Aktualizacja wag (Likelihood nowej obserwacji)
+        likelihood = (1.0 / (sigma_y * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((observations[t] - particles[:, t]) / sigma_y)**2)
+        weights *= likelihood
+        
+        total_w = np.sum(weights)
+        if total_w > 0:
+            weights /= total_w
+        else:
+            weights = np.ones(num_particles) / num_particles
+            
+        # Wyliczenie parametrów ciągłego rozkładu empirycznego w kroku t
+        est_means[t] = np.sum(particles[:, t] * weights)
+        est_stds[t] = np.sqrt(np.sum(weights * (particles[:, t] - est_means[t])**2))
+        
+    return particles, est_means, est_stds
 
 
 
