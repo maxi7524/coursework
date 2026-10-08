@@ -1,0 +1,150 @@
+############################
+# Global config & constants
+############################
+
+configfile: "config/task4.yaml"
+
+YEARS = config["years"]
+
+# ---- paths ----
+CONFIG_PATH = "config/task4.yaml"
+
+RESULTS_DIR = "results"
+PM25_DIR = f"{RESULTS_DIR}/pm25"
+LIT_DIR = f"{RESULTS_DIR}/literature"
+REPORT_DIR = f"{RESULTS_DIR}/report_files"
+
+# ---- PM2.5 artefacts ----
+PM25_FILES = {
+    "clean": PM25_DIR + "/{year}/clean_data.csv",
+    "exceed": PM25_DIR + "/{year}/daily_exceedances.csv",
+}
+
+# ---- PubMed per-year artefacts ----
+PUBMED_FILES = {
+    "papers": LIT_DIR + "/{year}/pubmed_papers.csv",
+    "summary": LIT_DIR + "/{year}/summary_by_year.csv",
+    "journals": LIT_DIR + "/{year}/top_journals.csv",
+}
+
+# ---- PubMed aggregated artefacts ----
+PUBMED_AGG = {
+    "publications_per_year": REPORT_DIR + "/publications_per_year.csv",
+    "top_journals_global": REPORT_DIR + "/top_journals_global.csv",
+    "papers_per_year": REPORT_DIR + "/papers_per_year.png",
+}
+
+############################
+# rule all
+############################
+
+rule all:
+    input:
+        f"{RESULTS_DIR}/report_task4.md"
+
+
+############################
+# PM2.5 — per year
+############################
+
+# rule for generating data for every year
+rule pm25_year_data:
+    input:
+        # CONFIG_PATH
+    output:
+        clean=PM25_FILES["clean"],
+        exceed=PM25_FILES["exceed"]  
+    shell:
+        """
+        python -m scripts.PM25_year_clean \
+            --year {wildcards.year} \
+            --config {CONFIG_PATH}
+        """
+
+# rule for generating plts
+rule pm25_plots:
+    input:
+        CONFIG_PATH,
+        expand(PM25_FILES["clean"], year=YEARS),
+        expand(PM25_FILES["exceed"], year=YEARS)
+    output:
+        plot_years_trend = REPORT_DIR + "/plot_years_trend_cities.png"
+    shell:
+        """
+        python -m scripts.PM25_analysis \
+            --config {CONFIG_PATH}
+        """
+
+
+############################
+# PubMed — per year
+############################
+
+# evaluate single year
+rule pubmed_year_data:
+    input:
+    output:
+        papers=PUBMED_FILES["papers"],
+        summary=PUBMED_FILES["summary"],
+        journals=PUBMED_FILES["journals"]
+    params:
+        year=lambda wc: wc.year
+    shell:
+        """
+        python -m scripts.literature_pubmed_fetch \
+            --year {params.year} \
+            --config {CONFIG_PATH}
+        """
+
+# join results 
+rule pubmed_analysis:
+    input:
+        CONFIG_PATH,
+        expand(PUBMED_FILES["papers"], year=YEARS)
+    output:
+        publications_per_year = PUBMED_AGG["publications_per_year"],
+        top_journals_global = PUBMED_AGG["top_journals_global"],
+        papers_per_year = PUBMED_AGG["papers_per_year"]
+    shell:
+        """
+        python -m scripts.literature_analysis \
+            --config {CONFIG_PATH}
+        """
+
+
+############################
+# Report — only selected years
+############################
+
+# rule  for joining results into .md report
+rule report_task4:
+    input:
+        CONFIG_PATH, 
+        # pm25
+        # ## data files
+        # clean=expand(PM25_FILES["clean"], year=YEARS),
+        exceed=expand(PM25_FILES["exceed"], year=YEARS),
+
+        ## plots 
+        plot_years_trend=REPORT_DIR + "/plot_years_trend_cities.png",
+
+        # literature
+        # ## obtain year data
+        # pubmed_files=expand(
+        #     LIT_DIR + "/{year}/{filename}.csv",
+        #     filename=["pubmed_papers", "summary_by_year", "top_journals"],
+        #     year=YEARS
+        # ),
+
+        ## obtain analysis file
+        pubmed_analysis=list(PUBMED_AGG.values())
+    output:
+        f"{RESULTS_DIR}/report_task4.md"
+    shell:
+        """
+        python -m scripts.build_report \
+            --config {CONFIG_PATH} \
+            --output {output}
+        """
+
+# rule for joining results into .md report
