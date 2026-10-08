@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/before_conversion/example.gp",
+      "sha256": "84c08695394f91dea8356f2afb87e94ce02f09a931eeb4092892d6061ee43eb8",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/example.gp",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/example.gp?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/before_conversion/sequence_(1).gp",
+      "sha256": "a371969bec1f6b983e9ef5989623bacd56485f68f83301f353c4e7699aeb516c",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/sequence (1).gp",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/sequence%20%281%29.gp?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/before_conversion/sequence.gp",
+      "sha256": "f51df37f274046864910d673a4c1ee2aa0ecc0dc251c3e3717430b050606148d",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/sequence.gp",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/sequence.gp?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "http://gp2fasta.mlhpc.org",
+    "https://cloud.ibm.com/docs/ssh-keys?topic=ssh-keys-generating-and-using-ssh-keys-for-remote-host-authentication",
+    "https://docs.acquia.com/acquia-cloud-platform/manage-apps/command-line/ssh/getting-started/generate",
+    "https://duch.mimuw.edu.pl/~lukaskoz/lukaskoz.keys",
+    "https://entropy-doc.mimuw.edu.pl",
+    "https://entropy-doc.mimuw.edu.pl/queuesresources.html#gpuminutes",
+    "https://entropy-doc.mimuw.edu.pl/submittingjobs.html#time-limit",
+    "https://students.mimuw.edu.pl/~ag2232823/id_rsa.pub",
+    "https://students.mimuw.edu.pl/~username/username.keys",
+    "https://www.ssh.com/academy/ssh/keygen"
+  ],
+  "providers": [],
+  "generated": []
+}

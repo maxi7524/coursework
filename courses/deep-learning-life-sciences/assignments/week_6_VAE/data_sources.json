@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "PBMC_train.h5ad",
+      "sha256": "8a33c92b720f4c950d629dd2498dbb58078c27aa3427e8d8cfdff14ccc04bc23",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/DLILS/week_6_VAE/PBMC_train.h5ad",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/DLILS/week_6_VAE/PBMC_train.h5ad?ref=12389f5e44b27308b8727c19ec60533b806f704f",
+      "url": "https://docs.google.com/uc?export=download&id=1zHJKoU8QcQB4cLR-oICO2YY4Nu-QaZHG"
+    },
+    {
+      "path": "reactomes.gmt",
+      "url": "https://www.dropbox.com/scl/fi/3a0toe9jqs0nnozf5axej/reactomes.gmt.txt?rlkey=3wbl4coru12bs7jjy40gs5s1a&dl=0",
+      "sha256": null,
+      "role": "input",
+      "availability": "original-notebook-url"
+    },
+    {
+      "path": "PBMC_valid.h5ad",
+      "url": "https://docs.google.com/uc?export=download&id=1rJKZYIG7rv7BQbDD9RElYOgHcxxzjcYj",
+      "sha256": null,
+      "role": "input",
+      "availability": "original-notebook-url"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://anndata.readthedocs.io/en/latest/tutorials/notebooks/getting-started.html",
+    "https://docs.google.com/uc?export=download&id=1rJKZYIG7rv7BQbDD9RElYOgHcxxzjcYj",
+    "https://docs.google.com/uc?export=download&id=1zHJKoU8QcQB4cLR-oICO2YY4Nu-QaZHG",
+    "https://github.com/LucasESBS/vega",
+    "https://pytorch.org/docs/stable/notes/extending.html",
+    "https://www.dropbox.com/scl/fi/3a0toe9jqs0nnozf5axej/reactomes.gmt.txt?rlkey=3wbl4coru12bs7jjy40gs5s1a&dl=0",
+    "https://www.nature.com/articles/s41467-021-26017-0"
+  ],
+  "providers": [],
+  "generated": []
+}

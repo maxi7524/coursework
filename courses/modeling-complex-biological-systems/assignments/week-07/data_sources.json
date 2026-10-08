@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "survival_LUSC_survival.txt",
+      "url": "https://tcga.xenahubs.net/download/survival/LUSC_survival.txt",
+      "sha256": null,
+      "role": "input",
+      "availability": "source-notebook-Xena-dataset"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://xenabrowser.net/datapages/?dataset=TCGA.LUSC.sampleMap%2FHiSeqV2_PANCAN&host=https%3A%2F%2Ftcga.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443",
+    "https://xenabrowser.net/datapages/?dataset=survival%2FLUSC_survival.txt&host=https%3A%2F%2Ftcga.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443"
+  ],
+  "providers": [],
+  "generated": []
+}

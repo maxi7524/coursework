@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "comparison_structure/first/example_image.png",
+      "sha256": "8409cf20385df22114079695e7956e158a73edd3a38916bfd566f3bb6d828c69",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/comparison_structure/first/example_image.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/comparison_structure/first/example_image.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "comparison_structure/second/example_image.png",
+      "sha256": "70d2f2884f6827dcc8eaf164ee2088807429f1d98da366ecdef19add19fffd7b",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/comparison_structure/second/example_image.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/comparison_structure/second/example_image.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/Mycgen/Mycoplasmoides_genitalium_G37/report/blast_run.log",
+      "sha256": "22caab57aa4d1a965b4fcbb9acd0707aa6c76e3901bf1f9b19b85c1ebb986a21",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/blast_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/blast_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/Mycgen/Mycoplasmoides_genitalium_G37/report/foldseek_run.log",
+      "sha256": "5fc28193c847f2f09022c461055f4c9946d052ad9c3da82f7da40a517fdc066d",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/foldseek_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/foldseek_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/Mycgen/Mycoplasmoides_genitalium_G37/report/generate_report.log",
+      "sha256": "833fac8558766ea38160a18305e1520a0b83ba08210d8ec3b100290c607837c3",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/generate_report.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/generate_report.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/Mycgen/Mycoplasmoides_genitalium_G37/report/reseek_run.log",
+      "sha256": "8aeb58eded31ba1992997cfc67ae1807b9693fec605a09342ec8ae6b1df1c488",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/reseek_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/reseek_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/Mycgen/Mycoplasmoides_genitalium_G37/report/tmalign_run.log",
+      "sha256": "4c636a9ebc239ed4b88379b8638093c42911d072da8a1ab25d59bbac132d7d33",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/tmalign_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/Mycgen/Mycoplasmoides_genitalium_G37/report/tmalign_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/synthethic_bacterium/CP014940.1/report/blast_run.log",
+      "sha256": "d24f5af402b67ce3606717f6003f06993260c56198b36c7a25278aa5c3b4345c",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/blast_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/blast_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/synthethic_bacterium/CP014940.1/report/foldseek_run.log",
+      "sha256": "838b864bc331bcba573d98fb0b298c1ef42c160e6d5a116f6a183d58b8f250f5",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/foldseek_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/foldseek_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/synthethic_bacterium/CP014940.1/report/generate_report.log",
+      "sha256": "ee1a12768746edab5689d7794edacadb43bf0142b7250803a7e4bfdcb026511b",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/generate_report.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/generate_report.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/synthethic_bacterium/CP014940.1/report/reseek_run.log",
+      "sha256": "c6bab1c3dffcbb375eb0e95c7bb7c18f42036d0d38503f18c31c28a780a9cf6e",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/reseek_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/reseek_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "logs/synthethic_bacterium/CP014940.1/report/tmalign_run.log",
+      "sha256": "68619cd4832f1b10c2dfa583eb49f8f5217c54edd10179b1a00c75033f1d996c",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/tmalign_run.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/logs/synthethic_bacterium/CP014940.1/report/tmalign_run.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "scan_manager.log",
+      "sha256": "127f043ab1a036cbd8297bb3408f41160f9c4293a413ef98c55b598c054b8b26",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/scan_manager.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/scan_manager.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/CP014940.1.fasta",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab2/CP014940.1.fasta",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://www.jcvi.org/research/first-minimal-synthetic-bacterial-cell",
+    "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab2/CP014940.1.fasta",
+    "https://www.ncbi.nlm.nih.gov/search/all/?term=CP014940.1",
+    "https://www.science.org/doi/10.1126/science.aad6253",
+    "https://www.youtube.com/watch?v=BzIgqdm9xDs"
+  ],
+  "providers": [],
+  "generated": [
+    "results/synthethic_bacterium/report/CP014940.1/blast_metadata.csv: absent from source snapshot; inspect the original input preparation cells",
+    "results/synthethic_bacterium/report/CP014940.1/blast_output.csv: absent from source snapshot; inspect the original input preparation cells",
+    "results/synthethic_bacterium/report/CP014940.1/tmalign_metadata.csv: absent from source snapshot; inspect the original input preparation cells",
+    "results/synthethic_bacterium/report/CP014940.1/tmalign_output.csv: absent from source snapshot; inspect the original input preparation cells"
+  ]
+}

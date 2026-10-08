@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "assignment-09",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/SDA_2 ćwiczenia/zestaw_9",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/SDA_2%20%C4%87wiczenia/zestaw_9?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

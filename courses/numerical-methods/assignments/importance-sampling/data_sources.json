@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "subblots_normal.png",
+      "sha256": "8846b0a921f8c4568cae3ffe64823ba56cf8f37789c9fc49b1d353529c6c2a89",
+      "role": "artifact",
+      "archive_path": "numerical-methods_IS/subblots_normal.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical-methods_IS/contents/subblots_normal.png?ref=29447dba7f58a59002d3b2f4c0a19e0200be9b28"
+    },
+    {
+      "path": "subblots_weibull.png",
+      "sha256": "15fc4569a00781ed5d4c078a1d25d7aa94715726f1b7315a2f86a1b39aea26ca",
+      "role": "artifact",
+      "archive_path": "numerical-methods_IS/subblots_weibull.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical-methods_IS/contents/subblots_weibull.png?ref=29447dba7f58a59002d3b2f4c0a19e0200be9b28"
+    },
+    {
+      "path": "wykresy/blad_bezwzgledny_normalny.png",
+      "sha256": "e6c4a2e90a7f26fe023b1afaf743dde6fae93d59ffa84ad24f2f100cd161c194",
+      "role": "artifact",
+      "archive_path": "numerical-methods_IS/wykresy/blad_bezwzgledny_normalny.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical-methods_IS/contents/wykresy/blad_bezwzgledny_normalny.png?ref=29447dba7f58a59002d3b2f4c0a19e0200be9b28"
+    },
+    {
+      "path": "wykresy/blad_bezwzgledny_weibull.png",
+      "sha256": "c66a9bd758d9f572238ef16c0a35b3a6fdff5367c1cd0ac42ba8417a960d1dc2",
+      "role": "artifact",
+      "archive_path": "numerical-methods_IS/wykresy/blad_bezwzgledny_weibull.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical-methods_IS/contents/wykresy/blad_bezwzgledny_weibull.png?ref=29447dba7f58a59002d3b2f4c0a19e0200be9b28"
+    },
+    {
+      "path": "wykresy/wzrost_efektywnosci_normalny.png",
+      "sha256": "c76161a49307da344e225bcbb12688b356fb5ba22c04ad0264500359eb816aa0",
+      "role": "artifact",
+      "archive_path": "numerical-methods_IS/wykresy/wzrost_efektywnosci_normalny.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical-methods_IS/contents/wykresy/wzrost_efektywnosci_normalny.png?ref=29447dba7f58a59002d3b2f4c0a19e0200be9b28"
+    },
+    {
+      "path": "wykresy/wzrost_efektywnosci_weibull.png",
+      "sha256": "96daf6f4c6892525201814dfd2177953aacc5f918ff6566f201f4e605416767e",
+      "role": "artifact",
+      "archive_path": "numerical-methods_IS/wykresy/wzrost_efektywnosci_weibull.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical-methods_IS/contents/wykresy/wzrost_efektywnosci_weibull.png?ref=29447dba7f58a59002d3b2f4c0a19e0200be9b28"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

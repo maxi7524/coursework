@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "providers": [],
+  "unresolved": [],
+  "resources": [
+    {
+      "path": "cpg_chr16.fasta",
+      "url": "https://drive.google.com/uc?id=1xqvRXIOLP6-lUbsL5-E0sxUzPd9Q5dnv",
+      "sha256": null,
+      "role": "input",
+      "availability": "original-notebook-url"
+    },
+    {
+      "path": "non_cpg_ch16.fasta",
+      "url": "https://drive.google.com/uc?id=1UP7ZjiSBwW-R3LskKUC7wc9cOR53o8SP",
+      "sha256": null,
+      "role": "input",
+      "availability": "original-notebook-url"
+    }
+  ]
+}

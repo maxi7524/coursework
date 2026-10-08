@@ -1,30 +1,9 @@
+# Dimensionality reduction and variational autoencoders
 
-### MAIN objective
-Dimension reduction
+Draft lecture notes; formulations remain subject to later review.
 
-
-
-
-VAE - redukcja wymiaru - przykłady
-
-Reduckja wymiaru nazw
-- możemy str zamienić na współrzędne i później to zdekodować 
-- 
-
-Nadmiar wymiaru
-- możemy znaleźć dodatkowe cechy które spełniają pewen wartości 
-    - trzeba zastosować regularyzacje 
-
-Autoencodery
-- chcemy stworzyć przestrzeń zawierającą dodatkowe informacje 
-
-Loss
-- just determine difference between encoding and decoded 
-
-
-autoencodey
-- chcemy odtworzyć rozkład normlalny
-    - potrzebujem średnią oraz waraiancję wyestymować 
-- loss
-    - prawpdopodobieńśtwo żę ten rozkład został wylosowany z tego rozkłądu 
-    - parametr $\beta$, pozwala nam zwiększac wpływ kulback'a liebliera żeby miał większy wplyw w stosunki do reconstruction error 
+- Encode objects into coordinates and decode them back into the original representation.
+- Additional latent dimensions require regularization.
+- Reconstruction loss compares the original and decoded observations.
+- The variational formulation estimates distribution parameters, including mean and variance.
+- The beta coefficient controls the influence of the Kullback–Leibler term relative to reconstruction error.

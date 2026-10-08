@@ -1,9 +1,8 @@
-co trzeba zrobić 
-- rozbić te projekt na pojedyncze repozytoria (duże projekty) od razu otrzymujemy strukture
--  readme jak odtworzyć takie wyniki 
--  zrobić skrypt który
-   -  osobno pobiera dane
-   -  osobno robi analizy konkretne per dane 
-   -  osobno skleja raport z tych danych
--  i potem dać w settingsach te organizmy 
--  
+# Workflow planning notes
+
+Original TODOs:
+
+- Keep substantial projects in independent repositories.
+- Describe how to reproduce each analysis.
+- Separate data download, dataset-specific analysis and report assembly.
+- Configure the organisms in project settings.

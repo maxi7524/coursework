@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "resources": [],
+  "unresolved": [
+    "BW25113_Growth_Round01.xlsx: absent from source snapshot; inspect the original input preparation cells"
+  ],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

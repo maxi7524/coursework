@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resources": [],
+  "unresolved": [],
+  "source_references": [
+    "http://www.yeastract.com",
+    "https://cdlib.readthedocs.io/en/latest/reference/cd_algorithms/node_clustering.html",
+    "https://networkx.org/documentation/stable/auto_examples/graph/plot_triad_types.html",
+    "https://networkx.org/documentation/stable/reference/algorithms/triads.html",
+    "https://string-db.org/api/json/get_string_ids",
+    "https://string-db.org/api/tsv/interaction_partners",
+    "https://string-db.org/api/tsv/network",
+    "https://www.yeastgenome.org"
+  ],
+  "providers": [],
+  "generated": []
+}

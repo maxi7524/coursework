@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "checksums",
+      "sha256": "e6ff42837bcdc41386e6b52f16d0f190c688a7a1cd0926f07676cb5cba555a95",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab4/checksums",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab4/checksums?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "mart_export.txt",
+      "sha256": "6626d4daab8f83ca224efc119dd3a1404d8216889d2e6e58a0fb57f0530bc9a7",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab4/mart_export.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab4/mart_export.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pancreas_refseq_rpkms_wholeislet.txt",
+      "sha256": "cc67d26a28cab011a7748ded8585bdc39a201b7849ba34c0819085dc67802802",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab4/pancreas_refseq_rpkms_wholeislet.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab4/pancreas_refseq_rpkms_wholeislet.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "top20",
+      "sha256": "e990712884410fe7465fc2537a522ea601732bec60f37c7875987dbcfb188710",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab4/top20",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab4/top20?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

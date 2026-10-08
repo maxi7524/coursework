@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "untitled.cps",
+      "sha256": "3475eaec102551d2d3e54284ab5424813fc543da607a092b53ae9617bd84e2de",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/MDSB/week_4/untitled.cps",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/MDSB/week_4/untitled.cps?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

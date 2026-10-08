@@ -10,7 +10,7 @@ import sys
 # params 
 # ------------------------
 
-predictESM_py_path = "/home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_3/predictESM.py"
+predictESM_py_path = str(Path(__file__).resolve().with_name("predictESM.py"))
 
 logging.basicConfig(
     level=logging.INFO,

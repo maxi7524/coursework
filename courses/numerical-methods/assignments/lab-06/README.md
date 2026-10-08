@@ -1,4 +1,6 @@
 ## File Descriptions
+
+Legacy assignment documentation. Historical test/performance claims below were not revalidated during migration.
 - **algorithms.py**: Contains implementations of various root-finding algorithms including Bisection, Falsi, Newton-Raphson, and Secant methods.
 
 

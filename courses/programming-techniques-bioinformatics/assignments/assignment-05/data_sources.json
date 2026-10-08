@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "trained_models/Linear_kernel",
+      "sha256": "84545014ebf03857d1f6137a7a1b77542388c50ddf4f98abe4c9fbc755495d5c",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/ZTPDB/ćw5/trained_models/Linear kernel",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/ZTPDB/%C4%87w5/trained_models/Linear%20kernel?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "trained_models/Polynomial_Kernel",
+      "sha256": "839adcd007f5eadac2f42722a1a5744836adbc9679ab438967b3685c75a260b2",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/ZTPDB/ćw5/trained_models/Polynomial Kernel",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/ZTPDB/%C4%87w5/trained_models/Polynomial%20Kernel?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "trained_models/Radial_basis_kernel",
+      "sha256": "859f6d4deaa58974113bbc546aaa4bc6c942e0e774fd6fbcf0add842a9937b7d",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/ZTPDB/ćw5/trained_models/Radial basis kernel",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/ZTPDB/%C4%87w5/trained_models/Radial%20basis%20kernel?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "trained_models/Sigmoid_Kernel",
+      "sha256": "a2d0cf6bff5bffef91446195f392f485f41b8091e05fb2b3642eefdb05adddf2",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/ZTPDB/ćw5/trained_models/Sigmoid Kernel",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/ZTPDB/%C4%87w5/trained_models/Sigmoid%20Kernel?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://pl.wikipedia.org/wiki/K_najbli%C5%BCszych_s%C4%85siad%C3%B3w",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html"
+  ],
+  "providers": [],
+  "generated": []
+}

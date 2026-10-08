@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/mnist.npz",
+      "url": "https://s3.amazonaws.com/img-datasets/mnist.npz",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://arxiv.org/abs/1711.05101",
+    "https://drive.google.com/uc?id=1BXZ0u3562N_MqCLcekI-Ens77Kk4LpPm",
+    "https://drive.google.com/uc?id=1_utx_ZGclmCwNttSe40kYA6VHzNocdET",
+    "https://en.wikipedia.org/wiki/MNIST_database",
+    "https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html",
+    "https://pytorch.org/docs/stable/generated/torch.optim.SGD.html",
+    "https://s3.amazonaws.com/img-datasets/mnist.npz"
+  ],
+  "providers": [],
+  "generated": []
+}

@@ -1,6 +1,6 @@
-Regresja liniowa
-- charakterystyczne jest że mamy tutaj explicite podana funkcje do liczenia błędu bez potrzeby stosowana gradient descent 
+# Linear regression
 
+Draft lecture notes. Original formulas and heuristic thresholds below have not been reviewed during migration.
 
 ### Linear regression 
 
@@ -86,5 +86,3 @@ checking assumptions
 cross validation
 - method is splitting our data on $cv$ amount, than performs test with 1 test group and other as learning group, 
 - i do not understand why we want to perform this on models from task 1,2 it only depends on data?
-
-

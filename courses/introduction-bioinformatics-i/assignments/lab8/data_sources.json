@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "zadanie2_blast.asn",
+      "sha256": "bdfe2fd2a4206ca063cd2d293d09b80c21e1ebef0ea3fdcca8c4c243c2066b7d",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab8/zadanie2_blast.asn",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab8/zadanie2_blast.asn?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "zadanie2_blast.html",
+      "sha256": "257b81ea7d8bf1b6541df2943e6845b5b37b4d9ff503b7cc405be2af55101ccc",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab8/zadanie2_blast.html",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab8/zadanie2_blast.html?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "zadanie2_psi_blast.asn",
+      "sha256": "57b5536048b80994fe9983e66c03ad939a9b272138a3c101aa9bf9c3ffe4714c",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab8/zadanie2_psi_blast.asn",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab8/zadanie2_psi_blast.asn?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "zadanie2_psi_blast.html",
+      "sha256": "42cee223fed21d6de8bafcb8a373d91690fc37f34cf39cd867ff57c364020f65",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab8/zadanie2_psi_blast.html",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab8/zadanie2_psi_blast.html?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "zadanie3_psi_blast.asn",
+      "sha256": "554e35455501e185f389452b364959a92f0e964c1b701a97fc08575297cfc04f",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab8/zadanie3_psi_blast.asn",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab8/zadanie3_psi_blast.asn?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

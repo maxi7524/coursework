@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "econometrics-project/Korelacja_podstawowe_zmienne_Pec_F.png",
+      "sha256": "04965fb42a7f389a9c06120d65d1a9496e553b99019b958ffa0fa5728be127cd",
+      "role": "artifact",
+      "archive_path": "ML_UJ/ekonometria projekt/Korelacja_podstawowe_zmienne_Płeć_F.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/Korelacja_podstawowe_zmienne_P%C5%82e%C4%87_F.png?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/Korelacja_podstawowe_zmienne_Pec_I.png",
+      "sha256": "9b9b27762635249e4233bfdf3b3d5d806b2b2980c34b4fcf20a7b01976ab6127",
+      "role": "artifact",
+      "archive_path": "ML_UJ/ekonometria projekt/Korelacja_podstawowe_zmienne_Płeć_I.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/Korelacja_podstawowe_zmienne_P%C5%82e%C4%87_I.png?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/Korelacja_podstawowe_zmienne_Pec_M.png",
+      "sha256": "07a2ddd49ccd9efd2ab099cb512e8b72cd62ebf702a3752887229399b135b9a3",
+      "role": "artifact",
+      "archive_path": "ML_UJ/ekonometria projekt/Korelacja_podstawowe_zmienne_Płeć_M.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/Korelacja_podstawowe_zmienne_P%C5%82e%C4%87_M.png?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/abalone_data_set.csv",
+      "sha256": "1ec03ee65d895e5bd8f50b9120f90f51e5fed6efc126037822f7632441e4e3c6",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/abalone_data_set.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/abalone_data_set.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/abalone_data_set.xlsx",
+      "sha256": "4c1e2e483bcc35a2a01684adb25223edec173d084281be30ecd20f79afce6817",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/abalone_data_set.xlsx",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/abalone_data_set.xlsx?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_f/F_test_before_reduction.csv",
+      "sha256": "368534e32919502331fd9a19581c07361fafe31a7208b9a9c678935a45c7b890",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_f/F_test_before_reduction.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_f/F_test_before_reduction.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_f/Wykres_reszt,_QQ_plot.png",
+      "sha256": "c2031d7429ba982cc55b31d5ed0301142b27070b9806202f9ecefe71e5d37268",
+      "role": "artifact",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_f/Wykres reszt, QQ plot.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_f/Wykres%20reszt%2C%20QQ%20plot.png?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_f/vifs_after_F_test.csv",
+      "sha256": "d36b9f86751722255f5c8999b7661e4cf670e9731ee0b58ba9c103cde4b6fa6b",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_f/vifs_after_F_test.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_f/vifs_after_F_test.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_f/vifs_basic_model.csv",
+      "sha256": "df406f93b1c809d87272eeded3e98a788c9ebf0962ea87299b029dfabcc7f8a4",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_f/vifs_basic_model.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_f/vifs_basic_model.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_i/F_test_before_reduction.csv",
+      "sha256": "a5d4e8a59962adc491bb85019e17359cb34cb4e887012f081bbd7b06e58a78e5",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_i/F_test_before_reduction.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_i/F_test_before_reduction.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_i/Wykres_reszt,_QQ_plot.png",
+      "sha256": "8c455f10c2104d3b8723f88bead9f44f181b82e01447d40963163c833c8122f0",
+      "role": "artifact",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_i/Wykres reszt, QQ plot.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_i/Wykres%20reszt%2C%20QQ%20plot.png?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_i/vifs_after_F_test.csv",
+      "sha256": "45b8e17c51133aec2bd7a1b6d00f2459effbf157ed5f9ae11c861f91648b2652",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_i/vifs_after_F_test.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_i/vifs_after_F_test.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_i/vifs_basic_model.csv",
+      "sha256": "f5a79a687809379764169462205f36683a0343c80291ce6b678f7334a350da37",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_i/vifs_basic_model.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_i/vifs_basic_model.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_m/F_test_before_reduction.csv",
+      "sha256": "af102ca49d1604690dd30a4797861cb960b5ab60a546e8154f08a74e148e7b29",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_m/F_test_before_reduction.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_m/F_test_before_reduction.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_m/Wykres_reszt,_QQ_plot.png",
+      "sha256": "8aa1d8e84d894e7eb5ff778b8fdf36efeb758af6bd9b328bfb9f2fb7c4254b6d",
+      "role": "artifact",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_m/Wykres reszt, QQ plot.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_m/Wykres%20reszt%2C%20QQ%20plot.png?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_m/vifs_after_F_test.csv",
+      "sha256": "d05507cf6b58b4b257e8263f5aa5f41c3eda7b2162c9433caf1481387250eb25",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_m/vifs_after_F_test.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_m/vifs_after_F_test.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "econometrics-project/sex_m/vifs_basic_model.csv",
+      "sha256": "8d58520e37768f2982fcf2da3b73abee5337b23971a1a1d2117ed36845cdae42",
+      "role": "input",
+      "archive_path": "ML_UJ/ekonometria projekt/sex_m/vifs_basic_model.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/ekonometria%20projekt/sex_m/vifs_basic_model.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "assignment-02/dab.csv",
+      "sha256": "b2e7e8c31819dcffbd617cad31ca6886169017575124079c4720b234ff75d15f",
+      "role": "input",
+      "archive_path": "ML_UJ/zaj_2/dab.csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/zaj_2/dab.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    },
+    {
+      "path": "assignment-05/Cell_output_6_[DW].csv",
+      "sha256": "4455e59f0cb8a35462f2ff802b03b3d9c2baea0ac6d5d176de500f93e4ab0f81",
+      "role": "input",
+      "archive_path": "ML_UJ/zaj_5/Cell output 6 [DW].csv",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/ML_UJ/contents/zaj_5/Cell%20output%206%20%5BDW%5D.csv?ref=e9400ca6cc6e511fc46709b1a2a70b849525ab61"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin_cg.html",
+    "https://jakevdp.github.io/PythonDataScienceHandbook/04.04-density-and-contour-plots.html",
+    "https://towardsdatascience.com/getting-acquainted-with-k-nearest-neighbors-ba0a9ecf354f"
+  ],
+  "providers": [
+    {
+      "kind": "uci",
+      "dataset_id": 1,
+      "path": "data/uci-1.pkl"
+    }
+  ],
+  "generated": []
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "history.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/history.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/history.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "joined.txt",
+      "sha256": "be229a227f2574175841bcc0a9f98eefb17efdedf5c04943342e31a55623b3a4",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/joined.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/joined.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pd1.23/4577.kegg_id_mini",
+      "sha256": "063724f3408fe4b60d3ce618436dd59868de20b478a582200f4089b35e0da231",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/4577.kegg_id_mini",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/4577.kegg_id_mini?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pd1.23/4577.kegg_id_mini.sorted",
+      "sha256": "9c1bf3961f358e58799c8324157b3cfd8b17bdba9b935c2ae26504adf7480197",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/4577.kegg_id_mini.sorted",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/4577.kegg_id_mini.sorted?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pd1.23/4577.protein.aliases.v12.04st.txt",
+      "sha256": "0437ef27e11dfc0d01a491820c55720a6f44bab00a6896f2568a127a25ef3ea1",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/4577.protein.aliases.v12.04st.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/4577.protein.aliases.v12.04st.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pd1.23/allover-blast-NAMv5-res4st",
+      "sha256": "8627b3a14a982929c539c1147de58d079724a7fa5abcc7c400060a638d46dec9",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/allover-blast-NAMv5-res4st",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/allover-blast-NAMv5-res4st?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pd1.23/dane.kegg_mini",
+      "sha256": "697c185d8079abd9ba41ecfeb4b1bc2a20b51718cdf932c5e5cf723514cca650",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/dane.kegg_mini",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/dane.kegg_mini?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pd1.23/dane.kegg_mini.sorted",
+      "sha256": "d81e9b830ee46ca393a9b9456967094f254f88ed51cbed871fef567c4af1aa82",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/dane.kegg_mini.sorted",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/dane.kegg_mini.sorted?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "pd1.23/joined.txt",
+      "sha256": "be229a227f2574175841bcc0a9f98eefb17efdedf5c04943342e31a55623b3a4",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/joined.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/zaliczenie_1-3/pd1.23/joined.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

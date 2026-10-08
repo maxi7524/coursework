@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "Maree-exercises-Turing.pdf",
+      "sha256": "75a5da3cad8d75b2a59c46e04848ee2326ca0373434d790ccbf966f5999fa439",
+      "role": "artifact",
+      "archive_path": "private/other/mathemathical_modeling_summer_2026/thursday/Maree-exercises-Turing.pdf",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/other/mathemathical_modeling_summer_2026/thursday/Maree-exercises-Turing.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://bitbucket.org/stan_maree/grind.git"
+  ],
+  "providers": [],
+  "generated": []
+}

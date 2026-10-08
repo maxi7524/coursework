@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/701_StillsRaw_full.zip",
+      "url": "https://datasets.cms.waikato.ac.nz/ufdl/data/camvid/701_StillsRaw_full.zip",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    },
+    {
+      "path": "data/LabeledApproved_full.zip",
+      "url": "https://datasets.cms.waikato.ac.nz/ufdl/data/camvid/LabeledApproved_full.zip",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    },
+    {
+      "path": "data/label_colors.txt",
+      "url": "https://datasets.cms.waikato.ac.nz/ufdl/data/camvid/label_colors.txt",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://arxiv.org/pdf/1505.04597.pdf",
+    "https://arxiv.org/pdf/1512.03385.pdf",
+    "https://datasets.cms.waikato.ac.nz/ufdl/data/camvid/701_StillsRaw_full.zip",
+    "https://datasets.cms.waikato.ac.nz/ufdl/data/camvid/LabeledApproved_full.zip",
+    "https://datasets.cms.waikato.ac.nz/ufdl/data/camvid/label_colors.txt",
+    "https://en.wikipedia.org/wiki/MNIST_database"
+  ],
+  "providers": [
+    {
+      "kind": "mnist",
+      "path": "data"
+    }
+  ],
+  "generated": []
+}

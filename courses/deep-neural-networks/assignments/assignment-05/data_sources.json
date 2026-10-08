@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/goldfish.zip",
+      "url": "https://www.mimuw.edu.pl/~cygan/goldfish.zip",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "http://www.mimuw.edu.pl/~cygan/welonka.jpg",
+    "https://www.mimuw.edu.pl/~cygan/goldfish.zip"
+  ],
+  "providers": [],
+  "generated": []
+}

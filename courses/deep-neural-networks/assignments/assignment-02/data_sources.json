@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/mnist.npz",
+      "url": "https://s3.amazonaws.com/img-datasets/mnist.npz",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://docs.python.org/3/tutorial/classes.html#generators",
+    "https://drive.google.com/uc?id=1BXZ0u3562N_MqCLcekI-Ens77Kk4LpPm",
+    "https://drive.google.com/uc?id=1_utx_ZGclmCwNttSe40kYA6VHzNocdET",
+    "https://en.wikipedia.org/wiki/MNIST_database",
+    "https://jax.readthedocs.io/en/latest/tutorials.html",
+    "https://s3.amazonaws.com/img-datasets/mnist.npz"
+  ],
+  "providers": [],
+  "generated": []
+}

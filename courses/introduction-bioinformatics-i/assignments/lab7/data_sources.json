@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "blast.xml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/WDB_1/lab7/blast.xml",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/WDB_1/lab7/blast.xml?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

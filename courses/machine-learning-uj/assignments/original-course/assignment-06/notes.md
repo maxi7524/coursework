@@ -1,11 +1,6 @@
-TODO
+# Model selection TODOs
 
-sprawdzić grade_CV (bo to train valid robi automatycznie)
-
-sprawdzić logistic regression penalty czy to dodaje regularyzacje czy to zmienia pomiar metryki 
-do znajdywania parametrów ciągłych można użyc optimize funkcji 
-
-zrobić metode z gridem, zrobić metode z CV optimize 
-
-- będe musiał jeszcze odesłać ten model z cross validation 
-- można poprawic to sprawozdanie na tym ostatnim zadaniu. 
+- Review cross-validation and the automatic training/validation split.
+- Check the logistic regression penalty and distinguish regularization from evaluation metrics.
+- Compare grid search with continuous optimization of hyperparameters.
+- Submit the cross-validated model and improve the final assignment report.

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/mieszkania_test.csv",
+      "url": "https://www.dropbox.com/s/dbrj6sbxb4ayqjz/mieszkania_test.csv?dl=1",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    },
+    {
+      "path": "data/mieszkania.csv",
+      "url": "https://www.dropbox.com/s/zey0gx91pna8irj/mieszkania.csv?dl=1",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://chrisjmccormick.files.wordpress.com/2013/07/10_fold_cv.png",
+    "https://drive.google.com/uc?id=1BXZ0u3562N_MqCLcekI-Ens77Kk4LpPm",
+    "https://drive.google.com/uc?id=1_utx_ZGclmCwNttSe40kYA6VHzNocdET",
+    "https://www.dropbox.com/s/dbrj6sbxb4ayqjz/mieszkania_test.csv?dl=1",
+    "https://www.dropbox.com/s/zey0gx91pna8irj/mieszkania.csv?dl=1"
+  ],
+  "providers": [],
+  "generated": []
+}

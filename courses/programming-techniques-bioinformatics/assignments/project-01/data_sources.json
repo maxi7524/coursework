@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/gios-archive-622.zip",
+      "url": "https://powietrze.gios.gov.pl/pjp/archives/downloadFile/622",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://gitlab.uw.edu.pl/d.rawa/flassilier_rawa_ztp_projekt_3",
+    "https://powietrze.gios.gov.pl",
+    "https://powietrze.gios.gov.pl/pjp/archives/downloadFile/622",
+    "https://powietrze.gios.gov.pl/pjp/content/annual_assessment_air_acceptable_level",
+    "https://www.gov.pl/web/klimat/dbamy-o-jakosc-powietrza-w-polsce-wprowadzamy-zmiany-w-wymaganiach-jakosciowych-dla-paliw-stalych-rozporzadzenie",
+    "https://www.nature.com/articles/s41598-025-17176-x"
+  ],
+  "providers": [],
+  "generated": []
+}

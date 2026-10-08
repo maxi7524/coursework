@@ -1,5 +1,7 @@
 # Numerical Methods Implementation
 
+Legacy assignment documentation. Historical test/performance claims below were not revalidated during migration.
+
 This repository contains implementations of various numerical methods for linear algebra and approximation problems, along with comprehensive testing and visualization tools.
 
 ## Table of Contents

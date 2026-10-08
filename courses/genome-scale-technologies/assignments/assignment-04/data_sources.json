@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "PCA_custom_PC1_PC2.png",
+      "sha256": "fb904ff540f894dd7a2a0a5556e2632bab9a3ba518fbfc1096d7511915ce8a2b",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/PCA_custom_PC1_PC2.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/PCA_custom_PC1_PC2.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "PCA_loadings_PC3_topneg.png",
+      "sha256": "73d8820e368cd54e53e80d3ca8bc64eac876f74410c11aa4ae7cc3e82bf6a49a",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/PCA_loadings_PC3_topneg.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/PCA_loadings_PC3_topneg.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "PCA_loadings_PC3_toppos.png",
+      "sha256": "9e335d166eb521cf163ffbb1abb5c6e6d2f509652232d2ae8c26f44c58e922bb",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/PCA_loadings_PC3_toppos.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/PCA_loadings_PC3_toppos.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "PCA_scree.png",
+      "sha256": "4e497eb2bdfd107eeba3177219e0283ebd813781ee5fb2154fca5c5e76d7ae89",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/PCA_scree.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/PCA_scree.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "PCA_vsd_condition.png",
+      "sha256": "ac6f2b94429d023554966bbf798587183cb4632e4ed8fd455820e274ade47bf7",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/PCA_vsd_condition.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/PCA_vsd_condition.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "PCA_vsd_top1000_condition.png",
+      "sha256": "ac6f2b94429d023554966bbf798587183cb4632e4ed8fd455820e274ade47bf7",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/PCA_vsd_top1000_condition.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/PCA_vsd_top1000_condition.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "PCA_vsd_top100_condition.png",
+      "sha256": "e019094308cd34eebde8cf74e9693fb062e828190829c802bec01de17bb61353",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/PCA_vsd_top100_condition.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/PCA_vsd_top100_condition.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "heatmap_top100.png",
+      "sha256": "fb7207384d637b5608b87ddab32c63987cae30485ae6430637a3bea951d5597a",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/heatmap_top100.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/heatmap_top100.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "heatmap_top100_vst_scaled.png",
+      "sha256": "83e3ce097dc8a9a71a9e8870e9709427d3c2f4f0536cc01881b96cc66bcb843f",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/heatmap_top100_vst_scaled.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/heatmap_top100_vst_scaled.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "sample_distance_vst.png",
+      "sha256": "23bf806cd8aed23ad23dc1260da469aead81b8b1967d8491b82e3e50cca78be2",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/TWSG/zestaw_4/sample_distance_vst.png",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/TWSG/zestaw_4/sample_distance_vst.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://hbctraining.github.io/DGE_workshop/lessons/04_DGE_DESeq2_analysis.html"
+  ],
+  "providers": [],
+  "generated": []
+}

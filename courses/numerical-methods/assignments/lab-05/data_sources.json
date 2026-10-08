@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "papers/lecture24.pdf",
+      "sha256": "399a05588bae96dc84a5fcfb2ab8bf842fff12d5920ef13767e20808a745ba7f",
+      "role": "artifact",
+      "archive_path": "numerical_methods_lab05/papers/lecture24.pdf",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical_methods_lab05/contents/papers/lecture24.pdf?ref=b178a3de8015faa4527c79066e73a5e86902a214"
+    },
+    {
+      "path": "papers/scipy_quad_explained.pdf",
+      "sha256": "9aee10f7d38dd4fbe99d308bb4ddab36b64c4bb2bebbe488171d177935244d2a",
+      "role": "artifact",
+      "archive_path": "numerical_methods_lab05/papers/scipy_quad_explained.pdf",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical_methods_lab05/contents/papers/scipy_quad_explained.pdf?ref=b178a3de8015faa4527c79066e73a5e86902a214"
+    },
+    {
+      "path": "papers/zagadnienia_numeryczne.041.pdf",
+      "sha256": "5b7c6ef7d5698792bf06dd13e985cc7d8dd057baa7ecc5cdab6d9b531859c596",
+      "role": "artifact",
+      "archive_path": "numerical_methods_lab05/papers/zagadnienia_numeryczne.041.pdf",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical_methods_lab05/contents/papers/zagadnienia_numeryczne.041.pdf?ref=b178a3de8015faa4527c79066e73a5e86902a214"
+    },
+    {
+      "path": "raport_5.pdf",
+      "sha256": "a078760d81849b54e4a321256f33860f5d42f778ccfa39107be79302610fe0a1",
+      "role": "artifact",
+      "archive_path": "numerical_methods_lab05/raport_5.pdf",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/numerical_methods_lab05/contents/raport_5.pdf?ref=b178a3de8015faa4527c79066e73a5e86902a214"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

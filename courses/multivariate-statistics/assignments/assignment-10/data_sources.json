@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/butterfly.dat",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/butterfly.dat",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    },
+    {
+      "path": "data/mmreg.csv",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/mmreg.csv",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    },
+    {
+      "path": "data/palmer_penguins.csv",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/palmer_penguins.csv",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/butterfly.dat",
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/mmreg.csv",
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/palmer_penguins.csv"
+  ],
+  "providers": [],
+  "generated": []
+}

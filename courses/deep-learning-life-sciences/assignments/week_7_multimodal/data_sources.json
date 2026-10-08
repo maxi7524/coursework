@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "models/CLL.hdf5",
+      "sha256": "4bf76f1479e3f81e117d93ab25be12145766ca48f56f93e74b398b444eb92ba8",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/DLILS/week_7_multimodal/models/CLL.hdf5",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/DLILS/week_7_multimodal/models/CLL.hdf5?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "models/mefisto.hdf5",
+      "sha256": "70ac60898f88cb8efaa854518d2b4d4fdd7e6a157d885b44f9af7affa85034be",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/DLILS/week_7_multimodal/models/mefisto.hdf5",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/DLILS/week_7_multimodal/models/mefisto.hdf5?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/sample_metadata.txt",
+      "url": "ftp://ftp.ebi.ac.uk/pub/databases/mofa/cll_vignette/sample_metadata.txt",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [
+    "data/evodevo.csv: absent from source snapshot; inspect the original input preparation cells"
+  ],
+  "source_references": [
+    "ftp://ftp.ebi.ac.uk/pub/databases/mofa/cll_vignette/sample_metadata.txt",
+    "http://bioconductor.org/packages/release/data/experiment/html/MOFAdata.html",
+    "https://figshare.com/s/242916198fde3353f3e6",
+    "https://github.com/bioFAM/mofax",
+    "https://link.springer.com/article/10.1186/s13059-021-02577-8",
+    "https://muon-tutorials.readthedocs.io/en/latest/CLL.html",
+    "https://muon-tutorials.readthedocs.io/en/latest/mefisto/1-MEFISTO-evodevo.html",
+    "https://muon.readthedocs.io/en/latest/notebooks/quickstart_mudata.html",
+    "https://onlinelibrary.wiley.com/doi/abs/10.1111/ijlh.13167",
+    "https://www.huber.embl.de/pub/pdf/Dietrich2018.pdf",
+    "https://www.nature.com/articles/2404220",
+    "https://www.nature.com/articles/2404867",
+    "https://www.spandidos-publications.com/mmr/21/3/1285"
+  ],
+  "providers": [],
+  "generated": []
+}

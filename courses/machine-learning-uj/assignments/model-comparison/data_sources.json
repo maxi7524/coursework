@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resources": [],
+  "unresolved": [],
+  "source_references": [
+    "https://scikit-learn.org/1.5/auto_examples/preprocessing/plot_all_scaling.html?utm_source=chatgpt.com",
+    "https://users.ece.utexas.edu/~cmcaram/pubs/XuCaramanisMannor.SVM1.pdf?utm_source=chatgpt.com"
+  ],
+  "providers": [
+    {
+      "kind": "uci",
+      "dataset_id": 519,
+      "path": "data/uci-519.pkl"
+    }
+  ],
+  "generated": []
+}

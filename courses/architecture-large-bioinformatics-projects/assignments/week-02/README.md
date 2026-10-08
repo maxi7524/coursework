@@ -12,9 +12,9 @@ The script processes FASTA sequences and splits them into fixed sized (`--size`)
 
 #### Run
 To run the script, use the following base command:
-'''shell
+```bash
 python3 fasta_splitter.py <input_paths...> <output_path>
-'''
+```
 Available Flags:
 - `-m`, `--max_length`: Maximum sequence length (longer sequences will be skipped). Set to `0` for no limit (default: `0`).
 - `-s`, `--size`: Number of sequences to include in a single output file chunk (default: `20`).
@@ -33,9 +33,9 @@ The script takes a target output folder and a single `.fasta` file, processing i
 
 #### Run
 To run the script, use the following base command:
-'''shell
+```bash
 python3 predictESM.py <fasta_file> <output_folder>
-'''
+```
 *(Note: This script uses positional arguments for the input file and output directory, and does not require additional flags).*
 
 ***
@@ -50,9 +50,9 @@ This script acts as a pipeline manager that scans for unprocessed FASTA files, t
 
 #### Run
 To run the script, use the following base command:
-'''shell
+```bash
 python3 scan_fasta4ESM.py <input_folder> <output_folder>
-'''
+```
 Available Flags:
 - `--mode`: Determines the post-processing behavior once all files are marked as done.
   - `separate` (default): Leaves the processed `.pdb` files and individual logs in their respective part folders.
@@ -60,95 +60,18 @@ Available Flags:
 
 *** 
 
-# Ćwiczenia 
 
-## Do prowadzącego
+## Original implementation choices
 
-### Odniesienie się do uwag z poprzedniego zadania:
-#### uwaga 1:
+Blank lines between FASTA records were removed following instructor feedback. Dataset names remain in chunk filenames to make logs identifiable. Each dataset separates raw GenPept records, cleaned FASTA, chunks and predicted structures under `data/<dataset>/`.
 
-"nie ma potrzeby nowej lini miedzy sekwencja a nastepnym headerem"
-
-Przerwa między sekwencjami była świadomym wyborem w celu zwiększenia czytelności, przy minimalnym zwiększeniu rozmiaru pliku. Po namyśle zgadzam się że jest nie potrzebna - usunąłem ją. 
-
-
-### Zmiany w implementacji (względem instrukcji) 
-Względem uwagi z poprzednich ćwiczeń zamieszczam ten żeby móc otrzymać komentarz dotyczący moich zmian w implementacji. 
-
-#### Struktura folderów:
-oryginalnie:
-```shell
-├── (pliki z sekwencjami w formacie .gp) 
-├── (pliki z sekwencjami w formacie .fasta)
-├── fastas (folder z )
-│   ├── (rozdzielone pliki .fasta - fasta_splitter.py output)
-│   ├── (wyniki po predictESM.py)
+```bash
+python download_data.py
+python gp_to_fasta.py data/mycoplasmoides_genitalium_G37/raw data/mycoplasmoides_genitalium_G37/clean_fasta --id locus --no_genename
+python fasta_splitter.py -m 400 -s 20 data/mycoplasmoides_genitalium_G37/clean_fasta data/mycoplasmoides_genitalium_G37/separated
+python scan_fasta4ESM.py data/mycoplasmoides_genitalium_G37/separated data/mycoplasmoides_genitalium_G37/4ESM
 ```
 
-Moja konwencja 
-```shell
-├── (logi + skrypty - one powinny iść do osobnego folderu)
-├── data
-│   ├── nazwa zbioru danych ('mycoplasmoides_genitalium_G37' | 'hsp23')
-│   │   ├── raw (surowe pliki w formacie .gp - można zebrać kilka) 
-│   │   ├── clean_fasta (wyniki gp_to_fasta.py)
-│   │   ├── separated (wyniki fasta_splitter.py)
-│   │   ├── 4ESM (wyniki predictESM.py)
-│   │   │   ├── folder dla każdego pliku z separated osobno z odpowiadającym logiem
-```
+Repeat for `hsp23` with the corresponding dataset directory. The historical final short chunk was merged manually. Scheduling originally used course-assigned minute slots; configure any scheduler for the current machine rather than copying old absolute paths.
 
-#### Nazwy plików
-W nazwach pliku zostawiłem skróconą nazwę żeby łatwiej nawigować w logach (przypadek wielu różnych zestawów sekwencji, ponieważ w takim trybie też można ten pipeline uruchomić). Można oczywiście to usunąć, ale ponieważ nie mamy tutaj do czynienia z dużą ilością sekwencji to uznałem że nei jest to duża strata pamięci.
-
-## Wywołania 
-
-### Zmiany względem instrukcji
-Musiałem nałożyć dwie instrukcje pobierania, starałem się to zrobić na jak najkrótszym interwale czasu (8-12), oraz w okresach gdzie domyślnie inni studenci nie powinni zajmować czasu (23, 53). Wynikało to z konieczności wyjazdu i braku możliwości stałego uruchomienia komputera oraz możliwość powrotu dopiero w niedziele późnym wieczorem. 
-
-### Część 1-3 
-Download data:
-```shell
-wget -P data/mycoplasmoides_genitalium_G37/raw  http://gp2fasta.mlhpc.org/Mycoplasmoides_genitalium_G37.gp
-```
-Transform download `gp` into `fasta`:
-```shell
-python3 gp_to_fasta.py data/mycoplasmoides_genitalium_G37/raw data/mycoplasmoides_genitalium_G37/clean_fasta --id locus --no_genename
-```
-
-Split data
-```shell
-python3 fasta_splitter.py -m 400 -s 20 data/mycoplasmoides_genitalium_G37/clean_fasta data/mycoplasmoides_genitalium_G37/separated
-```
-
-Crontab command (album last number is 3) 
-```shell
-3,33 * * * * /home/maxi7524/.pyenv/shims/python3 /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/scan_fasta4ESM.py /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/data/mycoplasmoides_genitalium_G37/separated/ /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/data/mycoplasmoides_genitalium_G37/4ESM/ >> /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/cron_general_mycoplasmoides.log 2>&1
-```
-
-### Część 4 
-Download data:
-```shell
-wget -P data/hsp23/raw  http://gp2fasta.mlhpc.org/hsp23.gp
-```
-
-Transform download `gp` into `fasta`:
-```shell
-python3 gp_to_fasta.py data/hsp23/raw data/hsp23/clean_fasta --id locus --no_genename
-```
-
-Split data
-```shell
-python3 fasta_splitter.py data/hsp23/clean_fasta data/hsp23/separated --max_length 400 --size 20
-```
-Last file is only 2 sequences long so i merged it with the last one
-
-
-Crontab command
-```shell
-23,53 * * * * /home/maxi7524/.pyenv/shims/python3 /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/scan_fasta4ESM.py /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/separated/ /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/ >> /home/maxi7524/repositories/private/semester_2025-2026_summer/ADPB/week_2/cron_general_hsp.log 2>&1
-```
-- Później został zmieniony na 3, 33 (domyślnie dla albumu) 
-
-
-
-
+[Input preparation](DATA.md).

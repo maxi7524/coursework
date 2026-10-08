@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "deterministic_probe.txt",
+      "sha256": "35836795f9a62b0e557ea664c5e2f9258f98d3dc0f8c131a3bdbacea533269ce",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/MDSB/small_project_1/deterministic_probe.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/MDSB/small_project_1/deterministic_probe.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "stochastic_probe.txt",
+      "sha256": "ab5bb14ad317ad5ad143e9c909336c0e2ed4efdd809ecb1f7d373c7429c4a566",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/MDSB/small_project_1/stochastic_probe.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/MDSB/small_project_1/stochastic_probe.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    }
+  ],
+  "unresolved": [],
+  "source_references": [],
+  "providers": [],
+  "generated": []
+}

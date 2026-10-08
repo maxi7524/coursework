@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resources": [],
+  "unresolved": [],
+  "source_references": [
+    "https://drive.google.com/uc?id=1BXZ0u3562N_MqCLcekI-Ens77Kk4LpPm",
+    "https://drive.google.com/uc?id=1_utx_ZGclmCwNttSe40kYA6VHzNocdET",
+    "https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html"
+  ],
+  "providers": [
+    {
+      "kind": "mnist",
+      "path": "data"
+    }
+  ],
+  "generated": []
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "assignment.html",
+      "sha256": "cd025b0c853dd0eb2059c421e85421c93b3bf33da3f2e3f17546f9312480d3ed",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assignment 2/assignment.html",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assignment%202/assignment.html?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/color.stimuli.rda",
+      "sha256": "5ec8017ae46dd1a8e599212a547cfd064b3ff59b51e6722883958d997f37285f",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assignment 2/data/color.stimuli.rda",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assignment%202/data/color.stimuli.rda?ref=12389f5e44b27308b8727c19ec60533b806f704f",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/color.stimuli.rda"
+    },
+    {
+      "path": "data/pendigits.txt",
+      "sha256": "589c8e4b450f9d784d1a63ee1b099d90f00ddaf12ebf82974353c90ab0996e8e",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assignment 2/data/pendigits.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/pendigits.txt",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assignment%202/data/pendigits.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/primate.scapulae.txt",
+      "sha256": "9b2a0c279c62be7a8872b11f808212ca2aa2f86289661d6d70942becccfa9088",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assignment 2/data/primate.scapulae.txt",
+      "availability": "pinned-original-repository-and-local-archive",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/primate.scapulae.txt",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assignment%202/data/primate.scapulae.txt?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/wdbc.rda",
+      "sha256": "6e04cc775aafe9ebb8f2c81c698523cc3ffd56aef70281b2a2b6698a8e56a5f8",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assignment 2/data/wdbc.rda",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assignment%202/data/wdbc.rda?ref=12389f5e44b27308b8727c19ec60533b806f704f",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/wdbc.rda"
+    },
+    {
+      "path": "25Tutorial2.pdf",
+      "sha256": "bef524408aa04f0ebf52aefc9400f32d4f59c407523b66aea9b9aff22e379761",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/zestaw 2/25Tutorial2.pdf",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/zestaw%202/25Tutorial2.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/ozone.csv",
+      "url": "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/ozone.csv",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/color.stimuli.rda",
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/ozone.csv",
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/pendigits.txt",
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/primate.scapulae.txt",
+    "https://www.mimuw.edu.pl/~noble/courses/MultivariateStatistics/data/wdbc.rda"
+  ],
+  "providers": [],
+  "generated": []
+}

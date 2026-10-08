@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "cron_general_hsp.log",
+      "sha256": "3a7bc6bd00939cd8ff9c1f164a00b9b9398af2f3bab8f1a5b91c8f00e2ab5107",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/cron_general_hsp.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/cron_general_hsp.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "cron_general_mycoplasmoides.log",
+      "sha256": "063c7ab7d7c0597e237f831097c88339eabda1751547095709d4d0bb97793ccf",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/cron_general_mycoplasmoides.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/cron_general_mycoplasmoides.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_000-019/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_000-019/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_000-019/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_000-019/predict.log",
+      "sha256": "d416c5efa69bf3290d9aa22bdfdee44f0fd2df6634ddd4ea6d87151939309a4f",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_000-019/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_000-019/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_020-039/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_020-039/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_020-039/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_020-039/predict.log",
+      "sha256": "701ed07e4825cd7009a299568a7599ce49ce5805cb9486f82dd854320a5c50fb",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_020-039/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_020-039/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_040-059/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_040-059/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_040-059/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_040-059/predict.log",
+      "sha256": "9e88fd2b3e9be82a5318c86a842bc9481e6a538aeac84cd814249af6d7a08233",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_040-059/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_040-059/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_060-079/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_060-079/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_060-079/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_060-079/predict.log",
+      "sha256": "82fee356e2f1ef3fe56ed9f0001fb4ee5e4c813d2111f8d8d19f2311d1853ba9",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_060-079/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_060-079/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_080-099/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_080-099/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_080-099/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_080-099/predict.log",
+      "sha256": "d35582f751e8cddcfff3572b0f79d1c2e94fde49d27fe98ef3b91b3690587fe5",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_080-099/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_080-099/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_100-119/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_100-119/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_100-119/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_100-119/predict.log",
+      "sha256": "e0440a78fa60af6009a89a63218e3ffad08d89057d0c6c9b201773a07e7e2db3",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_100-119/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_100-119/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_120-139/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_120-139/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_120-139/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_120-139/predict.log",
+      "sha256": "91bfbfbdf3c1eea588881953dcac7eba2141b7812413e0c3dc1edd9c176dbf26",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_120-139/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_120-139/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_140-159/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_140-159/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_140-159/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_140-159/predict.log",
+      "sha256": "9dede097f8d10b192532e8e7af2345a04aa428c0b35fed53b9ee0745f31d8c42",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_140-159/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_140-159/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_160-179/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_160-179/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_160-179/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_160-179/predict.log",
+      "sha256": "216aa4b2c6493a60df980e8202d7bdd68ef0b86e63b9e9865cb93271bc59437e",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_160-179/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_160-179/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_180-199/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_180-199/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_180-199/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_180-199/predict.log",
+      "sha256": "c570d68ae98190e5706dd413251ae37cba6f80676f55c2e27d8f530eb5883686",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_180-199/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_180-199/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_200-219/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_200-219/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_200-219/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_200-219/predict.log",
+      "sha256": "2d104053d8cdb1e178cf91b8a386fa30aa66108dd95a7df76e3223b997f6f91a",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_200-219/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_200-219/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_220-239/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_220-239/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_220-239/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_220-239/predict.log",
+      "sha256": "cc04f5a81717f508ae075c12a6cdd8d0c50f843a9fd05a461310ab3c15033d8f",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_220-239/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_220-239/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_240-259/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_240-259/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_240-259/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_240-259/predict.log",
+      "sha256": "9f19c740c9cf60ac5e0d351e4571f76887770e78304c12a6f02d3f4b35ef77a4",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_240-259/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_240-259/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_260-279/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_260-279/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_260-279/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_260-279/predict.log",
+      "sha256": "a3d226e25437675bd49696440c7488ec9e20682fe145638ff0e6520758295364",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_260-279/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_260-279/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_280-299/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_280-299/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_280-299/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_280-299/predict.log",
+      "sha256": "7e00a6443b847d355840c832389333d3f2d63b4850f4a01ffefeea22f0b23bea",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_280-299/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_280-299/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_300-319/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_300-319/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_300-319/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_300-319/predict.log",
+      "sha256": "9021d25606712aa39d8745c5ef2918891727f1d5ff78ed330d73a9311f3bb3e2",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_300-319/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_300-319/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_320-339/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_320-339/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_320-339/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_320-339/predict.log",
+      "sha256": "f8096ed70a4e819dd525fa2927c5532981b7819bfedd1501b958e2a49035aa83",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_320-339/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_320-339/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_340-359/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_340-359/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_340-359/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_340-359/predict.log",
+      "sha256": "4aebcc491473364fe0944ea2f16bcbd2d1fbccf5a7cadb3bc36041282fb5cf25",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_340-359/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_340-359/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_360-379/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_360-379/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_360-379/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_360-379/predict.log",
+      "sha256": "e0392cd12bfa62b328d6964e6e045b2d2cdf36a4b38d958c97868391d6b345cb",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_360-379/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_360-379/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_380-399/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_380-399/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_380-399/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_380-399/predict.log",
+      "sha256": "7bccf6d5f85849e56b662f94f32abe3a97e9d6f0631267f40cb4b62d64095818",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_380-399/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_380-399/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_400-419/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_400-419/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_400-419/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_400-419/predict.log",
+      "sha256": "051328452cda752da2934b329793d59d45d75b5563c4afa8ce90dc2806c78c55",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_400-419/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_400-419/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_420-432/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_420-432/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_420-432/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_420-432/predict.log",
+      "sha256": "feeee260f3004957a9b68cf54c213696be6590e32a69f96383b249d034698a6b",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_420-432/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/4ESM/Mycoplasmoides_genitalium_G37_420-432/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/Mycgen/raw/Mycoplasmoides_genitalium_G37.gp",
+      "sha256": "6b936fdfad11a438f850e0c5e3f4b71b2f6cff27114644dde60d91a3fee4f957",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/raw/Mycoplasmoides_genitalium_G37.gp",
+      "availability": "pinned-original-repository-and-local-archive",
+      "url": "http://gp2fasta.mlhpc.org/Mycoplasmoides_genitalium_G37.gp",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/Mycgen/raw/Mycoplasmoides_genitalium_G37.gp?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_000-019/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_000-019/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_000-019/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_000-019/predict.log",
+      "sha256": "11cff638c9af42d136c1b31f835b645f4bd05c90963cc084ec54ba94f0a54bec",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_000-019/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_000-019/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_020-039/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_020-039/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_020-039/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_020-039/predict.log",
+      "sha256": "994cff56cbe91862d121f32cb284732bb79ecb1c3b85640adc3b11818d18f5ad",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_020-039/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_020-039/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_040-059/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_040-059/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_040-059/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_040-059/predict.log",
+      "sha256": "4a6dff7bdc474ad4db6c52ca68b4dc87768193de6231c3b19cc2c11f43ff29bc",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_040-059/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_040-059/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_060-079/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_060-079/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_060-079/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_060-079/predict.log",
+      "sha256": "948726d19a0f062b1afdb76c765b00902fbab0e1e10c24862696846e4f620c60",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_060-079/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_060-079/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_080-099/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_080-099/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_080-099/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_080-099/predict.log",
+      "sha256": "ef04ceb4dd66c521ead4dc2f3c5453ddd89b195d3aed2aab667e25f552f88c7d",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_080-099/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_080-099/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_100-119/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_100-119/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_100-119/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_100-119/predict.log",
+      "sha256": "2c2714ebd74cfb7025a027fa1f441e72b1507328d72a5e43318059aef64f0bd4",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_100-119/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_100-119/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_120-139/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_120-139/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_120-139/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_120-139/predict.log",
+      "sha256": "09d6f3cc54e3581518460d7101487edf939820080b4941f7378a0085de148e35",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_120-139/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_120-139/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_140-159/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_140-159/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_140-159/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_140-159/predict.log",
+      "sha256": "48b308ef426beaa5f954babd1ac53dbb449b8351ad479fbfdf4b91017b2acdb1",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_140-159/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_140-159/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_160-179/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_160-179/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_160-179/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_160-179/predict.log",
+      "sha256": "d922c2c20f1206b9bcb9844b6c119f3f8b5a62b67acb359137ad7a4721090402",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_160-179/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_160-179/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_180-199/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_180-199/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_180-199/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_180-199/predict.log",
+      "sha256": "ef84cbb3fa6b9e4760d250de9312f47c5449f44f17e18e1c0e5e94d40e7eceff",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_180-199/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_180-199/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_200-221/.done",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_200-221/.done",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_200-221/.done?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/4ESM/hsp23_200-221/predict.log",
+      "sha256": "c5a3aa317fc72cbfd498a4c021d1090621e1aa0b9dd68ff3418699ab039c8a6c",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_200-221/predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/4ESM/hsp23_200-221/predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/hsp23/raw/hsp23.gp",
+      "sha256": "fd308f403a07d1ef8ece998eba41a61df6b4c74b665befaf76f2e91413aea25d",
+      "role": "input",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/hsp23/raw/hsp23.gp",
+      "availability": "pinned-original-repository-and-local-archive",
+      "url": "http://gp2fasta.mlhpc.org/hsp23.gp",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/hsp23/raw/hsp23.gp?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/test_part_results/main_predict.log",
+      "sha256": "d1a79c62e4e6263db38b23d8fbb6a14b5faab8403551aa06c32eab59e3fcaa30",
+      "role": "artifact",
+      "archive_path": "private/semester_2025-2026_summer/ADPB/week_2/data/test_part_results/main_predict.log",
+      "availability": "pinned-original-repository-and-local-archive",
+      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_2/data/test_part_results/main_predict.log?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/CP014940.1.fasta",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab2/CP014940.1.fasta",
+      "role": "input",
+      "availability": "external-url-not-verified",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "source_references": [
+    "http://gp2fasta.mlhpc.org/Mycoplasmoides_genitalium_G37.gp",
+    "http://gp2fasta.mlhpc.org/hsp23.gp",
+    "https://api.esmatlas.com/foldSequence/v1/pdb/`",
+    "https://en.wikipedia.org/wiki/Cron",
+    "https://github.com/facebookresearch/esm",
+    "https://www.jcvi.org/research/first-minimal-synthetic-bacterial-cell",
+    "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab2/CP014940.1.fasta",
+    "https://www.ncbi.nlm.nih.gov/search/all/?term=CP014940.1",
+    "https://www.science.org/doi/10.1126/science.aad6253"
+  ],
+  "providers": [],
+  "generated": []
+}

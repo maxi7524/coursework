@@ -1,16 +1,16 @@
-# Raport Analizy Zanieczyszczenia PM2.5 i Publikacji Naukowych
+# PM2.5 pollution and scientific publications
 
-Poniższy raport zawiera analizę stężeń PM2.5 w Polsce oraz przegląd publikacji naukowych poświęconych zagadnieniom zanieczyszczenia powietrza.
+Historical report: PM2.5 concentrations in Poland and related scientific publications. Results are retained without scientific revalidation.
 
-## Wyniki Analiz 
+## Analysis results
 
-### Rok 2019 
+### Year 2019
 
-#### Analiza Stężeń PM2.5 
+#### PM2.5 concentrations
 
-Tabela poniżej przedstawia 5 stacji pomiarowych z największą liczbą przekroczeń dziennych normą PM2.5 (wartość 15 µg/m³) w roku 2019:
+Five monitoring stations listed by the original report, using a daily PM2.5 threshold of 15 µg/m³, for 2019:
 
-| Nazwa stacji   |   Liczba przekroczonych dni |
+| Station   |   Days above threshold |
 |:---------------|----------------------------:|
 | DsDusznikMOB   |                         176 |
 | DsJaworMOB     |                         155 |
@@ -18,18 +18,18 @@ Tabela poniżej przedstawia 5 stacji pomiarowych z największą liczbą przekroc
 | DsWrocAlWisn   |                         180 |
 | DsWrocWybCon   |                         155 |
 
-#### Analiza Publikacji Naukowych 
+#### Scientific publications
 
-Poniżej znajduje się podsumowanie publikacji naukowych dotyczących zanieczyszczenia powietrza.
+Summary of publications concerning air pollution.
 
-**Liczba publikacji w wybranych latach:**
+**Publication counts by year:**
 
 |   year |   n_papers |
 |-------:|-----------:|
 |   2019 |        418 |
 |   2024 |        665 |
 
-**10 głównych czasopism publikujących artykuły na temat zanieczyszczenia powietrza:**
+**Ten journals represented in the publication search:**
 
 | journal                                                           |   n_papers |
 |:------------------------------------------------------------------|-----------:|
@@ -44,13 +44,13 @@ Poniżej znajduje się podsumowanie publikacji naukowych dotyczących zanieczysz
 | Environmental health perspectives                                 |         26 |
 | Environmental research                                            |         25 |
 
-### Rok 2024 
+### Year 2024
 
-#### Analiza Stężeń PM2.5 
+#### PM2.5 concentrations
 
-Tabela poniżej przedstawia 5 stacji pomiarowych z największą liczbą przekroczeń dziennych normą PM2.5 (wartość 15 µg/m³) w roku 2024:
+Five monitoring stations listed by the original report, using a daily PM2.5 threshold of 15 µg/m³, for 2024:
 
-| Nazwa stacji    |   Liczba przekroczonych dni |
+| Station    |   Days above threshold |
 |:----------------|----------------------------:|
 | DsChojnowMalMOB |                         170 |
 | DsJelGorOgin    |                         109 |
@@ -58,18 +58,18 @@ Tabela poniżej przedstawia 5 stacji pomiarowych z największą liczbą przekroc
 | DsKudowaSzkoMOB |                          98 |
 | DsWrocAlWisn    |                         134 |
 
-#### Analiza Publikacji Naukowych 
+#### Scientific publications
 
-Poniżej znajduje się podsumowanie publikacji naukowych dotyczących zanieczyszczenia powietrza.
+Summary of publications concerning air pollution.
 
-**Liczba publikacji w wybranych latach:**
+**Publication counts by year:**
 
 |   year |   n_papers |
 |-------:|-----------:|
 |   2019 |        418 |
 |   2024 |        665 |
 
-**10 głównych czasopism publikujących artykuły na temat zanieczyszczenia powietrza:**
+**Ten journals represented in the publication search:**
 
 | journal                                                           |   n_papers |
 |:------------------------------------------------------------------|-----------:|
@@ -84,17 +84,16 @@ Poniżej znajduje się podsumowanie publikacji naukowych dotyczących zanieczysz
 | Environmental health perspectives                                 |         26 |
 | Environmental research                                            |         25 |
 
-## Analizy Łączne 
+## Combined analyses
 
-### Trend Stężeń PM2.5 w Wybranych Miastach 
+### PM2.5 trends in selected cities
 
-Poniższy wykres pokazuje zmianę stężeń PM2.5 w poszczególnych miastach w latach 2014-2024:
+The historical figure shows city-level PM2.5 concentrations in 2014–2024.
 
-![PM2.5 trend w miastach](report_files/plot_years_trend_cities.png)
+Figure: `report_files/plot_years_trend_cities.png` (restore with the assignment downloader and `--include-artifacts`).
 
-### Trend Publikacji Naukowych 
+### Publication trends
 
-Poniższy wykres ilustruje liczbę publikacji na temat zanieczyszczenia powietrza w poszczególnych latach:
+The historical figure shows publication counts by year.
 
-![Trend publikacji naukowych](report_files/papers_per_year.png)
-
+Figure: `report_files/papers_per_year.png` (restore with `--include-artifacts`).
