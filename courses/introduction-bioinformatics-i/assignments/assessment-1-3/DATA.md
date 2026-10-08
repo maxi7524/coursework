@@ -1,30 +1,15 @@
 # Input data
 
-```bash
-python download_data.py --list
-python download_data.py
-```
-
-Run the script by path from any directory. Outputs are relative to this assignment and ignored by Git. Matching checksums are reused; failed downloads preserve existing files.
+`python download_data.py` · [Preparation options](../../../../DATA_POLICY.md) · [Sources and checksums](data_sources.json)
 
 | Input | Availability |
 |---|---|
-| `history.txt` | pinned-original-repository-and-local-archive |
-| `joined.txt` | pinned-original-repository-and-local-archive |
-| `pd1.23/4577.kegg_id_mini` | pinned-original-repository-and-local-archive |
-| `pd1.23/4577.kegg_id_mini.sorted` | pinned-original-repository-and-local-archive |
-| `pd1.23/4577.protein.aliases.v12.04st.txt` | pinned-original-repository-and-local-archive |
-| `pd1.23/allover-blast-NAMv5-res4st` | pinned-original-repository-and-local-archive |
-| `pd1.23/dane.kegg_mini` | pinned-original-repository-and-local-archive |
-| `pd1.23/dane.kegg_mini.sorted` | pinned-original-repository-and-local-archive |
-| `pd1.23/joined.txt` | pinned-original-repository-and-local-archive |
-
-## Exact archived inputs
-
-```bash
-python download_data.py --archive-root /path/to/github-organization/migration-archive
-```
-
-Keep this local archive when deleting original repositories. The GitHub fallback uses authenticated `gh` and stops working after source deletion. Add `--include-artifacts` to restore historical models, reports and figures. Providers use existing course dependencies (`torchvision` or `ucimlrepo`); they do not install or upgrade packages. UCI providers cache the original dataset object as pickle; notebooks retain their original fetch/preprocessing cells. Only load trusted local pickle files.
-
-Independent URLs without a checksum are not certified as reproducing historical bytes. Google Drive or other hosts may require access or interactive confirmation; HTML responses are rejected. Full notebook execution and scientific modernization are a later stage.
+| `history.txt` | Archive + original repository |
+| `joined.txt` | Archive + original repository |
+| `pd1.23/4577.kegg_id_mini` | Archive + original repository |
+| `pd1.23/4577.kegg_id_mini.sorted` | Archive + original repository |
+| `pd1.23/4577.protein.aliases.v12.04st.txt` | Archive + original repository |
+| `pd1.23/allover-blast-NAMv5-res4st` | Archive + original repository |
+| `pd1.23/dane.kegg_mini` | Archive + original repository |
+| `pd1.23/dane.kegg_mini.sorted` | Archive + original repository |
+| `pd1.23/joined.txt` | Archive + original repository |
