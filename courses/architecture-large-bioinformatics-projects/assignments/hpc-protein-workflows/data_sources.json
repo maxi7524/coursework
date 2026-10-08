@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "image-1.png",
+      "sha256": "173977b459bd97b2d50d7adc1c6458068b060708a3e92a383cba8b6f9cec5205",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/image-1.png",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/image-1.png?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "image-4.png",
+      "sha256": "663b6c03e858276e5e758edfd7eafc73b48766627fffb4a858b7cb52e0af74b5",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/image-4.png",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/image-4.png?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "image-5.png",
+      "sha256": "d8c826ca8a4e686c804663f264c3f0c870f65d0d755186b18f09c1fb94ee5a75",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/image-5.png",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/image-5.png?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "image.png",
+      "sha256": "9276e391726ea7498341fe505beb02f338a5f71b576eb84916928595495ae4bb",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/image.png",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/image.png?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "logs/ProtBert/all",
+      "sha256": "3fe2c2f6f4c71b6cd6451ab6cf939c5b56b7e9d8806b9de2b8a4bb64e680f86a",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/logs/ProtBert/all",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/logs/ProtBert/all?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "logs/iupred/long/all",
+      "sha256": "e7d821e7b2cfd8d639c17a2d1b0a0e077808e613b49689bfdc72df5b345009a2",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/logs/iupred/long/all",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/logs/iupred/long/all?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "logs/iupred/short/all",
+      "sha256": "f5fe7ef2950b1ac379e46296e048a673d576a39746422b3bada11a43d1e34d80",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/logs/iupred/short/all",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/logs/iupred/short/all?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/ProtBert_SHS_results.csv",
+      "sha256": "6b4d3209d54c4009ddde1910cd70b1162a49a5cb34b6107fba1889467af22ec5",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/ProtBert_SHS_results.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/ProtBert_SHS_results.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_ProtBert_E_coli_cpu.csv",
+      "sha256": "7d2c9360dc8494de7d33dcba2d339fb1b4c0a3fdc290294ca9bd94e61668ab82",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_ProtBert_E_coli_cpu.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_ProtBert_E_coli_cpu.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_ProtBert_E_coli_gpu.csv",
+      "sha256": "188d5a903fb7e173e07b8ed6e60327103ce32b12ea4a64ee619e5301df3de9c4",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_ProtBert_E_coli_gpu.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_ProtBert_E_coli_gpu.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_ProtBert_H_sapiens_gpu.csv",
+      "sha256": "b9d31089fac53311042015cf88f0924e8b34d1e56afe053834a429c4e186242d",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_ProtBert_H_sapiens_gpu.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_ProtBert_H_sapiens_gpu.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_ProtBert_SwissProt_cpu.csv",
+      "sha256": "20f2af8fe1422502440d1c629ec2ab289504c75089b8e38d728c8993fb2afc48",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_ProtBert_SwissProt_cpu.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_ProtBert_SwissProt_cpu.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_ProtBert_SwissProt_gpu.csv",
+      "sha256": "16e127b2c72f0028f678c48a221bd651b9f136fb83a58aaf46e271eee5d20fe5",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_ProtBert_SwissProt_gpu.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_ProtBert_SwissProt_gpu.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_iupred_E_coli_long.csv",
+      "sha256": "591c85e969c9747bc814ff7b87474219f0274bf2fcf553340d1aaa3954293603",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_iupred_E_coli_long.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_iupred_E_coli_long.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_iupred_E_coli_short.csv",
+      "sha256": "f92126f27f3aefcbac796ecf1fcdfb9e7ecbdc6284c445ea816dd8f5d268032b",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_iupred_E_coli_short.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_iupred_E_coli_short.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_iupred_H_sapiens_long.csv",
+      "sha256": "916dd7a0db6e4b9d4f82a103ad813a1212fba57c1b924256466151f97c8c4e99",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_iupred_H_sapiens_long.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_iupred_H_sapiens_long.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_iupred_H_sapiens_short.csv",
+      "sha256": "130bf0c1fb5f844f94fb8eeb79fcaec1bdf3cb7ec16c7bdbeddf7068d2522dbb",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_iupred_H_sapiens_short.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_iupred_H_sapiens_short.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_iupred_SwissProt_long.csv",
+      "sha256": "e9baba98e6e500446d4c43f48476bc3c2724d371aad716faf643abcc545e30fb",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_iupred_SwissProt_long.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_iupred_SwissProt_long.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/cost_estimation/time_estimation_iupred_SwissProt_short.csv",
+      "sha256": "7a75c881dda30fcc73762638e3d6717c6f9a73f0f6edb3984dd43f6c856cd274",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/cost_estimation/time_estimation_iupred_SwissProt_short.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/cost_estimation/time_estimation_iupred_SwissProt_short.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/iupred_disorder_results.csv",
+      "sha256": "aca58ea31bf717b218e2f1ec0a32ae707ffff7e210504f6b7e8c229952a399d6",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/iupred_disorder_results.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/iupred_disorder_results.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/iupred_long_Induced_results.csv",
+      "sha256": "62899baec2d8c76cc669adaf47d58eb92211f82b322e9595df6a016316e36e0a",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/iupred_long_Induced_results.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/iupred_long_Induced_results.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/iupred_long_mcc.csv",
+      "sha256": "fc6c3468b690636dff7f876bca516e45d022e0e2a3c2f81a34207c346f4b81b2",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/iupred_long_mcc.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/iupred_long_mcc.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/iupred_short_Induced_results.csv",
+      "sha256": "2563eb72cdf5504dd7398cfffa357b3df565c25dbfb292df1dba0c1044dc0984",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/iupred_short_Induced_results.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/iupred_short_Induced_results.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/iupred_short_mcc.csv",
+      "sha256": "51cdc4f3f5feceb758d6c0d7901012c816f58a2bd216300ed2799449fbc50fc3",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/iupred_short_mcc.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/iupred_short_mcc.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/ss_pcr_results.csv",
+      "sha256": "44ac1ebad62d348b08a529b7e4647c907f947acbf6fd67857692588d6415a980",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/ss_pcr_results.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/ss_pcr_results.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/E_coli_iupred_long.csv",
+      "sha256": "308df47f1e75a2907ded563670bd1970af8dd628005da151a270e9004620527c",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/E_coli_iupred_long.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/E_coli_iupred_long.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/E_coli_iupred_short.csv",
+      "sha256": "5288447d0a3e7328c1788ea6e56554442897135b4b1934ad1217f07fe41b4069",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/E_coli_iupred_short.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/E_coli_iupred_short.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/E_coli_ss.csv",
+      "sha256": "0268fd7cbaaf8024896a625b3e9c5f464eed5cdac8165b7f3d6c88a945bbfe46",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/E_coli_ss.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/E_coli_ss.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/H_sapiens_iupred_long.csv",
+      "sha256": "3ddcf518782ea0c52f9318b5af3325adaa7aed014053773aa253855b10e12a18",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/H_sapiens_iupred_long.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/H_sapiens_iupred_long.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/H_sapiens_iupred_short.csv",
+      "sha256": "4184405bb4ac7f4ac0ef4eed2a81b10cd9b373319f36ee959d7ac1bbf9a7b5b1",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/H_sapiens_iupred_short.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/H_sapiens_iupred_short.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/H_sapiens_ss.csv",
+      "sha256": "8e9cffb43660b2aaf46d9d351082c525cdf5e890fe175dc83577bd3ee959dadd",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/H_sapiens_ss.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/H_sapiens_ss.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/SwissProt_iupred_long.csv",
+      "sha256": "f4715bbf14b6939ac8710c949766dc635355a9ab82d8d56fc84bf5eace31963d",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/SwissProt_iupred_long.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/SwissProt_iupred_long.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/SwissProt_iupred_short.csv",
+      "sha256": "fc3330f8c5a4c87f2b2fd2bf8d12073e608fc90e9ccf5330f91aba9c27ed2e09",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/SwissProt_iupred_short.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/SwissProt_iupred_short.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/structure_pct/SwissProt_ss.csv",
+      "sha256": "1a86d8d737bcb21ce614c3c8ae97e594f77b58e1bc57e26480edce8b07cb7de5",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/structure_pct/SwissProt_ss.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/structure_pct/SwissProt_ss.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report/results/time_estimation_merged.csv",
+      "sha256": "0a936729bdbdb704eec06f89c165b9aa147d6a42b61daf11e1f05bf65ef7189c",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/report/results/time_estimation_merged.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_hpc_disordered_proteins_and_ss/contents/report/results/time_estimation_merged.csv?ref=c253a1b393b132341c2601a62a141ce7dcd889f3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "data/E_coli/ProtBert.fasta",
+      "sha256": "f5664d85def6fca7c867b1b502d4bc9df0b6ed08be4567d75e0d3025fb776d8d",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/E_coli/ProtBert.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/E_coli/iupred_long.fasta",
+      "sha256": "2aa6e8110033b2cb6ba99c8664e442f4d2c3990d5008451c754e84dafd4df1e9",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/E_coli/iupred_long.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/E_coli/iupred_short.fasta",
+      "sha256": "4ba5f017bcc5fc2df55a1fa2120529513c29e893eb69156e1e7e0f8c7309e3fa",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/E_coli/iupred_short.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/H_sapiens/H_sapiens_Induced_long_top5000.fasta",
+      "sha256": "6ea95178dcef112ed5224c9d9cba222162701f2a01326ef1f49e6b881ca5f0eb",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/H_sapiens/H_sapiens_Induced_long_top5000.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/H_sapiens/H_sapiens_Induced_short_top5000.fasta",
+      "sha256": "7f30bae0c68f1b1613a1151d4ab37c2577574f63d48f6cd000830e0fcdf20bf6",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/H_sapiens/H_sapiens_Induced_short_top5000.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/H_sapiens/ProtBert.fasta",
+      "sha256": "8ec08361b2e795c3f3a9d6e614da1a346d72be43e840ce1f9245cf3a3ab5254e",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/H_sapiens/ProtBert.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/H_sapiens/iupred_long.fasta",
+      "sha256": "b32ad7a018a4459a56b019c8df079d479677f552299c6c035a3f50f6522bfe60",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/H_sapiens/iupred_long.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/H_sapiens/iupred_short.fasta",
+      "sha256": "8947695d8789e23a500da8e6ae177373070d82f3ee0a3ca55ae984c78d68bbe5",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/H_sapiens/iupred_short.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/SwissProt/SwissProt_SHS_top5000.fasta",
+      "sha256": "ced21b771f6537f3b1d723d7eede5c3983d56db676306d9692e91fca672f0a3b",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/data/SwissProt/SwissProt_SHS_top5000.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "logs/iupred_long_log",
+      "sha256": "e7d821e7b2cfd8d639c17a2d1b0a0e077808e613b49689bfdc72df5b345009a2",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/logs/iupred_long_log",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "logs/iupred_short_log",
+      "sha256": "f5fe7ef2950b1ac379e46296e048a673d576a39746422b3bada11a43d1e34d80",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/logs/iupred_short_log",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "logs/protbert_log",
+      "sha256": "3fe2c2f6f4c71b6cd6451ab6cf939c5b56b7e9d8806b9de2b8a4bb64e680f86a",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/ADP26_lab_hpc_hw_Strozyk_Max/logs/protbert_log",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/raw/E_coli.fasta",
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Bacteria/UP000000625/UP000000625_83333.fasta.gz",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null,
+      "compression": "gzip"
+    },
+    {
+      "path": "data/raw/H_sapiens.fasta",
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000005640/UP000005640_9606.fasta.gz",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null,
+      "compression": "gzip"
+    },
+    {
+      "path": "data/raw/SwissProt.fasta",
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null,
+      "compression": "gzip"
+    },
+    {
+      "path": "DisProt_human_fragments_flat.csv",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab_hpc3/DisProt_human_fragments_flat.csv",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "providers": [],
+  "generated": []
+}

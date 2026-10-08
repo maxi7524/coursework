@@ -1,5 +1,6 @@
 """Behavioral checks for deterministic, atomic assignment data retrieval."""
 
+import gzip
 import hashlib
 import io
 import tempfile
@@ -53,12 +54,14 @@ class DownloadTests(unittest.TestCase):
         destination.parent.mkdir()
         destination.write_bytes(b"existing bytes")
         self.resource["url"] = "https://example.test/sample.csv"
-        with patch(
-            "_support.downloads.urllib.request.urlopen",
-            return_value=io.BytesIO(b"wrong bytes"),
+        with (
+            patch(
+                "_support.downloads.urllib.request.urlopen",
+                return_value=io.BytesIO(b"wrong bytes"),
+            ),
+            self.assertRaises(RuntimeError),
         ):
-            with self.assertRaises(RuntimeError):
-                retrieve(self.resource, self.project)
+            retrieve(self.resource, self.project)
         self.assertEqual(destination.read_bytes(), b"existing bytes")
         self.assertEqual(list(destination.parent.iterdir()), [destination])
 
@@ -86,6 +89,74 @@ class DownloadTests(unittest.TestCase):
         with patch("_support.downloads.subprocess.run", side_effect=run):
             self.assertEqual(retrieve(self.resource, self.project), "github")
 
+    def test_gzip_url_checks_unpacked_bytes_and_caches(self):
+        """Compressed inputs produce the expected project-local plain bytes."""
+        self.resource.update(
+            url="https://example.test/sample.csv.gz", compression="gzip"
+        )
+        with patch(
+            "_support.downloads.urllib.request.urlopen",
+            return_value=io.BytesIO(gzip.compress(self.payload, mtime=0)),
+        ) as request:
+            self.assertEqual(retrieve(self.resource, self.project), "url")
+            self.assertEqual(retrieve(self.resource, self.project), "cached")
+        request.assert_called_once()
+        self.assertEqual(
+            (self.project / self.resource["path"]).read_bytes(), self.payload
+        )
+
+    def test_invalid_gzip_preserves_existing_input(self):
+        """Malformed compressed responses cannot replace an existing input."""
+        self.resource.update(
+            url="https://example.test/sample.csv.gz", compression="gzip"
+        )
+        target = self.project / self.resource["path"]
+        target.parent.mkdir()
+        target.write_bytes(b"existing input")
+        with (
+            patch(
+                "_support.downloads.urllib.request.urlopen",
+                return_value=io.BytesIO(b"invalid"),
+            ),
+            self.assertRaises(RuntimeError),
+        ):
+            retrieve(self.resource, self.project)
+        self.assertEqual(target.read_bytes(), b"existing input")
+        self.assertEqual(list(target.parent.iterdir()), [target])
+
+    def test_gzip_checksum_failure_preserves_existing_input(self):
+        """The decoded content must match its checksum before replacement."""
+        self.resource.update(
+            url="https://example.test/sample.csv.gz", compression="gzip"
+        )
+        target = self.project / self.resource["path"]
+        target.parent.mkdir()
+        target.write_bytes(b"existing input")
+        with (
+            patch(
+                "_support.downloads.urllib.request.urlopen",
+                return_value=io.BytesIO(gzip.compress(b"wrong bytes", mtime=0)),
+            ),
+            self.assertRaises(RuntimeError),
+        ):
+            retrieve(self.resource, self.project)
+        self.assertEqual(target.read_bytes(), b"existing input")
+
+    def test_truncated_gzip_removes_partial_download(self):
+        """An incomplete compressed stream leaves no input or temporary file."""
+        self.resource.update(
+            url="https://example.test/sample.csv.gz", compression="gzip"
+        )
+        with (
+            patch(
+                "_support.downloads.urllib.request.urlopen",
+                return_value=io.BytesIO(gzip.compress(self.payload, mtime=0)[:-4]),
+            ),
+            self.assertRaises(RuntimeError),
+        ):
+            retrieve(self.resource, self.project)
+        self.assertEqual(list((self.project / "data").iterdir()), [])
+
     def test_path_escape_rejected(self):
         """Traversal, absolute paths, and symlink escapes are outside the domain."""
         for relative in ["../escaped", "/tmp/escaped", "."]:
@@ -106,9 +177,11 @@ class DownloadTests(unittest.TestCase):
         self.resource["url"] = "https://example.test/confirmation"
         response = io.BytesIO(b"<html>confirmation required</html>")
         response.headers = {"Content-Type": "text/html"}
-        with patch("_support.downloads.urllib.request.urlopen", return_value=response):
-            with self.assertRaises(RuntimeError):
-                retrieve(self.resource, self.project)
+        with (
+            patch("_support.downloads.urllib.request.urlopen", return_value=response),
+            self.assertRaises(RuntimeError),
+        ):
+            retrieve(self.resource, self.project)
         self.assertFalse((self.project / self.resource["path"]).exists())
 
     def test_provider_reuses_existing_project_downloader(self):
@@ -129,6 +202,19 @@ class DownloadTests(unittest.TestCase):
         ]:
             with self.subTest(provider=provider), self.assertRaises(ValueError):
                 prepare_provider(provider, self.project)
+
+    def test_script_provider_passes_explicit_arguments_in_project(self):
+        """Original download scripts run with their declared CLI and working directory."""
+        provider = {
+            "kind": "script",
+            "path": "data/pdb",
+            "script": "scripts/download_pdb.py",
+            "arguments": ["--out", "data/pdb"],
+        }
+        with patch("_support.downloads.subprocess.run") as run:
+            prepare_provider(provider, self.project)
+        self.assertEqual(run.call_args.args[0][2:], provider["arguments"])
+        self.assertEqual(run.call_args.kwargs, {"cwd": self.project, "check": True})
 
 
 if __name__ == "__main__":

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "GRCh38.p14.log",
+      "sha256": "30c011fe9b967e3d6208b112c4f4c1795c3dbdde5d874ae36c33a1b564f6fc40",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_human_genome_analysis/GRCh38.p14.log",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_human_genome_analysis/contents/GRCh38.p14.log?ref=080dffa11cd678a8369b5cf6b1d0452b5746086f",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "T2T.log",
+      "sha256": "af3d1961f459c45f4b206600d56e2f2673f7ffa4280fce26403d244b31809afe",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_human_genome_analysis/T2T.log",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_human_genome_analysis/contents/T2T.log?ref=080dffa11cd678a8369b5cf6b1d0452b5746086f",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "data/results/GRCh38.p14_stats.csv",
+      "sha256": "7934b0d4169ed431250ef9090648741002013bd0e8e99b4cdba11ce995224c65",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_human_genome_analysis/data/results/GRCh38.p14_stats.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_human_genome_analysis/contents/data/results/GRCh38.p14_stats.csv?ref=080dffa11cd678a8369b5cf6b1d0452b5746086f",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "data/results/T2T_stats.csv",
+      "sha256": "8cf8d31c91574fdfb4e6f96b0e865b409369982125101206fb13332c927f11ac",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_human_genome_analysis/data/results/T2T_stats.csv",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_human_genome_analysis/contents/data/results/T2T_stats.csv?ref=080dffa11cd678a8369b5cf6b1d0452b5746086f",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "orf_map_chr1.log",
+      "sha256": "b1381d60522b4dbe27d7efd3d153cf9b566be2c380d21be867bfbda3370daba2",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_human_genome_analysis/orf_map_chr1.log",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_human_genome_analysis/contents/orf_map_chr1.log?ref=080dffa11cd678a8369b5cf6b1d0452b5746086f",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "orf_map_chrM.log",
+      "sha256": "680534f46008b99ee5d116ef6b73da8d0f7603ab4cfb5b30bc61b55d0877ea80",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_human_genome_analysis/orf_map_chrM.log",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_human_genome_analysis/contents/orf_map_chrM.log?ref=080dffa11cd678a8369b5cf6b1d0452b5746086f",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "results/T2T_stats.csv",
+      "sha256": "8cf8d31c91574fdfb4e6f96b0e865b409369982125101206fb13332c927f11ac",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_labHG_hw_Strozyk_Max/ADP26_labHG_hw_Strozyk_Max/results/T2T_stats.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/orf_chr1.csv",
+      "sha256": "b2f36698498aa09196ef7dbc11a5487bfee6bc6d54bf06253e84eb88653d1314",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_labHG_hw_Strozyk_Max/ADP26_labHG_hw_Strozyk_Max/results/orf_chr1.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/orf_chrM.csv",
+      "sha256": "e82ed34e6a9cbd00b8df284339966cf194f02363fee063914666877de6854829",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_labHG_hw_Strozyk_Max/ADP26_labHG_hw_Strozyk_Max/results/orf_chrM.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/genome/hs1.fa",
+      "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hs1/bigZips/hs1.fa.gz",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null,
+      "compression": "gzip"
+    },
+    {
+      "path": "data/genome/hs1.annotation.fasta",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab_human_genome/chm13.draft_v1.1.gene_annotation.protein.fasta",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
+    },
+    {
+      "path": "data/genome/chr1.fa",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab_human_genome/chr1.fa",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
+    },
+    {
+      "path": "data/genome/chrM.fa",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab_human_genome/chrM.fa",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
+    }
+  ],
+  "unresolved": [],
+  "providers": [],
+  "generated": []
+}

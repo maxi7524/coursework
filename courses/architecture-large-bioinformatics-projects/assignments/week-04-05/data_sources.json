@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "report.html",
+      "sha256": "a3079ab906b091899e9d91a43a70d4aa245196f7ad85b5c414fd8fdcca9fb7d3",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_proteins_data_analyse/report.html",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_proteins_data_analyse/contents/report.html?ref=7e218a822d5e9ef50b303442a197f941943bb5d3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "report.pdf",
+      "sha256": "e0ab6ed1289b436c7f68ba7ddafd9d468b38d84218fb0182a9f68e05b753a0f6",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_proteins_data_analyse/report.pdf",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_proteins_data_analyse/contents/report.pdf?ref=7e218a822d5e9ef50b303442a197f941943bb5d3",
+      "availability": "pinned-original-repository-and-local-archive"
+    },
+    {
+      "path": "results/plots/pdb_trends_interactive.html",
+      "sha256": "c48dea6fba7bc3ecd3a9db177e22940dd00ad51f9a685842fa43a2736fccd53f",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/repositories/project_bioinformatics_tools_proteins_data_analyse/results/plots/pdb_trends_interactive.html",
+      "github_api": "repos/maxi7524/project_bioinformatics_tools_proteins_data_analyse/contents/results/plots/pdb_trends_interactive.html?ref=7e218a822d5e9ef50b303442a197f941943bb5d3",
+      "availability": "pinned-original-repository-and-local-archive"
+    }
+  ],
+  "unresolved": [],
+  "providers": [
+    {
+      "kind": "script",
+      "path": "data/pdb",
+      "script": "scripts/downloads/download_pdb.py",
+      "arguments": [
+        "--out",
+        "data/pdb"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "E_coli",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "Human",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "Yeast",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "A_thaliana",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "D_melanogaster",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "C_elegans",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "Mouse",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "Zebrafish",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/species",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--species",
+        "B_subtilis",
+        "--out",
+        "data/uniprot/species"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/kingdoms",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--kingdom",
+        "Bacteria",
+        "--limit",
+        "100",
+        "--out",
+        "data/uniprot/kingdoms"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/kingdoms",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--kingdom",
+        "Viruses",
+        "--limit",
+        "100",
+        "--out",
+        "data/uniprot/kingdoms"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/kingdoms",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--kingdom",
+        "Archaea",
+        "--limit",
+        "100",
+        "--out",
+        "data/uniprot/kingdoms"
+      ]
+    },
+    {
+      "kind": "script",
+      "path": "data/uniprot/kingdoms",
+      "script": "scripts/downloads/download_uniprot.py",
+      "arguments": [
+        "--kingdom",
+        "Eukaryota",
+        "--limit",
+        "100",
+        "--out",
+        "data/uniprot/kingdoms"
+      ]
+    }
+  ],
+  "generated": []
+}

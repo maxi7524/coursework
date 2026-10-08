@@ -1,13 +1,7 @@
 # Genomics and Transcriptomics Technologies
 
-Summer 2025/2026. Metagenomics, transcriptomics, assembly assessment.
+Summer 2025/2026. Final group project: experimental design for ancient-DNA analysis, including methylation reconstruction and comparison of hunter-gatherer and agricultural populations.
 
-## Assignments
+[TGT_project](https://github.com/maxi7524/TGT_project) contains the experiment proposal, methodology, references and grant-style report. It remains in its shared repository. This entry describes the final project rather than a completed laboratory collection.
 
-| Assignment | Files | Inputs |
-|---|---|---|
-| [metagenomics](assignments/metagenomics/README.md) | [notes.ipynb](assignments/metagenomics/notes.ipynb) | No external inputs identified |
-| [transcriptomics](assignments/transcriptomics/README.md) | [homework.ipynb](assignments/transcriptomics/homework.ipynb), [week_4_script.py](assignments/transcriptomics/week_4_script.py) | [Data](assignments/transcriptomics/DATA.md) |
-| [week-01](assignments/week-01/README.md) | [busco.ipynb](assignments/week-01/busco.ipynb), [exercise.ipynb](assignments/week-01/exercise.ipynb) | [Data](assignments/week-01/DATA.md) |
-
-[All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+[All courses](../../README.md)

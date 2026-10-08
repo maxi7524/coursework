@@ -1,15 +1,18 @@
 # Architecture of Large Projects in Bioinformatics
 
-Summer 2025/2026. Proteomes, ESM structure prediction, sequence comparison, Snakemake.
+Summer 2025/2026. Laboratory solutions organized by the [official lab sequence](https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/).
 
-## Assignments
+| Laboratory | Work retained |
+|---|---|
+| [1 — Data formats](assignments/week-01/README.md) | GenPept-to-FASTA converter, submitted usage examples and notebook |
+| [2 — CRON and API](assignments/week-02/README.md) | Proteome preparation, batching and ESM structure-prediction requests |
+| [3 — Sequence versus structure search](assignments/week-03/README.md) | BLAST, TM-align, Reseek and Foldseek workflow; submitted report |
+| [4–5 — Protein data analysis](assignments/week-04-05/README.md) | Complete PDB/UniProt acquisition, analysis and Snakemake reporting pipeline |
+| [HPC 1–3 — Protein feature prediction](assignments/hpc-protein-workflows/README.md) | IUPred, ProtBert, Slurm/RAM-disk workflows, benchmarking and reports |
+| [Human genome analysis](assignments/human-genome-analysis/README.md) | Streaming genome statistics, six-frame ORFs, annotation mapping and report |
 
-| Assignment | Files | Inputs |
-|---|---|---|
-| [entropy_cluster](assignments/entropy_cluster/README.md) | See assignment directory | [Data](assignments/entropy_cluster/DATA.md) |
-| [week-01](assignments/week-01/README.md) | [exercise_1.ipynb](assignments/week-01/exercise_1.ipynb), [gp_to_fasta.py](assignments/week-01/gp_to_fasta.py) | [Data](assignments/week-01/DATA.md) |
-| [week-02](assignments/week-02/README.md) | [exercise_2.ipynb](assignments/week-02/exercise_2.ipynb), [fasta_splitter.py](assignments/week-02/fasta_splitter.py), [gp_to_fasta.py](assignments/week-02/gp_to_fasta.py), [predictESM.py](assignments/week-02/predictESM.py), [scan_fasta4ESM.py](assignments/week-02/scan_fasta4ESM.py) | [Data](assignments/week-02/DATA.md) |
-| [week-03](assignments/week-03/README.md) | [exercise_3.ipynb](assignments/week-03/exercise_3.ipynb) | [Data](assignments/week-03/DATA.md) |
-| [week-04](assignments/week-04/README.md) | [analysis.ipynb](assignments/week-04/analysis.ipynb), [download_pdb.py](assignments/week-04/download_pdb.py), [notes.ipynb](assignments/week-04/notes.ipynb) | [Data](assignments/week-04/DATA.md) |
+Final group project: [tAIpipe](https://github.com/NorbertSzala/tAIpipe), with Norbert Szala; maintained in its shared repository. Galaxy and genome-browser exercises are not listed as completed work because no solutions were recovered.
 
-[All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+Repository snapshots were compared with five submitted archives. Missing HPC preparation scripts were recovered from the submitted version. Scientific code is preserved; dependency updates and portability fixes are deferred. [Source provenance](../../PROVENANCE.md).
+
+[All courses](../../README.md)

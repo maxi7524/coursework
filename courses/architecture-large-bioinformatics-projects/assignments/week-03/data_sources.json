@@ -111,6 +111,132 @@
       "role": "input",
       "availability": "external-url-not-verified",
       "sha256": null
+    },
+    {
+      "path": "comparison_structure/first/M_genitalium-WP_009885894_esmfold_v1.pdb",
+      "sha256": "9213ba6968d1e9c204f87621dc60306adeeb9e4bbe2e1aef031aeb195060c75e",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/comparison_structure/first/M_genitalium-WP_009885894_esmfold_v1.pdb",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "comparison_structure/first/WP_020862476_esmfold_v1.pdb",
+      "sha256": "9afecc7e993989272053ac9c017b967446644ef92fae585c14cbd39656a5032b",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/comparison_structure/first/WP_020862476_esmfold_v1.pdb",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "comparison_structure/second/M_genitalium-WP_010869411_esmfold_v1.pdb",
+      "sha256": "1c5348d3829b6c227ab2e2c55d24e69a7ecc26dd0e843e6e8ea12c3334c1b147",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/comparison_structure/second/M_genitalium-WP_010869411_esmfold_v1.pdb",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "comparison_structure/second/WP_020862584_esmfold_v1.pdb",
+      "sha256": "edbf49a732c60ed6f84b704ec0739df9215f1ec5c0da7ed1089201e1eaef66d8",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/comparison_structure/second/WP_020862584_esmfold_v1.pdb",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "raport_return.html",
+      "sha256": "6dfa289430ede7b861c50864eb8ecf7b52998990ca0aa6a03488e562cff1df83",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/raport_return.html",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "raport_return.pdf",
+      "sha256": "9a75ad29096b6553b59da6788722908f929530ae7675a55cb294fd09d40cd1c9",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/raport_return.pdf",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/blast_metadata.csv",
+      "sha256": "a635cc5d2522fe8e6ea0257418babf3f76ae021bb0a3e488608a5e43bf286565",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/blast_metadata.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/blast_output.csv",
+      "sha256": "61a79167760376eea5758916bbc2468c98a59d701e136f37f9cdd45d4a094d88",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/blast_output.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/foldseek_metadata.csv",
+      "sha256": "d316d51d29ff1874f5b45db5c578d246cbfb936617c2267e60e61c7148374ccf",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/foldseek_metadata.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/foldseek_output.csv",
+      "sha256": "4a0031603febe34e37339e4604b434ac6fde8340b358bfd89c5873d9bbed20d1",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/foldseek_output.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/reseek_metadata.csv",
+      "sha256": "b7f2a9f24d85e7eedc72f505fc48cf9d7bb2297eba13ec2f2be9f38385e7d8fd",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/reseek_metadata.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/reseek_output.csv",
+      "sha256": "01a1540df42555fcf9a720491954f21e06a84e409e96c866cfa0c8ad34816448",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/reseek_output.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/tmalign_metadata.csv",
+      "sha256": "75284ee8d09e20418476b9c0864a6cabff6ba7e069ced65ce355804995475747",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/tmalign_metadata.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "results/tmalign_output.csv",
+      "sha256": "6896816e29dc290e80f0b4f8b87326c3e25385982149949d920f93d195260b7f",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/results/tmalign_output.csv",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/raw/CP014940.fas",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab3/CP014940.fas",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
+    },
+    {
+      "path": "data/raw/Mycgen.fas",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab3/Mycgen.fas",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
+    },
+    {
+      "path": "data/structures/CP014940.tar.gz",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab3/CP014940.tar.gz",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
+    },
+    {
+      "path": "data/structures/Mycgen.tar.gz",
+      "url": "https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab3/Mycgen.tar.gz",
+      "role": "input",
+      "availability": "upstream-url",
+      "sha256": null
     }
   ],
   "unresolved": [],

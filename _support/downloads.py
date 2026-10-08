@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import logging
@@ -12,6 +13,7 @@ import subprocess
 import tempfile
 import urllib.error
 import urllib.request
+import zlib
 from pathlib import Path
 
 
@@ -97,7 +99,13 @@ def retrieve(resource: dict, root: Path, archive: Path | None = None) -> str:
                             raise ValueError(
                                 "Source returned an HTML page instead of dataset bytes"
                             )
-                        shutil.copyfileobj(response, output)
+                        if resource.get("compression") == "gzip":
+                            # REMARK: The checksum describes the unpacked input,
+                            # and decompression stays inside the atomic write.
+                            with gzip.GzipFile(fileobj=response) as unpacked:
+                                shutil.copyfileobj(unpacked, output)
+                        else:
+                            shutil.copyfileobj(response, output)
                 else:
                     # REMARK: gh supplies credentials internally; tokens never enter
                     # manifests, command arguments, or logger output.
@@ -123,7 +131,9 @@ def retrieve(resource: dict, root: Path, archive: Path | None = None) -> str:
                 return kind
             except (
                 OSError,
+                EOFError,
                 ValueError,
+                zlib.error,
                 urllib.error.URLError,
                 subprocess.CalledProcessError,
             ) as error:
@@ -172,11 +182,15 @@ def prepare_provider(provider: dict, project: Path) -> None:
                     os.replace(temporary, target)
                 finally:
                     temporary.unlink(missing_ok=True)
-    elif provider["kind"] == "pdb":
+    elif provider["kind"] in {"pdb", "script"}:
         import sys
 
         subprocess.run(
-            [sys.executable, str(contained(project, provider["script"]))],
+            [
+                sys.executable,
+                str(contained(project, provider["script"])),
+                *provider.get("arguments", []),
+            ],
             cwd=project,
             check=True,
         )

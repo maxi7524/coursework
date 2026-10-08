@@ -24,6 +24,97 @@
       "archive_path": "private/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/sequence.gp",
       "availability": "pinned-original-repository-and-local-archive",
       "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_1/data/before_conversion/sequence.gp?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+    },
+    {
+      "path": "data/after_conversion/id_gi.fasta",
+      "sha256": "6f964ecf0fd258d90c131be1cfc36e31f1676e1bf77378f7d0279aa28073ec3e",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/id_gi.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/id_locus.fasta",
+      "sha256": "1bf693631409e8890ea09b0c273c8e0c7826270433e78d7112e417c56543c6ab",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/id_locus.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/no_genename.fasta",
+      "sha256": "4c3beade591adbe40a2f8633286e533465bc21a5fe599955a0bd09a3594a29c1",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/no_genename.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/org_style_abbreviate.fasta",
+      "sha256": "bfb4dd39328683bb6757b8201d7e63465c0e828243f1022ca64d825498939c96",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/org_style_abbreviate.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/org_style_full.fasta",
+      "sha256": "410a8ce300e9874f9d0e34273c33d69f8e4fe55dd94e0be58eba6272076bb973",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/org_style_full.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/org_style_short.fasta",
+      "sha256": "5c18809d7f0c6b248614fa574a32cd02b40643be6184b54a0ffdc57e4d4043f2",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/org_style_short.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/run_file.fasta",
+      "sha256": "1649886ec291d6b8e774a0712bfd16b0d22fcff3860ed395476b164d5cc16ec5",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/run_file.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/run_folder.fasta",
+      "sha256": "c443792adf689fffa48977426ad960d42e8c3b5befb6bb9724da28e222874336",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/run_folder.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion/separator.fasta",
+      "sha256": "52aaa7cd544ddf14a6ea7cfeb7b071dbd9c5531d09fad0e14ef29d726d869a47",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion/separator.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion_separate/example.fasta",
+      "sha256": "bf291b1916432a0b7276d31d7ca95e9ecd7a89c9ec626163a4ac20cfbe7ff9df",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion_separate/example.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion_separate/sequence (1).fasta",
+      "sha256": "53ed63ce70fe4207c503c1213713d2ef19cc33b137e41827e8a1e55da019ef81",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion_separate/sequence (1).fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/after_conversion_separate/sequence.fasta",
+      "sha256": "1649886ec291d6b8e774a0712bfd16b0d22fcff3860ed395476b164d5cc16ec5",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/after_conversion_separate/sequence.fasta",
+      "availability": "local-submission-archive"
+    },
+    {
+      "path": "data/before_conversion/sequence (1).gp",
+      "sha256": "a371969bec1f6b983e9ef5989623bacd56485f68f83301f353c4e7699aeb516c",
+      "role": "artifact",
+      "archive_path": "review-2026-10-08/submissions/ADP26_lab01_hw_Strozyk_Max/ADP26_lab01_hw_Strozyk_Max/data/before_conversion/sequence (1).gp",
+      "availability": "local-submission-archive"
     }
   ],
   "unresolved": [],
