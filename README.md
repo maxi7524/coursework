@@ -48,26 +48,28 @@ Completed course assignments, laboratory solutions, and workshop materials. Acti
 
 ## Data and provenance
 
-Each data-dependent assignment has `download_data.py` and [input instructions](DATA_POLICY.md). External data and generated artifacts are excluded from the imported histories. [Source provenance](PROVENANCE.md).
+Each data-dependent assignment has `download_data.py` and [input instructions](DATA_POLICY.md). External datasets and model weights remain outside Git. Submitted reports, illustrations and notebook previews are included for browsing.
 
 ## Semester overview
 
+These notes describe only the programming work represented on GitHub, rather than my complete university curriculum. Current coursework is kept private until it is ready to share.
+
 ### Winter 2024/2025
 
-#TODO
+I began studying statistics and numerical methods alongside Python programming courses.
 
 ### Summer 2024/2025
 
-#TODO
+I began studying machine learning and other analytical subjects, including econometrics. I also worked through exercises from [Dive into Deep Learning](https://d2l.ai/), although those notebooks are no longer available.
 
 ### Winter 2025/2026
 
-#TODO
+I explored software integration, GitHub workflows, machine-learning optimization and advanced mathematical models, including probabilistic graphical models. I also began studying Bioinformatics at the University of Warsaw's Faculty of Mathematics, Informatics and Mechanics, working with omics data.
 
 ### Summer 2025/2026
 
-#TODO
+I worked on larger bioinformatics projects using external computing clusters and a broader range of biological datasets and analysis problems.
 
 ### Winter 2026/2027
 
-#TODO
+I am exploring further biological models and focusing on my master's thesis on mass spectrometry imaging (MSI).

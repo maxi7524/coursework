@@ -17,4 +17,4 @@ The numerical implementation code in this collection was written by **Max Stró�
 
 Reports, source exports and fixed illustrations are located inside the corresponding assignments. The additional draft belongs with Lab 3; it is not another numbered laboratory. Numerical algorithms and historical scientific claims have not been modernized or revalidated in this organization pass.
 
-[PDF build instructions](BUILD_REPORTS.md) · [Source inventory](source-inventory.json) · [All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+[PDF build instructions](BUILD_REPORTS.md) · [Source inventory](source-inventory.json) · [All courses](../../README.md)

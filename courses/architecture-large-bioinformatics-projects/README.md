@@ -13,6 +13,6 @@ Summer 2025/2026. Laboratory solutions organized by the [official lab sequence](
 
 Final group project: [tAIpipe](https://github.com/NorbertSzala/tAIpipe), with Norbert Szala; maintained in its shared repository. Galaxy and genome-browser exercises are not listed as completed work because no solutions were recovered.
 
-Repository snapshots were compared with five submitted archives. Missing HPC preparation scripts were recovered from the submitted version. Scientific code is preserved; dependency updates and portability fixes are deferred. [Source provenance](../../PROVENANCE.md).
+Repository snapshots were compared with five submitted archives. Missing HPC preparation scripts were recovered from the submitted version. Scientific code is preserved; dependency updates and portability fixes are deferred.
 
 [All courses](../../README.md)

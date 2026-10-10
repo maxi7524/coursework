@@ -15,4 +15,4 @@ Summer 2025/2026. Markov processes, Monte Carlo, MCMC, particle filters, FFBS.
 | [week-10](assignments/week-10/README.md) | [RBM.ipynb](assignments/week-10/RBM.ipynb) | No external inputs identified |
 | [week-11](assignments/week-11/README.md) | [algorithms_PF_and_FFBS.ipynb](assignments/week-11/algorithms_PF_and_FFBS.ipynb), [exercise.ipynb](assignments/week-11/exercise.ipynb), [utils_algorithms_PF_and_FFBS.py](assignments/week-11/utils_algorithms_PF_and_FFBS.py) | No external inputs identified |
 
-[All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+[All courses](../../README.md)

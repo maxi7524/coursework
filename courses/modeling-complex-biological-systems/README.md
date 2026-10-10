@@ -18,4 +18,4 @@ Summer 2025/2026. Selected analyses and completed exercises. Independent project
 
 Partial Boolean exercises, exploratory notes and the supplied batch-effect demonstration are omitted. Original source notebooks and comments are preserved; execution and scientific corrections are a later stage.
 
-[All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+[All courses](../../README.md)

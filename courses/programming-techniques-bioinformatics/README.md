@@ -11,4 +11,4 @@ Winter 2025/2026. Graded projects are indexed in their independent repositories;
 
 Project numbering follows the repository names; some original README files use a different template number.
 
-[All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+[All courses](../../README.md)

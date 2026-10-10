@@ -16,4 +16,4 @@ Winter 2025/2026. Bayesian inference, Markov chains, HMMs, EM.
 | [assignment-08](assignments/assignment-08/README.md) | [SAD2_lab8_Baum_Welch_student_version.ipynb](assignments/assignment-08/SAD2_lab8_Baum_Welch_student_version.ipynb) | No external inputs identified |
 | [general-exercises](assignments/general-exercises/README.md) | [SAD2_Lab9_EM_gaussian_mixture_student_version.ipynb](assignments/general-exercises/SAD2_Lab9_EM_gaussian_mixture_student_version.ipynb) | [Data](assignments/general-exercises/DATA.md) |
 
-[All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+[All courses](../../README.md)

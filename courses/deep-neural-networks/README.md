@@ -13,4 +13,4 @@ Winter 2025/2026. Backpropagation, CNNs, normalization, residual networks, U-Net
 | [assignment-06](assignments/assignment-06/README.md) | [DNN_Lab_6_Batchnorm_and_Convnets_student_version.ipynb](assignments/assignment-06/DNN_Lab_6_Batchnorm_and_Convnets_student_version.ipynb) | [Data](assignments/assignment-06/DATA.md) |
 | [assignment-07](assignments/assignment-07/README.md) | [DNN_Lab_7_ResidualBlock_in_Pytorch_student_version.ipynb](assignments/assignment-07/DNN_Lab_7_ResidualBlock_in_Pytorch_student_version.ipynb), [DNN_Lab_7_UNet_in_Pytorch_student_version.ipynb](assignments/assignment-07/DNN_Lab_7_UNet_in_Pytorch_student_version.ipynb) | [Data](assignments/assignment-07/DATA.md) |
 
-[All courses](../../README.md) · [Source provenance](../../PROVENANCE.md)
+[All courses](../../README.md)
