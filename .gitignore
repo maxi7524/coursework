@@ -550,3 +550,10 @@
 !/workshops/mat-bio-exchange-2026/wednesday/Maree_exercises_nullclines_excitable_media.pdf
 !/workshops/mat-bio-exchange-2026/wednesday/Maree_slides_excitable.pdf
 !/workshops/mat-bio-exchange-2026/wednesday/Maree_slides_nullclines.pdf
+
+# Preparation scripts are source code; downloaded datasets remain ignored.
+!/courses/architecture-large-bioinformatics-projects/assignments/hpc-protein-workflows/scripts/data/
+/courses/architecture-large-bioinformatics-projects/assignments/hpc-protein-workflows/scripts/data/*
+!/courses/architecture-large-bioinformatics-projects/assignments/hpc-protein-workflows/scripts/data/download_data.sh
+!/courses/architecture-large-bioinformatics-projects/assignments/hpc-protein-workflows/scripts/data/normalize_fasta.py
+!/courses/architecture-large-bioinformatics-projects/assignments/hpc-protein-workflows/scripts/data/split_fasta.py
