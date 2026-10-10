@@ -29,3 +29,5 @@ Browse the retained analysis and scratch notebooks. They contain NumPy, pandas, 
 - Investigate the disagreement between the comparisons.
 
 [Course index](../../README.md).
+
+[Polish report and English translation](../../reports/importance-sampling/README.md).

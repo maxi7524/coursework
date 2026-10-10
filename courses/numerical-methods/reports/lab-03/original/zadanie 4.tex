@@ -1,0 +1,83 @@
+\section{Zadanie 4}
+
+\subsection{Metody iteracyjne: charakterystyka i porównanie}
+W tej sekcji analizujemy trzy popularne metody iteracyjne rozwiązywania układów równań liniowych: metodę Jacobiego, Gaussa-Seidela oraz SOR (Successive Over-Relaxation). Wszystkie te metody oparte są na przekształceniu macierzy układu \( A \) w odpowiednią formę, która umożliwia iteracyjne obliczanie przybliżeń rozwiązania.  
+\begin{itemize}
+    \item \textbf{Metoda Jacobiego}: W tej metodzie macierz \( A \) dzielimy na sumę \( A = D + R \), gdzie \( D \) to macierz diagonalna, a \( R \) to pozostałe elementy (off-diagonal). Iteracyjny wzór ma postać:  
+    \[
+    x^{(k+1)} = D^{-1}(b - Rx^{(k)}).
+    \]  
+    Metoda ta bazuje wyłącznie na wartościach \( x^{(k)} \) z poprzedniej iteracji.  
+
+    \item \textbf{Metoda Gaussa-Seidela}: Rozkładamy macierz jako \( A = L + U \), gdzie \( L \) to dolna macierz trójkątna zawierająca również przekątną, a \( U \) to macierz górna. Iteracyjny wzór ma postać:  
+    \[
+    x^{(k+1)} = L^{-1}(b - Ux^{(k+1)}).
+    \]  
+    Nowe wartości \( x^{(k+1)} \) są natychmiast wykorzystywane w bieżących obliczeniach, co przyspiesza zbieżność.  
+
+    \item \textbf{Metoda SOR}: To uogólnienie metody Gaussa-Seidela, które wprowadza współczynnik relaksacji \( \omega \). Wzór iteracyjny ma postać:  
+    \[
+    x^{(k+1)} = (1-\omega)x^{(k)} + \omega L^{-1}(b - Ux^{(k+1)}).
+    \]  
+    Odpowiedni dobór \( \omega \) ma kluczowe znaczenie dla efektywności metody.  
+\end{itemize}
+
+
+\subsection{Wyniki i wnioski:} 
+Przy wszystkich wyliczeniach ustalamy $x=0, b=rand(n,1) *10$, robimy $1000$ prób i bierzemy z nich średnią.\\
+\subsubsection{parametr $k$}
+Szacujemy \( k \), czyli liczbę iteracji potrzebnych do stwierdzenia zbieżności macierzy. Aby uniknąć błędów związanych z brakiem dominacji diagonalnej, ustalamy \( c = n \cdot 10 \). Dzięki temu zapewniamy dominującą przekątną w macierzy, co eliminuje błędy wynikające z jej struktury. W takiej sytuacji możemy ustalić \( n = 10 \), ponieważ przy tej wielkości przekątnej macierzy nie będą pojawiały się problemy związane z jej rozmiarem i brakiem zbieżności.
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+Metoda       & 1          & 3          & 5          & 10         & 16         \\ \hline
+Jacobi       & $4.0556e-03$ & $6.5079e-06$ & $9.9949e-09$ & $2.7341e-15$ & $1.1819e-17$ \\ \hline
+Gauss-Siedel & $3.3702e-03$ & $4.4534e-07$ & $4.7716e-12$ & $2.6600e-17$ & $1.8228e-17$ \\ \hline
+SOR          & $0.010987$   & $1.3029e-04$ & $1.2422e-06$ & $2.5774e-11$ & $2.3522e-17$ \\ \hline
+\end{tabular}
+\end{center}
+Wnioski:
+\begin{itemize}
+    \item Metoda SOR – wpływ źle dobranego współczynnika relaksacji:\\
+    Metoda SOR, choć teoretycznie powinna charakteryzować się najszybszą zbieżnością, w naszych obliczeniach tego nie potwierdza. Wynika to z faktu, że zastosowano stały współczynnik relaksacji, który został nieodpowiednio dobrany. W efekcie metoda SOR wykazuje słabszą efektywność. Można zatem stwierdzić, że przy źle dobranym współczynniku relaksacji skuteczność tej metody znacząco maleje.
+    \item Porównanie metod Jacobiego i Gaussa-Seidla:\\
+    Analiza wyników pokazuje, że metoda Gaussa-Seidla osiąga szybszą zbieżność już od pierwszej iteracji. Wynika to z charakteru algorytmu, w którym nowe wartości obliczane w bieżącej iteracji są natychmiast wykorzystywane w kolejnych obliczeniach. Z kolei metoda Jacobiego bazuje wyłącznie na wartościach z poprzedniej iteracji, co spowalnia proces zbieżności.
+\end{itemize}
+
+
+
+\subsubsection{Parametr $c$}
+Szacujemy \( c \), które jest parametrem odpowiedzialnym za wartość dodaną na diagonali w macierzy \( A + c \cdot \text{eye}(n) \). Ustalamy \( k = 100 \), aby mieć pewność co do zbieżności.
+\begin{itemize}
+    \item przypadek dla $c = n/2$
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Metoda       & $3$            & $10$           & $100$          \\ \hline
+Jacobi       & $1.4872e-08$ & $2.0980e-03$ & $8.8618e-03$ \\ \hline
+Gauss-Siedel & $5.8098e-16$ & $3.9518e-16$ & $17138e-16$  \\ \hline
+SOR          & $5.9233e-16$ & $3.9828e-16$ & $17124e-16$  \\ \hline
+\end{tabular}
+\end{center}
+    \item przypadek dla $c = 10*n$
+    \begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Metoda       & $3$            & $10$           & $100$          \\ \hline
+Jacobi       & $3.9344e-17$ & $2.5617e-17$ & $1.0956e-17$ \\ \hline
+Gauss-Siedel & $4.0613e-17$ & $2.5840e-17$ & $1.0976e-17$ \\ \hline
+SOR          & $3.7866e-17$ & $2.5573e-17$ & $1.0902e-17$ \\ \hline
+\end{tabular}
+    \end{center}
+\end{itemize}
+Wnioski:\\
+\begin{itemize}
+    \item Możemy zauważyć że takie przybliżenie $c$ które sugeruje nam średnia $E[\sum_i^n X_i]$, gdzie $X_1 \sim \mathrm{U}([0, 1])$ jest dobrym szacowaniem. Błędy związane z metodą Jacobiego musza wynikac z samego algorytmu, ale nii rozumiem dlaczego pojawiają się dla 
+% TODO dlaczego w sumie w jacbim jest taki duzy błą ??? 
+\end{itemize}
+
+\subsection{Propozycje}
+Moment stopu:
+Ustalamy $p$ i definiujemy moment stopu w momencie $n$ jeśli pradziwe będzie wyrażenie:
+$$\left|\frac{x_n - x_{n-1}}{x_n}\right| \times 100 < p$$

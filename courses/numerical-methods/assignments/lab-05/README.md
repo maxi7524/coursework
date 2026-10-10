@@ -242,3 +242,5 @@ Contains testing and utility functions:
 - SciPy
 - Matplotlib
 
+
+[Polish report and English translation](../../reports/lab-05/README.md).

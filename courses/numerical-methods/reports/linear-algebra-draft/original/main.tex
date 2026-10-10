@@ -1,0 +1,271 @@
+% LaTeX Template for short student reports.
+% Citations should be in bibtex format and go in references.bib
+\documentclass[a4paper, 11pt]{article}
+\usepackage[T1]{fontenc} % font
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[top=3cm, bottom=3cm, left = 2cm, right = 2cm]{geometry} 
+\geometry{a4paper} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{graphicx} 
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{bm}  
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue} % black links, for printed output
+\usepackage{memhfixc} 
+\usepackage{pdfsync}  
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\title{Sample Report}
+\author{Author McWriterson}
+%\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Zadanie 1}
+\subsection{Polecenie:}
+\noindent \textbf{Dane:} \( x \), \( e \) - wektory kolumnowe należące do \( \mathbb{R}^n \).
+
+\[
+k = \frac{\|x\|}{\|e\|} = \sqrt{\frac{x^T x}{e^T e}}, \quad v = x - k e, \quad u = x + k e.
+\]
+ Napisz funkcję
+\begin{center}
+\begin{verbatim}
+function [P, Q] = haus(x, e)
+\end{verbatim}
+\end{center}
+która zwraca macierze \( P \) oraz \( Q \) dane wzorami:
+\[
+P = I - 2 \frac{v v^T}{v^T v}, \quad Q = I - 2 \frac{u u^T}{u^T u}.
+\]
+
+Wywołanie funkcji:
+\begin{center}
+\begin{verbatim}
+x = [1; 0; 0; 0];
+e = [1/2; -1/2; -1/2; -1/2];
+[P, Q] = haus(x, e)
+\end{verbatim}
+\end{center}
+< z slajdów > 
+\subsection{Pytania:} 
+
+\subsection{Wyniki:} 
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{center}
+\begin{tabular}{@{}|l|l|l|l|l|l|@{}}
+\toprule
+n                         & k      & Błąd 1      & Błąd 2      & Błąd 3      & Błąd 4      \\ \hline
+3                         &$ 1.0892$ & $2.2204 e-16$ & $2.2204 e-16$ & $2.2204 e-16$ & $2.2204 e-16$ \\ \hline
+3000                      & $0.9829$ & $1.7764 e-15$ & $1.9984 e-15$ & $3.2198 e-15$ & $2.9976 e-15$ \\ \hline
+3000; e prawie równy x    &$ 1.000$  & $1.9984 e-15$ & $1.8874 e-15$ &$ 2.6645 e-15$ & $3.8858 e-15$ \\ \hline
+3000; x, e ortogonalnych: & $0.9939$ & $1.9984 e-15$ & $1.7764 e-15$ & $4.2188 e-15$ & $3.5527 e-15$ \\ \hline
+\end{tabular}
+\end{center}
+\subsection{Wnioski:}
+
+\section{Zadanie 2}
+\subsection{Polecenie:}
+\noindent \textbf{Dane:} \( B := A \) - macierz nieosobliwa.
+
+\begin{center} \textbf{Algorytm QR:} \end{center}
+\begin{algindent}
+    \item \textbf{for} \( m := 1 \) \textbf{to} \( n \) \textbf{do}
+    \item \hspace{1.5em} \( t := \sum_{s=m}^n (B[s, m])^2 \);
+    \item \hspace{1.5em} \textbf{if} \( B[m, m] < 0 \) \textbf{then} \( k := \sqrt{t} \) \textbf{else} \( k := -\sqrt{t} \);
+    \item \hspace{1.5em} \( d[m] := k \);
+    \item \hspace{1.5em} \( f[m] := \frac{1}{k \cdot B[m, m] - t} \);
+    \item \hspace{1.5em} \( B[m, m] := B[m, m] - k \);
+    \item \hspace{1.5em} \textbf{for} \( i := m+1 \) \textbf{to} \( n \) \textbf{do}
+    \item \hspace{3em} \( y := f[m] \sum_{s=m}^n B[s, m] B[s, i] \);
+    \item \hspace{3em} \textbf{for} \( j := m \) \textbf{to} \( n \) \textbf{do} \( B[j, i] := B[j, i] + B[j, m] \cdot y \);
+\end{algindent}
+
+\noindent Wynik:
+\[
+R = \begin{bmatrix}
+d[1] & B[1, 2] & \cdots & B[1, n] \\
+0 & d[2] & B[2, 3] & \cdots & B[2, n] \\
+\vdots & \ddots & \ddots & \cdots \\
+0 & \cdots & d[n-1] & B[n-1, n] \\
+0 & \cdots & 0 & d[n]
+\end{bmatrix}, \quad Q = A R^{-1}.
+\]
+
+Napisz funkcję:
+\begin{center}
+\begin{verbatim}
+function [Q, R] = QR(A)
+\end{verbatim}
+\end{center}
+zwracającą macierze \( Q \) i \( R \), a następnie znajdź rozkład QR dla wylosowanych macierzy.
+
+\subsection{Pytania:} 
+
+\subsection{Wyniki:} 
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+n   & błąd-1       & błąd-2       & błąd-3       & błąd-4       \\ \hline
+3   & $8.8818e-16$ & $5.5511e-17$ & $4.4409e-16$ & $3.3307e-16$ \\ \hline
+500 & $5.4368e-13$ & $3.5416e-14$ & $1.1102e-15$ & $7.9381e-15$ \\ \hline
+100 & $3.9968e-15$ & $5.6843e-14$ & $1.7764e-15$ & $3.1264e-13$ \\ \hline
+\end{tabular}
+\end{center}
+\subsection{Wnioski:}
+
+\section{Zadanie 3}
+\subsection{Polecenie:}
+Dla macierzy
+\[
+A = \begin{bmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n,1} & a_{n,2} & \cdots & a_{n,n}
+\end{bmatrix}
+\]
+
+Norma druga macierzy \( A \) to maksimum po pierwiastkach wielomianu charakterystycznego macierzy \( A^T A \), czyli:
+\[
+w(x) := \det(A^T A - x I), \quad C := \{ x : w(x) = 0 \}, \quad \|A\|_2 = \max_{x \in C} \sqrt{x}.
+\]
+
+Napisz funkcję
+\begin{center}
+\begin{verbatim}
+ret = norm2(A)
+\end{verbatim}
+\end{center}
+która zwraca normę drugą macierzy \( A \).
+%\subsection{Analiza:}
+%Funkcja norm2 liczy normę 2, w Octave istnieje też funkcja wbudowana licząca normę norm(A,2). Problem w naszym algorytmie jest z \textbf{roots}, ponieważ Octave rozwiązuje w przybliżony sposób i licząc rzeczywiste pierwiastki wielomianu może otrzymać zespolone. Różnice między rozwiązaniem z naszego algorytmu, a tego wbudowanego można obliczyć dzięki \textit{norm(A,2)-norm2(A)}. Możemy wywoałać peierwistaki wielomianu stosująć komendę \textit{roots(poly(A'*A))}
+\subsection{Pytania:} 
+
+\subsection{Wyniki:} 
+
+\subsection{Wnioski:}
+Porównując naszą funkcję $norm2$ z wbudowaną w Octave funkcją $norm$ otrzymujemy rozbieżności wynikające z błędów numerycznych. W naszej funkcji błędy te są spowodowane głównie obliczaniem pierwiastków wielomianu charakterystycznego naszej macierzy. Jest to szczególnie wrażliwa operacja dla macierzy o bliskich sobie wartościach własnych. Zespolone pierwiastków nie powinny się pojawiać, jednak dla macierzy płaskich błędy mogą być liczbami zespolonymi ze względu na możliwą małą część zespoloną pierwiastków wielomianu, ale także na błędy zaokrągleń przy obliczaniu wielomianu charakterystycznego, które później mogą skutkować pojawieniem się niepożądanych wartości zespolonych pierwiastków przy dużych macierzach. Dla macierzy z dużymi wartościami na przekątnej może dojść do błędnych zaokrągleń spowodowanych przepełnieniem pamięci w przypadku ekstremalnych wartości. Aby wyzbyć się błędów spowodowanych liczeniem pierwiastków, można użyć np. metody potęgowej. Koncentruje się ona wyłącznie na największej wartości własnej, która w miarę iteracji staje się bardziej widoczna oraz wymaga tylko mnożenia macierzy przez wektor, co zmniejsza ryzyko występowania błędów. 
+%zmieniamy szyk, więc na części to podzielimy wraz z wynikami
+
+
+%%%%%%
+
+
+\section{Zadanie 4}
+\subsection{Metody iteracyjne}
+\subsection{Polecenie}
+
+\subsubsection{Metoda Jacobiego}
+\noindent \textbf{Dane:} \( A \) - macierz \( n \times n \), \( b \), \( x_0 \) - wektory kolumnowe należące do \( \mathbb{R}^n \), \( k \) - liczba naturalna.
+
+Niech \( B := D \). 
+
+Napisz funkcję
+\begin{center}
+\begin{verbatim}
+function retval = Jacobi(A, b, x0, k)
+\end{verbatim}
+\end{center}
+która zwraca wektor \( x^{(k)} \).
+
+\subsubsection{Metoda Gaussa-Seidela:}
+
+\noindent \textbf{Dane:} \( A \) - macierz \( n \times n \), \( b \), \( x_0 \) - wektory kolumnowe należące do \( \mathbb{R}^n \), \( k \) - liczba naturalna.
+
+Niech \( B := D + L \).
+
+Napisz funkcję
+\begin{center}
+\begin{verbatim}
+function retval = GaussSiedel(A, b, x0, k)
+\end{verbatim}
+\end{center}
+która zwraca wektor \( x^{(k)} \).
+
+\subsubsection{Metoda SOR:}
+
+\noindent \textbf{Dane:} \( A \) - macierz \( n \times n \), \( b \), \( x_0 \) - wektory kolumnowe należące do \( \mathbb{R}^n \), \( k \) - liczba naturalna, \( t \in (0, 2) \).
+
+Niech \( B := \frac{1}{t} D + L \).
+
+Napisz funkcję
+\begin{center}
+\begin{verbatim}
+function retval = SOR(A, b, x0, k, t)
+\end{verbatim}
+\end{center}
+która zwraca wektor \( x^{(k)} \).
+
+
+\subsection{Wyniki i wnioski:} 
+Przy wszystkich wyliczeniach ustalamy $x=0, b=rand(n,1) *10$, robimy $1000$ prób i bierzemy z nich średnią.\\
+\subsubsection{parametr $k$}
+Szacujemy \( k \), czyli liczbę iteracji potrzebnych do stwierdzenia zbieżności macierzy. Aby uniknąć błędów związanych z brakiem dominacji diagonalnej, ustalamy \( c = n \cdot 10 \). Dzięki temu zapewniamy dominującą przekątną w macierzy, co eliminuje błędy wynikające z jej struktury. W takiej sytuacji możemy ustalić \( n = 10 \), ponieważ przy tej wielkości macierzy nie będą pojawiały się problemy związane z jej rozmiarem i brakiem zbieżności.
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+Metoda       & 1          & 3          & 5          & 10         & 16         \\ \hline
+Jacobi       & 4.0556e-03 & 6.5079e-06 & 9.9949e-09 & 2.7341e-15 & 1.1819e-17 \\ \hline
+Gauss-Siedel & 3.3702e-03 & 4.4534e-07 & 4.7716e-12 & 2.6600e-17 & 1.8228e-17 \\ \hline
+SOR          & 0.010987   & 1.3029e-04 & 1.2422e-06 & 2.5774e-11 & 2.3522e-17 \\ \hline
+\end{tabular}
+\end{center}
+Wnioski:
+\begin{itemize}
+    \item Metoda SOR – wpływ źle dobranego współczynnika relaksacji:\\
+    Metoda SOR, choć teoretycznie powinna charakteryzować się najszybszą zbieżnością, w naszych obliczeniach tego nie potwierdza. Wynika to z faktu, że zastosowano stały współczynnik relaksacji, który został nieodpowiednio dobrany. W efekcie metoda SOR wykazuje słabszą efektywność. Można zatem stwierdzić, że przy źle dobranym współczynniku relaksacji skuteczność tej metody znacząco maleje.
+    \item Porównanie metod Jacobiego i Gaussa-Seidla:\\
+    Analiza wyników pokazuje, że metoda Gaussa-Seidla osiąga szybszą zbieżność już od pierwszej iteracji. Wynika to z charakteru algorytmu, w którym nowe wartości obliczane w bieżącej iteracji są natychmiast wykorzystywane w kolejnych obliczeniach. Z kolei metoda Jacobiego bazuje wyłącznie na wartościach z poprzedniej iteracji, co spowalnia proces zbieżności.
+\end{itemize}
+
+
+
+\subsubsection{Parametr $c$}
+Szacujemy \( c \), które jest parametrem odpowiedzialnym za wartość dodaną na diagonali w macierzy \( A + c \cdot \text{eye}(n) \). Ustalamy \( k = 100 \), aby mieć pewność co do zbieżności.
+\begin{itemize}
+    \item przypadek dla $c = n/2$
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Metoda       & $3$            & $10$           & $100$          \\ \hline
+Jacobi       & $1.4872e-08$ & $2.0980e-03$ & $8.8618e-03$ \\ \hline
+Gauss-Siedel & $5.8098e-16$ & $3.9518e-16$ & $17138e-16$  \\ \hline
+SOR          & $5.9233e-16$ & $3.9828e-16$ & $17124e-16$  \\ \hline
+\end{tabular}
+\end{center}
+    \item przypadek dla $c = 10*n$
+    \begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Metoda       & 3            & 10           & 100          \\ \hline
+Jacobi       & $3.9344e-17$ & $2.5617e-17$ & $1.0956e-17$ \\ \hline
+Gauss-Siedel & $4.0613e-17$ & $2.5840e-17$ & $1.0976e-17$ \\ \hline
+SOR          & $3.7866e-17$ & $2.5573e-17$ & $1.0902e-17$ \\ \hline
+\end{tabular}
+    \end{center}
+\end{itemize}
+Wnioski:\\
+Możemy zauważyć że takie przybliżenie $c$ które sugeruje nam średnia $E[\sum_i^n X_i]$, gdzie $X_1 \sim \mathrm{U}([0, 1])$ jest dobrym szacowaniem. Błędy związane z metodą Jacobiego musza wynikac z samego algorytmu, ale nii rozumiem dlaczego pojawiają się dla 
+% TODO dlaczego w sumie w jacbim jest taki duzy błą ??? 
+\subsection{Propozycje}
+Moment stopu:\\
+Ustalamy $p$ i definiujemy moment stopu w momencie $n$ jeśli pradziwe będzie wyrażenie:
+$$\left|\frac{x_n - x_{n-1}}{x_n}\right| \times 100 < p$$
+
+
+% propozycje: 
+% moment stopu, gdy, absolutny błąd bezwzględny, jest taki sam jak poprzedni
+
+
+% \bibliographystyle{abbrv}
+% \bibliography{references}  % need to put bibtex references in references.bib 
+\end{document}

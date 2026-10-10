@@ -391,3 +391,10 @@
 # Owner-added assessment inputs and generated exports.
 *.parquet
 /courses/introduction-bioinformatics-i/assignments/data-science-homework/reference/PyConPL24_Pandas_Polars/
+
+# Authored numerical reports and their fixed document illustrations.
+!/courses/numerical-methods/reports/**/*.png
+!/courses/numerical-methods/reports/**/*.jpg
+!/courses/numerical-methods/reports/**/report-pl.pdf
+!/courses/numerical-methods/reports/**/report-en.pdf
+!/courses/numerical-methods/reports/**/submitted-pl.pdf

@@ -1,0 +1,36 @@
+\section{Zadanie 2}
+% opis
+Porównujemy algorytmy rozwiązujące macierze dolnotrójkątne
+\textbf{Działanie SolveL}
+\begin{enumerate}
+    \item pętla $i$ po indeksach $2$ do długości $x$
+    \item pętla po indeksach 1 do $i$
+    \item zliczanie - mnożymy po kolei elementy 
+\end{enumerate}
+\textbf{Działanie SolveL1}
+\begin{enumerate}
+    \item pętla po indeksach wierszy, 
+    \item zliczanie - mnożenie macierzowe 
+\end{enumerate}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+
+\begin{center}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\resizebox{0.7\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$n$          & SolveL     & błąd          & SolveL1       & błąd          \\ \hline
+1000       & $1.43726$s & $6.2607e+159$ & $0.00959992$s & $1.2082e+159$ \\ \hline
+10000      & $135.994$s & $1.9449e+295$ & $0.278352$s   & $1.8671e+295$ \\ \hline
+1000 + eye & $1.36324$s & $4.7684e-06$  & $0.00939488$s & $6.4969e-06$  \\ \hline
+\end{tabular}%
+}
+\end{center}
+
+
+% wnioski 
+\noindent
+Widzimy że rozwiązywanie układów dolnotrójkątnych jest bardzo szybkie. Trzeba zwrócić uwagę na błąd pomiarowy. Bierze się to z iloczyn złożony z wielu małych liczb. Takie wyrażenie daży do $0$. Kiedy dzielimy przez odwrotność, utrzymujemy bardzo duże błędy.

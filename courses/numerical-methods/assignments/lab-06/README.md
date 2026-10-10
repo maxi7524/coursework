@@ -118,3 +118,5 @@ The test suite in tests.ipynb covers several key aspects:
   - Small interval: [0,1]
   - Large interval: [0,100]
 
+
+[Polish report and English translation](../../reports/lab-06/README.md).

@@ -1,0 +1,61 @@
+% LaTeX Template for short student reports.
+% Citations should be in bibtex format and go in references.bib
+\documentclass[a4paper, 11pt]{article}
+\usepackage[T1]{fontenc} % font
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[top=3cm, bottom=3cm, left = 2cm, right = 2cm]{geometry} 
+\geometry{a4paper} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{graphicx} 
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{bm}  
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue} % black links, for printed output
+\usepackage{memhfixc} 
+\usepackage{pdfsync}  
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\title{Lab04}
+\author{Max Stróżyk}
+%\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\begin{center}
+    \href{https://github.com/maxi7524/numerical-methods}{\textbf{Link do projektu na GitHubie}}
+\end{center}
+
+
+\include{zadanie 1}
+\newpage
+
+
+
+\include{zadanie 2}
+\newpage
+
+
+% TODO zrobić tą tabele jeszce raz 
+\include{zadanie 3}
+\newpage
+
+
+
+\include{zadanie 4}
+\newpage
+
+\include{zadanie 5}
+
+
+% propozycje: 
+% moment stopu, gdy, absolutny błąd bezwzględny, jest taki sam jak poprzedni
+
+
+% \bibliographystyle{abbrv}
+% \bibliography{references}  % need to put bibtex references in references.bib 
+\end{document}

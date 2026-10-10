@@ -1,0 +1,32 @@
+\section{Task 1}
+We compare different algorithms for matrix multiplication.
+\textbf{Operation of mm}:
+\begin{enumerate}
+    \item loop over the row indices of matrix A
+    \item loop over the column indices of matrix B
+    \item loop over the column indices of matrix A
+    \item accumulate each element by multiplying the corresponding row and column entries
+\end{enumerate}
+\textbf{Operation of mm1}:
+\begin{enumerate}
+    \item loop over the row indices of matrix A
+    \item loop over the column indices of matrix B
+    \item multiply the corresponding rows of A and columns of B
+\end{enumerate}
+\textbf{Default matrix multiplication}:\\
+I could not determine how it is implemented; most likely, its loops are organized differently.\\
+
+\begin{center}
+\resizebox{0.6 \textwidth}{!}{
+\begin{tabular}{|l|l|l|l|}
+\hline
+$n$   & mm         & mm1         & default         \\ \hline
+100   & $5.28124$s & $0.052098$s & $0.000175953$   \\ \hline
+500   & $671.192$s & $1.42004$s  & $0.00494003$   \\ \hline
+\end{tabular}
+}
+\end{center}
+
+
+\noindent 
+\textbf{Conclusions}:\\ Adding another loop significantly increases computational complexity. In the first case the complexity is $n^3$, and in the second it is $n^2$. The default algorithm must use a different approach: it is substantially faster than our implementation.

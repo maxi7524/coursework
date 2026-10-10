@@ -1,0 +1,41 @@
+\section{Zadanie 2}
+
+\subsection{Charakterystyka dekompozycji QR}
+
+Dekompozycja QR to metoda, która pozwala rozłożyć macierz \( A \) na iloczyn dwóch macierzy:  
+\[
+A = QR,
+\]  
+gdzie \( Q \) jest macierzą ortogonalną (\( Q^T Q = I \)), a \( R \) to macierz górna trójkątna. Metoda ta znajduje szerokie zastosowanie w obliczeniach numerycznych, szczególnie w kontekście znajdowania wartości własnych macierzy. 
+Podczas gdy metoda potęgowa iteracyjnie mnoży macierz \( A \) przez wektor i normalizuje wyniki, algorytm QR operuje na pełnej bazie wektorów. Dzięki dekompozycji QR kolejne iteracje prowadzą do ortogonalizacji bazy i normalizacji wektorów.
+
+\subsection{Wyniki i wnioski:}
+
+Wyniki obliczeń błędów numerycznych dla dekompozycji QR przedstawiają się następująco:
+
+\textbf{Opis błędów:}
+\begin{itemize}
+\item \textbf{Błąd 1:} Sprawdza unitarność macierzy \( Q \), czyli weryfikuje, czy \( Q^T Q = I \). Dla idealnej dekompozycji QR, macierz \( Q \) powinna być macierzą ortogonalną.
+\item \textbf{Błąd 2:} Sprawdza, czy iloczyn \( Q \) i \( R \) daje oryginalną macierz \( A \), czyli czy \( Q R = A \). Jest to weryfikacja poprawności samej dekompozycji QR.
+\item  \textbf{Błąd 3:} Sprawdza unitarność macierzy \( Q1 \), która powstaje w wyniku dalszych transformacji macierzy \( Q \). Dla macierzy ortogonalnych \( Q1 \) również powinna być macierzą ortogonalną.
+\item  \textbf{Błąd 4:} Sprawdza, czy iloczyn \( Q1 \) i \( R1 \) daje oryginalną macierz \( A \). Podobnie jak w przypadku błędu 2, jest to weryfikacja poprawności dekompozycji przy uwzględnieniu dodatkowych transformacji.
+\end{itemize}
+Tabela przedstawia wartości błędów numerycznych dla różnych rozmiarów macierzy:
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline 
+$n$   & błąd-1       & błąd-2       & błąd-3       & błąd-4       \\ \hline
+$3$   & $8.8817e-16$ & $5.5512e-17$ & $4.4408e-16$ & $3.3308e-16$ \\ \hline
+$500$ & $5.4369e-13$ & $3.5417e-14$ & $1.1103e-15$ & $7.9382e-15$ \\ \hline
+$100$ & $3.9967e-15$ & $5.6844e-14$ & $1.7765e-15$ & $3.1265e-13$ \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Wnioski:}
+\begin{itemize}
+    \item Dla małych macierzy (\( n = 3 \)), błędy numeryczne są bardzo małe, co wskazuje na wysoką precyzję metody QR w przypadku niewielkich rozmiarów macierzy.
+    \item Wraz ze wzrostem rozmiaru macierzy (\( n = 500 \)), błędy zaczynają rosnąć, co może być efektem akumulacji błędów zaokrągleń i ograniczeń precyzji obliczeń numerycznych, które stają się bardziej widoczne w przypadku dużych macierzy. Błędy są nadal małe ale znacząco większe. 
+    \item Dla macierzy symetrycznych, które zostały rozważone w ostatnim wierszu tabeli, błędy zmniejszają się, co świadczy o lepszej stabilności numerycznej metody QR w przypadku tego typu macierzy.
+    \item Ogólnie rzecz biorąc, metoda QR charakteryzuje się dobrą stabilnością numeryczną, szczególnie w kontekście macierzy symetrycznych, gdzie zbieżność jest wyraźniejsza, a błędy są mniejsze.
+\end{itemize}

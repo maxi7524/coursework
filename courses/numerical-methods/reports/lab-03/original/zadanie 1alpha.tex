@@ -1,0 +1,43 @@
+\section{Zadanie 1}
+
+\subsection{Charakterystyka metody Householdera}
+
+Metoda Householdera to technika stosowana do ortogonalizacji wektorów i redukcji macierzy do prostszej postaci, takiej jak macierz trójkątna górna lub macierz Hessenberga. Jest szeroko wykorzystywana w algorytmach numerycznych, takich jak dekompozycja QR czy obliczanie wartości własnych.
+
+Główna idea metody polega na zastosowaniu transformacji Householdera, która za pomocą macierzy odbicia (Householdera) przekształca dany wektor w prostszą postać.
+\[
+P = I - 2 \frac{v v^T}{v^T v}, \quad Q = I - 2\frac{uu^T}{u^Tu}
+\]
+
+
+\subsection{Wyniki i wnioski}
+
+Tabela przedstawia wyniki testów metody Householdera w odniesieniu do różnych rozmiarów macierzy \( n \) oraz relacji pomiędzy wektorami \( e \) i \( x \). Wartości błędów są obliczone w następujący sposób:  
+\begin{itemize}
+\item \textbf{Błąd 1:} Sprawdza błąd macierzy unitarnej \( P \), czyli sprawdza: \( P^T P = I \).  
+\item \textbf{Błąd 2:} Sprawdza bład macierzy unitarnej \( Q \), tj. \( Q^T Q = I \).  
+\item \textbf{Błąd 3:} Porównuje wynik \( P x \) z \(-k e\), gdzie \( k \) jest wyrażeniem definiującym skalowanie.  
+\item \textbf{Błąd 4:} Sprawdza, czy \( Q x \) równa się \(-k e\).  
+\end{itemize}
+Wartości w tabeli reprezentują maksymalne odchylenia od idealnych wyników i wskazują na precyzję algorytmu:  
+
+\begin{center}
+\begin{tabular}{@{}|l|l|l|l|l|l|@{}}
+\hline
+$n$                        & $k$       & Błąd 1       & Błąd 2       & Błąd 3       & Błąd 4       \\ \hline
+$3$                        & $1.0891$  & $2.2203e-16$ & $2.2205e-16$ & $2.2204e-16$ & $2.2204e-16$ \\ \hline
+$3000$                     & $0.9830$  & $1.7765e-15$ & $1.9983e-15$ & $3.2197e-15$ & $2.9975e-15$ \\ \hline
+$3000$; $e \sim x$         & $1.000$   & $1.9983e-15$ & $1.8875e-15$ & $2.6646e-15$ & $3.8857e-15$ \\ \hline
+$3000$; $e, x$ - ortogonalne & $0.9938$ & $1.9985e-15$ & $1.7763e-15$ & $4.2187e-15$ & $3.5528e-15$ \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Wnioski:}
+\begin{itemize}
+    \item \textbf{Precyzja dla małych \( n \):} Dla małych wartości \( n \), np. \( n = 3 \), metoda Householdera wykazuje bardzo wysoką dokładność z błędami rzędu \( 10^{-16} \). Oznacza to niemal idealną unitarność macierzy \( P \) i \( Q \), a także doskonałe odwzorowanie wektora wynikowego.  
+    \item \textbf{Stabilność dla dużych \( n \):} Dla dużych macierzy (\( n = 3000 \)) metoda nadal zachowuje stabilność numeryczną, choć błędy nieznacznie rosną.  
+    \item \textbf{Wpływ relacji \( e \) i \( x \):} Gdy \( e \) jest bliski \( x \), błędy są niezauważalne. 
+    \item \textbf{Ortogonalność \( e \) i \( x \):} W przypadku wektorów ortogonalnych błędy są niezauważalne. 
+
+\end{itemize}
+

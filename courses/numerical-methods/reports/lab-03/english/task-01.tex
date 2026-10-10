@@ -1,0 +1,43 @@
+\section{Task 1}
+
+\subsection{Overview of the Householder method}
+
+The Householder method is used to orthogonalize vectors and reduce matrices to simpler forms, such as upper-triangular or Hessenberg matrices. It is widely used in numerical algorithms, including QR decomposition and eigenvalue computation.
+
+The main idea is to apply a Householder transformation: a reflection matrix transforms a given vector into a simpler form.
+\[
+P = I - 2 \frac{v v^T}{v^T v}, \quad Q = I - 2\frac{uu^T}{u^Tu}
+\]
+
+
+\subsection{Results and conclusions}
+
+The table gives Householder-method test results for different matrix sizes \( n \) and relationships between vectors \( e \) and \( x \). Errors are computed as follows:
+\begin{itemize}
+\item \textbf{Error 1:} Checks the error of the unitary matrix \( P \), that is, \( P^T P = I \).
+\item \textbf{Error 2:} Checks the error of the unitary matrix \( Q \), that is, \( Q^T Q = I \).
+\item \textbf{Error 3:} Compares \( P x \) with \(-k e\), where \( k \) defines the scaling.
+\item \textbf{Error 4:} Checks whether \( Q x \) equals \(-k e\).
+\end{itemize}
+The table values represent maximum deviations from ideal results and indicate the algorithm's precision:
+
+\begin{center}
+\begin{tabular}{@{}|l|l|l|l|l|l|@{}}
+\hline
+$n$                        & $k$       & Error 1       & Error 2       & Error 3       & Error 4       \\ \hline
+$3$                        & $1.0891$  & $2.2203e-16$ & $2.2205e-16$ & $2.2204e-16$ & $2.2204e-16$ \\ \hline
+$3000$                     & $0.9830$  & $1.7765e-15$ & $1.9983e-15$ & $3.2197e-15$ & $2.9975e-15$ \\ \hline
+$3000$; $e \sim x$         & $1.000$   & $1.9983e-15$ & $1.8875e-15$ & $2.6646e-15$ & $3.8857e-15$ \\ \hline
+$3000$; $e, x$ - orthogonal & $0.9938$ & $1.9985e-15$ & $1.7763e-15$ & $4.2187e-15$ & $3.5528e-15$ \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Conclusions:}
+\begin{itemize}
+    \item \textbf{Precision for small \( n \):} For small values of \( n \), such as \( n = 3 \), the Householder method is highly accurate, with errors of order \( 10^{-16} \). This indicates nearly ideal unitarity of \( P \) and \( Q \) and an accurate mapping of the resulting vector.
+    \item \textbf{Stability for large \( n \):} For large matrices (\( n = 3000 \)), the method remains numerically stable, although errors increase slightly.
+    \item \textbf{Effect of the relationship between \( e \) and \( x \):} When \( e \) is close to \( x \), the errors are negligible.
+    \item \textbf{Orthogonality of \( e \) and \( x \):} Errors are negligible for orthogonal vectors.
+
+\end{itemize}
+

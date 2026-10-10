@@ -1,0 +1,41 @@
+\section{Task 2}
+
+\subsection{Overview of QR decomposition}
+
+QR decomposition factors a matrix \( A \) into the product of two matrices:
+\[
+A = QR,
+\]  
+where \( Q \) is orthogonal (\( Q^T Q = I \)) and \( R \) is upper triangular. The method is widely used in numerical computation, particularly for computing matrix eigenvalues.
+Whereas the power method repeatedly multiplies \( A \) by a vector and normalizes the result, the QR algorithm operates on a complete vector basis. QR decomposition leads to basis orthogonalization and vector normalization across successive iterations.
+
+\subsection{Results and conclusions:}
+
+Numerical-error results for QR decomposition are as follows:
+
+\textbf{Error definitions:}
+\begin{itemize}
+\item \textbf{Error 1:} Checks the unitarity of \( Q \), that is, \( Q^T Q = I \). For an ideal QR decomposition, \( Q \) should be orthogonal.
+\item \textbf{Error 2:} Checks whether the product of \( Q \) and \( R \) reconstructs the original matrix \( A \), that is, \( Q R = A \). This verifies the decomposition itself.
+\item \textbf{Error 3:} Checks the unitarity of \( Q1 \), obtained by further transformations of \( Q \). For orthogonal matrices, \( Q1 \) should also be orthogonal.
+\item \textbf{Error 4:} Checks whether the product of \( Q1 \) and \( R1 \) reconstructs \( A \). As for error 2, this verifies the decomposition after additional transformations.
+\end{itemize}
+The table gives numerical errors for different matrix sizes:
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline 
+$n$   & error-1       & error-2       & error-3       & error-4       \\ \hline
+$3$   & $8.8817e-16$ & $5.5512e-17$ & $4.4408e-16$ & $3.3308e-16$ \\ \hline
+$500$ & $5.4369e-13$ & $3.5417e-14$ & $1.1103e-15$ & $7.9382e-15$ \\ \hline
+$100$ & $3.9967e-15$ & $5.6844e-14$ & $1.7765e-15$ & $3.1265e-13$ \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Conclusions:}
+\begin{itemize}
+    \item For small matrices (\( n = 3 \)), numerical errors are very small, indicating high precision of the QR method at small matrix sizes.
+    \item As matrix size increases (\( n = 500 \)), errors grow. This may reflect accumulated rounding errors and limited numerical precision, which become more visible for large matrices. The errors remain small but are significantly larger.
+    \item For the symmetric matrices considered in the last table row, errors decrease, suggesting better numerical stability of the QR method for these matrices.
+    \item Overall, the QR method has good numerical stability, particularly for symmetric matrices, where convergence is clearer and errors are smaller.
+\end{itemize}

@@ -1,0 +1,21 @@
+
+\section{Task 3}
+We test an algorithm that computes the inverse of an upper-triangular matrix.\\
+\textbf{Operation of invU}
+\begin{itemize}
+    \item loop over columns
+    \item loop over rows
+    \item accumulate products of successive elements
+\end{itemize}
+
+\begin{center}
+\resizebox{0.27\textwidth}{!}{
+\begin{tabular}{|l|l|}
+\hline
+$n$    & invU       \\ \hline
+100  & $0.906316$s \\ \hline
+1000 & $1.43726$s \\ \hline
+\end{tabular}
+}
+\end{center}
+Inverting upper-triangular matrices is very fast.

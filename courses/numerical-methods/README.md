@@ -2,7 +2,13 @@
 
 Winter 2024/2025. Interpolation, QR, approximation, quadrature, root finding, importance sampling.
 
-## Assignments
+## Reports and authorship
+
+[Polish originals and English translations](reports/README.md) cover Labs 2–6, Importance Sampling and an additional earlier linear-algebra draft. Source exports and fixed report figures are included; translated versions are explicitly labeled. Historical PDF snapshots are also retained for Labs 4 and 5.
+
+The numerical implementation code in this collection was written by **Max Stróżyk**. Existing implementation files retain their original bytes and behavior; no modernization was applied. Report coauthors remain as listed in their source documents. Labs 2 and 3 currently have reports but no recovered implementation source.
+
+## Available implementations
 
 | Assignment | Files | Inputs |
 |---|---|---|

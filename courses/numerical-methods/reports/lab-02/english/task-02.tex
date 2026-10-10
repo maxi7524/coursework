@@ -1,0 +1,30 @@
+\section{Task 2}
+We compare algorithms for solving lower-triangular systems.
+\textbf{Operation of SolveL}
+\begin{enumerate}
+    \item loop over index $i$ from $2$ to the length of $x$
+    \item loop over indices from 1 to $i$
+    \item accumulate products of successive elements
+\end{enumerate}
+\textbf{Operation of SolveL1}
+\begin{enumerate}
+    \item loop over row indices
+    \item accumulate using matrix multiplication
+\end{enumerate}
+
+
+\begin{center}
+\resizebox{0.7\textwidth}{!}{
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$n$          & SolveL     & error          & SolveL1       & error          \\ \hline
+1000       & $1.43726$s & $6.2607e+159$ & $0.00959992$s & $1.2082e+159$ \\ \hline
+10000      & $135.994$s & $1.9449e+295$ & $0.278352$s   & $1.8671e+295$ \\ \hline
+1000 + eye & $1.36324$s & $4.7684e-06$  & $0.00939488$s & $6.4969e-06$  \\ \hline
+\end{tabular}
+}
+\end{center}
+
+
+\noindent
+Solving lower-triangular systems is very fast. Attention must be paid to the measured error. It comes from a product of many small numbers, which tends to $0$. When dividing by the reciprocal, we obtain very large errors.
