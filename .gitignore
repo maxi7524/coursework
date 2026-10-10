@@ -393,8 +393,13 @@
 /courses/introduction-bioinformatics-i/assignments/data-science-homework/reference/PyConPL24_Pandas_Polars/
 
 # Authored numerical reports and their fixed document illustrations.
-!/courses/numerical-methods/reports/**/*.png
-!/courses/numerical-methods/reports/**/*.jpg
-!/courses/numerical-methods/reports/**/report-pl.pdf
-!/courses/numerical-methods/reports/**/report-en.pdf
-!/courses/numerical-methods/reports/**/submitted-pl.pdf
+!/courses/numerical-methods/assignments/**/report/**/*.png
+!/courses/numerical-methods/assignments/**/report/**/*.jpg
+!/courses/numerical-methods/assignments/**/report/report-pl.pdf
+!/courses/numerical-methods/assignments/**/report/report-en.pdf
+!/courses/numerical-methods/assignments/**/report/submitted-pl.pdf
+!/courses/numerical-methods/assignments/**/report-draft/**/*.png
+!/courses/numerical-methods/assignments/**/report-draft/**/*.jpg
+!/courses/numerical-methods/assignments/**/report-draft/report-pl.pdf
+!/courses/numerical-methods/assignments/**/report-draft/report-en.pdf
+!/courses/numerical-methods/assignments/**/report-draft/submitted-pl.pdf

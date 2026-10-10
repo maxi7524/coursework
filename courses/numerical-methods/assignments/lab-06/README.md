@@ -119,4 +119,4 @@ The test suite in tests.ipynb covers several key aspects:
   - Large interval: [0,100]
 
 
-[Polish report and English translation](../../reports/lab-06/README.md).
+[Polish report and English translation](report/README.md).

@@ -243,4 +243,4 @@ Contains testing and utility functions:
 - Matplotlib
 
 
-[Polish report and English translation](../../reports/lab-05/README.md).
+[Polish report and English translation](report/README.md).

@@ -6,4 +6,4 @@ Browse the notebooks and Python modules in this directory. Use the retained envi
 
 [Course index](../../README.md).
 
-[Polish report and English translation](../../reports/lab-04/README.md).
+[Polish report and English translation](report/README.md).

@@ -1,0 +1,692 @@
+{
+  "environment_versions": {
+    "nbformat": "5.10.4",
+    "nbconvert": "7.17.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.3.0",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1"
+  },
+  "notebooks": [
+    {
+      "notebook": "courses/architecture-large-bioinformatics-projects/assignments/week-01/exercise_1.ipynb",
+      "preview": "previews/courses/architecture-large-bioinformatics-projects/assignments/week-01/exercise_1.html",
+      "source_sha256": "e33a33a6c9b6fa2987da7106bece63e9e5dfb1e37cfc1aebdafa3462e3e5122b",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 2,
+      "completed_source_cells": 2,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/architecture-large-bioinformatics-projects/assignments/week-02/exercise_2.ipynb",
+      "preview": "previews/courses/architecture-large-bioinformatics-projects/assignments/week-02/exercise_2.html",
+      "source_sha256": "a8b17ca66c34b7ff0988e6dbbb224afa4ce3e5c30e8e074d5ff6625a1c3df66c",
+      "status": "blocked",
+      "detail": "Inputs absent from the local preserved archive: data/CP014940.1.fasta. See the assignment data instructions. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/architecture-large-bioinformatics-projects/assignments/week-03/exercise_3.ipynb",
+      "preview": "previews/courses/architecture-large-bioinformatics-projects/assignments/week-03/exercise_3.html",
+      "source_sha256": "5addda7f85e1a5547821bef3d657f8d0f153b25988b94665849a1f892d225e9d",
+      "status": "blocked",
+      "detail": "Inputs absent from the local preserved archive: data/CP014940.1.fasta, data/raw/CP014940.fas, data/raw/Mycgen.fas, data/structures/CP014940.tar.gz, data/structures/Mycgen.tar.gz. See the assignment data instructions. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 1,
+      "output_cells": 1,
+      "completed_source_cells": 1,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-01/DNN_Lab_1_MSLE_student_version.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-01/DNN_Lab_1_MSLE_student_version.html",
+      "source_sha256": "c581ef23d047393559ec48cd11f47779a8d954e153761f6bd6e0d6bd553e3617",
+      "status": "blocked",
+      "detail": "Inputs absent from the local preserved archive: data/mieszkania_test.csv, data/mieszkania.csv. See the assignment data instructions. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 13,
+      "output_cells": 13,
+      "completed_source_cells": 11,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-02/DNN_Lab_2_backprop_student_version.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-02/DNN_Lab_2_backprop_student_version.html",
+      "source_sha256": "fd117db9b3d2e22f2dc7fe58b24c861713faaa6d52fe5ed70ed8014aa228cb6e",
+      "status": "blocked",
+      "detail": "The original notebook installs or upgrades packages/system tools. The existing scientific environment is preserved; this notebook requires a dedicated original environment. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 7,
+      "output_cells": 7,
+      "completed_source_cells": 6,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-03/DNN_Lab_3_mnist_again_student.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-03/DNN_Lab_3_mnist_again_student.html",
+      "source_sha256": "af7fdba905db4b94cceb5c3d41a6937446b8741f81c7727a0b65853cfae888db",
+      "status": "blocked",
+      "detail": "The original notebook installs or upgrades packages/system tools. The existing scientific environment is preserved; this notebook requires a dedicated original environment. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 15,
+      "output_cells": 15,
+      "completed_source_cells": 12,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-05/DNN_Lab_5a_goldfish_to_shark_student_version.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-05/DNN_Lab_5a_goldfish_to_shark_student_version.html",
+      "source_sha256": "519009e02a56c37a8571a045a223b2a24aa76b72e779793efaa981afb1288e35",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: timm, torchvision. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 8,
+      "output_cells": 8,
+      "completed_source_cells": 7,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-05/DNN_Lab_5b_occlusion_student_version.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-05/DNN_Lab_5b_occlusion_student_version.html",
+      "source_sha256": "9a42ee1e736d2f44bda65141a7277efb7db1e99d5f86d19c4ac985cf91a2e08e",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: timm, torchvision. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 1,
+      "output_cells": 1,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-06/DNN_Lab_6_Batchnorm_and_Convnets_student_version.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-06/DNN_Lab_6_Batchnorm_and_Convnets_student_version.html",
+      "source_sha256": "bd7898e4d46f179d0d89baad404d474f49d57f81fb0223a24cdd40441ad939dd",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: google, torchvision. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 3,
+      "output_cells": 3,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-07/DNN_Lab_7_ResidualBlock_in_Pytorch_student_version.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-07/DNN_Lab_7_ResidualBlock_in_Pytorch_student_version.html",
+      "source_sha256": "d6a4a65cd75258ab4f6fdee321ae839d4dece7e6271741cdc0502744b0d5e279",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: torchvision. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/deep-neural-networks/assignments/assignment-07/DNN_Lab_7_UNet_in_Pytorch_student_version.ipynb",
+      "preview": "previews/courses/deep-neural-networks/assignments/assignment-07/DNN_Lab_7_UNet_in_Pytorch_student_version.html",
+      "source_sha256": "37230791ef18c10324d9d2846302bcd58567a899aed38afb9edb1b702ae8c2b7",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: torchvision. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 5,
+      "output_cells": 5,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/introduction-bioinformatics-i/assignments/assessment-1-3/history.ms.ipynb",
+      "preview": "previews/courses/introduction-bioinformatics-i/assignments/assessment-1-3/history.ms.html",
+      "source_sha256": "5ae1ebfb7dba96a6149bdb423c045f35d486321390eb15a77ce7363309c96f55",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 4,
+      "completed_source_cells": 4,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/introduction-bioinformatics-i/assignments/data-science-homework/part_1_rna_tail_analysis.ipynb",
+      "preview": "previews/courses/introduction-bioinformatics-i/assignments/data-science-homework/part_1_rna_tail_analysis.html",
+      "source_sha256": "8c2ebba75830d3d74e1cadf0f668d74ca1952601dd48c84ac8113c85addcebe5",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 10,
+      "completed_source_cells": 13,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/introduction-bioinformatics-i/assignments/data-science-homework/reference/part_0_polars_tutorial.ipynb",
+      "preview": "previews/courses/introduction-bioinformatics-i/assignments/data-science-homework/reference/part_0_polars_tutorial.html",
+      "source_sha256": "19b1fb21daf8f3fd667e59a232817d444aa4d93b536235280ecf16ebcf4d0861",
+      "status": "blocked",
+      "detail": "The original notebook installs or upgrades packages/system tools. The existing scientific environment is preserved; this notebook requires a dedicated original environment. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 37,
+      "output_cells": 37,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/introduction-bioinformatics-i/assignments/final-project/part_1_mrna_stability_and_creb1_variation.ipynb",
+      "preview": "previews/courses/introduction-bioinformatics-i/assignments/final-project/part_1_mrna_stability_and_creb1_variation.html",
+      "source_sha256": "f40a0cccf5a8344d5701f493e31f7246367fca9986678e4bdfb51d58828c79a0",
+      "status": "blocked",
+      "detail": "The original notebook installs or upgrades packages/system tools. The existing scientific environment is preserved; this notebook requires a dedicated original environment. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 29,
+      "output_cells": 29,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/modeling-complex-biological-systems/assignments/small_project_1/analysis.ipynb",
+      "preview": "previews/courses/modeling-complex-biological-systems/assignments/small_project_1/analysis.html",
+      "source_sha256": "a40b775577bad3fd4f5cad175ec842b7d8748d41903f0888951177cedb593b2f",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 4,
+      "completed_source_cells": 6,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/modeling-complex-biological-systems/assignments/week-01/lab_0_toy_model.ipynb",
+      "preview": "previews/courses/modeling-complex-biological-systems/assignments/week-01/lab_0_toy_model.html",
+      "source_sha256": "6ad5e139f7765c8749330a3dfabe33b0227097d79f0d96224277bb7791c04f98",
+      "status": "failed",
+      "detail": "Fresh execution stopped at RuntimeError: Encountered an exception when converting data source to a pandas DataFrame. See traceback above for details.. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 3,
+      "completed_source_cells": 5,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/modeling-complex-biological-systems/assignments/week-02/lab_01_homework.ipynb",
+      "preview": "previews/courses/modeling-complex-biological-systems/assignments/week-02/lab_01_homework.html",
+      "source_sha256": "7d0ae413a4dd5590123e3d3363ad49afd448f1b8e01cbe33c80c098bb8f82031",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: inmoose. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/modeling-complex-biological-systems/assignments/week-07/Lab_Survival_Analysis.ipynb",
+      "preview": "previews/courses/modeling-complex-biological-systems/assignments/week-07/Lab_Survival_Analysis.html",
+      "source_sha256": "4604c1b855f57624e22743334e939ca0ed66f6664facb8da25294a6d401463e9",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: lifelines. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 21,
+      "output_cells": 21,
+      "completed_source_cells": 20,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/modeling-complex-biological-systems/assignments/week_5_6/lab_biological_networks.ipynb",
+      "preview": "previews/courses/modeling-complex-biological-systems/assignments/week_5_6/lab_biological_networks.html",
+      "source_sha256": "fc7d1767d4e1827795feee5839c27d03fc07b062e80fdaedc57e0776b37cbc87",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 16,
+      "completed_source_cells": 17,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/modeling-complex-biological-systems/assignments/week_5_6/lab_motifs_modules.ipynb",
+      "preview": "previews/courses/modeling-complex-biological-systems/assignments/week_5_6/lab_motifs_modules.html",
+      "source_sha256": "aed4aa6213cb7044d9297821f6be3995a4b2dd1fcf095265f8ba6a13ef9a9cc1",
+      "status": "blocked",
+      "detail": "The original notebook installs or upgrades packages/system tools. The existing scientific environment is preserved; this notebook requires a dedicated original environment. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 15,
+      "output_cells": 15,
+      "completed_source_cells": 11,
+      "missing_attachments": [
+        {
+          "cell": 33,
+          "name": "image.png"
+        },
+        {
+          "cell": 33,
+          "name": "image-2.png"
+        }
+      ]
+    },
+    {
+      "notebook": "courses/multivariate-statistics/assignments/assignment-01/main.ipynb",
+      "preview": "previews/courses/multivariate-statistics/assignments/assignment-01/main.html",
+      "source_sha256": "2614a60aebc837d49613dcd267a0b919cbc4cc30a4923d3807ee5c08673aa021",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/multivariate-statistics/assignments/assignment-02/assignment.ipynb",
+      "preview": "previews/courses/multivariate-statistics/assignments/assignment-02/assignment.html",
+      "source_sha256": "2bc493d12256b765e28bb4c2f783fe6f8bb63426206e7228aa2309e56b7113d0",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: minisom, pyreadr. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/numerical-methods/assignments/importance-sampling/analysis.ipynb",
+      "preview": "previews/courses/numerical-methods/assignments/importance-sampling/analysis.html",
+      "source_sha256": "47de1e2f83637cc149d364e07d6382e71f0b412a3990ec348a0c8253d6a6f228",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 8,
+      "completed_source_cells": 14,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/numerical-methods/assignments/lab-04/results.ipynb",
+      "preview": "previews/courses/numerical-methods/assignments/lab-04/results.html",
+      "source_sha256": "073a32cceddfaff59297e9e1a022e1062b7c7e8aba522ec367851aa762faf92a",
+      "status": "failed",
+      "detail": "Fresh execution stopped at SyntaxError: invalid syntax (2562255087.py, line 13). Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 2,
+      "completed_source_cells": 4,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/numerical-methods/assignments/lab-05/summary.ipynb",
+      "preview": "previews/courses/numerical-methods/assignments/lab-05/summary.html",
+      "source_sha256": "bb4f9e50757315f930b81a27f944a216869460d0c83aa91e6a1b28957d492648",
+      "status": "timeout",
+      "detail": "Fresh execution did not produce a complete result within the 900-second whole-notebook budget. The preview shows preserved results where available. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 6,
+      "output_cells": 6,
+      "completed_source_cells": 6,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/numerical-methods/assignments/lab-06/tests.ipynb",
+      "preview": "previews/courses/numerical-methods/assignments/lab-06/tests.html",
+      "source_sha256": "0511b8980978272fca0711279f44dd309b5a7d698db7db84317629d6f517bf63",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 6,
+      "completed_source_cells": 11,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/assignment-01/SAD2_Lab0_torch_distributions_student_version_alpha_version.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/assignment-01/SAD2_Lab0_torch_distributions_student_version_alpha_version.html",
+      "source_sha256": "0a85ddefc3e434752bf625d96d5a11a89de90a2c95149525bcf93ddab3581276",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 18,
+      "completed_source_cells": 21,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/assignment-01/SAD2_Lab1_prior_posterior_coin_tossing_student_version.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/assignment-01/SAD2_Lab1_prior_posterior_coin_tossing_student_version.html",
+      "source_sha256": "02fb596841b837ffdceaefc228eab4a28c4f052231b84b5400fe5f440b6c5cc3",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 8,
+      "completed_source_cells": 13,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/assignment-03/SAD2_lab3_Markov_chains_student_version.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/assignment-03/SAD2_lab3_Markov_chains_student_version.html",
+      "source_sha256": "088de5162872be22a68c4ca489dae6debdf8a82a7e92e2eb646aef9406a6b5d2",
+      "status": "failed",
+      "detail": "Fresh execution stopped at TypeError: can't assign a ellipsis to a torch.LongTensor. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 11,
+      "completed_source_cells": 13,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/assignment-05/SAD2_Lab5_HMM_CpG_student_version.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/assignment-05/SAD2_Lab5_HMM_CpG_student_version.html",
+      "source_sha256": "f42986e4aeadaf706732aa072520b9f2cac745a48799eb1c5a070f9102fbd356",
+      "status": "blocked",
+      "detail": "Inputs absent from the local preserved archive: cpg_chr16.fasta, non_cpg_ch16.fasta. See the assignment data instructions. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 5,
+      "output_cells": 5,
+      "completed_source_cells": 4,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/assignment-05/hmm_lab_5.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/assignment-05/hmm_lab_5.html",
+      "source_sha256": "ac293f4abccc34fe6488f8611a123a98a61f26900f742d67b256c81cb34f727d",
+      "status": "blocked",
+      "detail": "Inputs absent from the local preserved archive: cpg_chr16.fasta, non_cpg_ch16.fasta. See the assignment data instructions. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 5,
+      "output_cells": 5,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/assignment-05/lbas.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/assignment-05/lbas.html",
+      "source_sha256": "5190451d08736e439cbbef298ad232be7972074c8d3b32b804d3224c71a65d55",
+      "status": "blocked",
+      "detail": "Inputs absent from the local preserved archive: cpg_chr16.fasta, non_cpg_ch16.fasta. See the assignment data instructions. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 2,
+      "output_cells": 2,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/assignment-08/SAD2_lab8_Baum_Welch_student_version.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/assignment-08/SAD2_lab8_Baum_Welch_student_version.html",
+      "source_sha256": "ef01e52e2cc6d086fd28f50a3dd765a385c96049af19aeddce5c316a61a0da5c",
+      "status": "failed",
+      "detail": "Fresh execution stopped at NameError: name 'T' is not defined. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 2,
+      "completed_source_cells": 2,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/statistical-data-analysis-ii/assignments/general-exercises/SAD2_Lab9_EM_gaussian_mixture_student_version.ipynb",
+      "preview": "previews/courses/statistical-data-analysis-ii/assignments/general-exercises/SAD2_Lab9_EM_gaussian_mixture_student_version.html",
+      "source_sha256": "b85e6ed146256883d58e06bdd63c416560321a73c477cf0396ddb2bd7d3c6243",
+      "status": "failed",
+      "detail": "Fresh execution stopped at NameError: name 'std_h' is not defined. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 2,
+      "completed_source_cells": 1,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-01/exercise_1.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-01/exercise_1.html",
+      "source_sha256": "dec6c4906a40f79b1ab2b4eb133dbd17bb823b8b88e8d7379816d4925ddf4e53",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 5,
+      "completed_source_cells": 8,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-01/homework_1.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-01/homework_1.html",
+      "source_sha256": "c417c1d5895104d5c999f317c1364f9758ec31995ab6d9185a1c7e96eef39034",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 7,
+      "completed_source_cells": 13,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-02/exercise_2.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-02/exercise_2.html",
+      "source_sha256": "b96c089a7a8777abd13af9c5cefdb6461a27c9bf8dd7f75e0165f5eb8703cb23",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 2,
+      "completed_source_cells": 5,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-03/exercise_3.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-03/exercise_3.html",
+      "source_sha256": "553800c560b2e88c120d29fd8da862a65d92b34f24152949983e12c09d8de96e",
+      "status": "failed",
+      "detail": "Fresh execution stopped at TypeError: list.append() takes exactly one argument (3 given). Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 5,
+      "completed_source_cells": 11,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-05/exercise_5.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-05/exercise_5.html",
+      "source_sha256": "dc32acb41f8242d84b55694bbdd0ce520653d7b050a3d5fbd893fdf148b6b0f6",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 4,
+      "completed_source_cells": 6,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-05/markov_processes.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-05/markov_processes.html",
+      "source_sha256": "102476da3f9fac94aa4910fddbdcf49c423777dc3a7769af6c3cc393a6aa521f",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 3,
+      "completed_source_cells": 6,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-05/random_walks.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-05/random_walks.html",
+      "source_sha256": "0ebcc1c3a20e44e0fb320a875ef7ab1935832eec3fe065c589fddbe22b03950d",
+      "status": "failed",
+      "detail": "Fresh execution stopped at NameError: name 'k' is not defined. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 3,
+      "completed_source_cells": 7,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-07/estimator_variance.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-07/estimator_variance.html",
+      "source_sha256": "5e8f3c5b58c0eec5681af1c19fd9afe9127fa5dd85bd23029c3af9249a729680",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 1,
+      "completed_source_cells": 2,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-07/jumping_process_and_SIR.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-07/jumping_process_and_SIR.html",
+      "source_sha256": "4dc17e3619b318421b04de29f42f84338bda263fbc55a099bde2d1358a293bd5",
+      "status": "failed",
+      "detail": "Fresh execution stopped at NameError: name 'binom' is not defined. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 4,
+      "completed_source_cells": 5,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-07/mcmc_estimator.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-07/mcmc_estimator.html",
+      "source_sha256": "eed179b0d774c79750a6a75b6d7b0184274a8bf54e1d8d7575b0832e2c19b0d6",
+      "status": "failed",
+      "detail": "Fresh execution stopped at TypeError: _parse_args() missing 1 required positional argument: 'c'. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 3,
+      "completed_source_cells": 3,
+      "missing_attachments": [
+        {
+          "cell": 2,
+          "name": "image.png"
+        },
+        {
+          "cell": 6,
+          "name": "image.png"
+        }
+      ]
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-08/12.05.26.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-08/12.05.26.html",
+      "source_sha256": "711f06ea5891be1bda7445300467a5e04a0eae4b08b7d292dd68b2042dda8a5a",
+      "status": "failed",
+      "detail": "Fresh execution stopped at AttributeError: 'rv_continuous_frozen' object has no attribute 'log'. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 1,
+      "completed_source_cells": 1,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-08/markov_processes.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-08/markov_processes.html",
+      "source_sha256": "6058776ec0b2d8e40b625c38c0128266b77ee9da5d92fdd71acd6b42fde7fc3d",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 3,
+      "completed_source_cells": 6,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-10/RBM.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-10/RBM.html",
+      "source_sha256": "d83430bdfc2b0ea7b1af0b15b53ca26b234570c2572ac07aa501527b3295a712",
+      "status": "failed",
+      "detail": "Fresh execution stopped at NameError: name 'cite' is not defined. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 3,
+      "completed_source_cells": 5,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-11/algorithms_PF_and_FFBS.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-11/algorithms_PF_and_FFBS.html",
+      "source_sha256": "5e4c41d42a22033573f4735e555b638ed062bbee0e31b75455de99e858f11297",
+      "status": "failed",
+      "detail": "Fresh execution stopped at AttributeError: module 'matplotlib.cm' has no attribute 'get_cmap'. Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 2,
+      "completed_source_cells": 3,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "courses/stochastic-simulations/assignments/week-11/exercise.ipynb",
+      "preview": "previews/courses/stochastic-simulations/assignments/week-11/exercise.html",
+      "source_sha256": "f971a36704437e7dd72424a82243b1acddc2a750d2436b354a8ab69fae86f178",
+      "status": "executed",
+      "detail": "Fresh execution completed in source cell order with seed 4242. Historical results were not substituted.",
+      "historical_output_cells": 0,
+      "output_cells": 2,
+      "completed_source_cells": 2,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/thursday/ipynb/turing.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/thursday/ipynb/turing.html",
+      "source_sha256": "efe6c69bf1260c49e41dc21daaca251373799f553c4c32f17568fffcf71147bc",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 4,
+      "output_cells": 4,
+      "completed_source_cells": 3,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/thursday/ipynb/turing_wavelength.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/thursday/ipynb/turing_wavelength.html",
+      "source_sha256": "92d706f9cffc2c1682a3d7f3a9affa0243cfecf23f273debca54ce243e6cace3",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/tuesday/test_r.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/tuesday/test_r.html",
+      "source_sha256": "356d15e9bad4f384a83d3c24e66f33276c9a04856fa3dcd27c2e0aa6acca5419",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 3,
+      "output_cells": 3,
+      "completed_source_cells": 3,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/wednesday/ipynb/fitzhugh.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/wednesday/ipynb/fitzhugh.html",
+      "source_sha256": "b26ee0744b38c376352a772d1dde8cbb92822beb36b6d836d6b59a3b1b83310f",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 6,
+      "output_cells": 6,
+      "completed_source_cells": 6,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/wednesday/ipynb/my_first_ODE_model.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/wednesday/ipynb/my_first_ODE_model.html",
+      "source_sha256": "6717c957a81596b2e0b0fb6b8af90ed18251526750ebfae09cb472243f730fae",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/wednesday/ipynb/operon.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/wednesday/ipynb/operon.html",
+      "source_sha256": "f2af8d145d7976292c1028a52fc59d5dbd4e96b1b2db1e812bde245f0b15274b",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/wednesday/ipynb/paradox.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/wednesday/ipynb/paradox.html",
+      "source_sha256": "845d2a40609d331ff13c33d38c62ac9a8df4003c7e98a05bffd86c01649271c3",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/mat-bio-exchange-2026/wednesday/ipynb/sheep_wolves.ipynb",
+      "preview": "previews/workshops/mat-bio-exchange-2026/wednesday/ipynb/sheep_wolves.html",
+      "source_sha256": "f7a319a9ce2d287bc19424aa01267dd3efbaf92b55cc961f2ca2d59e96ca3d87",
+      "status": "blocked",
+      "detail": "The original R kernel and its course packages are not installed. Source-only preview; no computed results are available.",
+      "historical_output_cells": 0,
+      "output_cells": 0,
+      "completed_source_cells": 0,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/phd-open-2026-diffusion/tutorial_continuous_diffusion.ipynb",
+      "preview": "previews/workshops/phd-open-2026-diffusion/tutorial_continuous_diffusion.html",
+      "source_sha256": "22a3f5026352034483e3ce1055e0f78d23cb3fbfc5cb985e587bbf2146cd12ea",
+      "status": "blocked",
+      "detail": "Unavailable original dependencies: ipympl. Preserved historical outputs are shown for exactly matching cells; they are not results of a fresh run.",
+      "historical_output_cells": 10,
+      "output_cells": 10,
+      "completed_source_cells": 10,
+      "missing_attachments": []
+    },
+    {
+      "notebook": "workshops/phd-open-2026-diffusion/tutorial_discrete_diffusion.ipynb",
+      "preview": "previews/workshops/phd-open-2026-diffusion/tutorial_discrete_diffusion.html",
+      "source_sha256": "84d3897dff078cfa3e90669e0551fe70662bd930e9cad259c834aac618d87985",
+      "status": "failed",
+      "detail": "Fresh execution stopped at SyntaxError: invalid syntax (3555716661.py, line 44). Earlier outputs are partial results.",
+      "historical_output_cells": 0,
+      "output_cells": 10,
+      "completed_source_cells": 20,
+      "missing_attachments": []
+    }
+  ]
+}

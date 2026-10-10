@@ -13,7 +13,19 @@ sys.path.insert(0, str(ROOT))
 from _support.downloads import get_custom_logger  # noqa: E402
 
 logger = get_custom_logger(__name__)
-REPORTS = ROOT / "courses/numerical-methods/reports"
+ASSIGNMENTS = ROOT / "courses/numerical-methods/assignments"
+REPORTS = {
+    name: ASSIGNMENTS / name / "report"
+    for name in [
+        "lab-02",
+        "lab-03",
+        "lab-04",
+        "lab-05",
+        "lab-06",
+        "importance-sampling",
+    ]
+}
+REPORTS["linear-algebra-draft"] = ASSIGNMENTS / "lab-03/report-draft"
 
 
 def adapt_for_tectonic(text: str) -> str:
@@ -65,7 +77,7 @@ def build_report(report: Path, version: str, tectonic: str) -> None:
     :raises OSError: If staging or publication fails.
     :side effects: Replaces report-pl.pdf or report-en.pdf after successful build.
     """
-    logger.info("Building %s/%s", report.name, version)
+    logger.info("Building %s/%s/%s", report.parent.name, report.name, version)
     with tempfile.TemporaryDirectory(prefix="coursework-report-") as temporary:
         stage = Path(temporary) / "source"
         shutil.copytree(report / version, stage)
@@ -88,18 +100,14 @@ def main() -> int:
     parser.add_argument(
         "--report",
         action="append",
-        choices=sorted(path.name for path in REPORTS.iterdir() if path.is_dir()),
+        choices=sorted(REPORTS),
         help="Build this report only; repeat to select several reports.",
     )
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     if args.tectonic is None:
         raise FileNotFoundError("Install Tectonic or supply --tectonic.")
-    reports = (
-        [REPORTS / name for name in args.report]
-        if args.report
-        else sorted(path for path in REPORTS.iterdir() if path.is_dir())
-    )
+    reports = [REPORTS[name] for name in (args.report or sorted(REPORTS))]
     for report in reports:
         for version in ["original", "english"]:
             build_report(report, version, args.tectonic)
