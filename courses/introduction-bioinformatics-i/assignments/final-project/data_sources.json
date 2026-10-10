@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/part_1.xls",
+      "role": "input",
+      "url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12864-016-3237-6/MediaObjects/12864_2016_3237_MOESM22_ESM.xls",
+      "sha256": "19c25f7bf32905b81855a77e1128caaacf5f2d7e5d5cec6bc4b9eabc968debf5",
+      "archive_path": "review-2026-10-10/external-inputs/final-project/data/part_1.xls",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "data/uniprot/Q01147.json",
+      "role": "input",
+      "url": "https://rest.uniprot.org/uniprotkb/Q01147.json",
+      "sha256": "88557be2b8c336f8f472ae490f7d29f09de6f497d5e7f8f8c625e7a39cd2a281",
+      "archive_path": "review-2026-10-10/external-inputs/final-project/data/uniprot/Q01147.json",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "data/genbank/Danio_rerio.gb",
+      "role": "input",
+      "organism": "Danio rerio",
+      "accessions": [
+        "BC164114.1"
+      ],
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=BC164114.1&rettype=gb&retmode=text",
+      "sha256": "c96c264181b58c8862ac08253339414f2e8fbdcaadbe8945fba0f69bacbc17c6",
+      "archive_path": "review-2026-10-10/external-inputs/final-project/data/genbank/Danio_rerio.gb",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "data/genbank/Oryctolagus_cuniculus.gb",
+      "role": "input",
+      "organism": "Oryctolagus cuniculus",
+      "accessions": [
+        "KJ139984.1"
+      ],
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=KJ139984.1&rettype=gb&retmode=text",
+      "sha256": "f428d7af77e47248c42d32a0d50a8fcbd0ef61966f959497ce52fa84a2beb9ae",
+      "archive_path": "review-2026-10-10/external-inputs/final-project/data/genbank/Oryctolagus_cuniculus.gb",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "data/genbank/Ovis_aries.gb",
+      "role": "input",
+      "organism": "Ovis aries",
+      "accessions": [
+        "MH500603.1"
+      ],
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=MH500603.1&rettype=gb&retmode=text",
+      "sha256": "4e3e0a4bd019032505d2dc91c155f3f8f6ecd1d94d4cc25c69986154c0c28863",
+      "archive_path": "review-2026-10-10/external-inputs/final-project/data/genbank/Ovis_aries.gb",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "data/genbank/Sus_scrofa.gb",
+      "role": "input",
+      "organism": "Sus scrofa",
+      "accessions": [
+        "OL439247.1",
+        "OL439246.1",
+        "OL439245.1",
+        "AY862387.1"
+      ],
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=OL439247.1%2COL439246.1%2COL439245.1%2CAY862387.1&rettype=gb&retmode=text",
+      "sha256": "b2ebb18845de88a4b4a9f09f39b5e67d03ea5a0cec0f081657b6af40721c4157",
+      "archive_path": "review-2026-10-10/external-inputs/final-project/data/genbank/Sus_scrofa.gb",
+      "availability": "verified-source-and-local-archive"
+    }
+  ],
+  "unresolved": [],
+  "providers": [],
+  "generated": []
+}

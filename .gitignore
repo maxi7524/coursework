@@ -387,3 +387,7 @@
 /courses/architecture-large-bioinformatics-projects/assignments/human-genome-analysis/data/genome/chr1.fa
 /courses/architecture-large-bioinformatics-projects/assignments/human-genome-analysis/data/genome/chrM.fa
 **/.ruff_cache/
+
+# Owner-added assessment inputs and generated exports.
+*.parquet
+/courses/introduction-bioinformatics-i/assignments/data-science-homework/reference/PyConPL24_Pandas_Polars/

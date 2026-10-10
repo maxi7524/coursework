@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "data/data_RNAtails_wt.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/lidkalee/PyConPL23_Pandas/e1a7ce5ed59e6052b06e2163bcbfae72048d08c7/data_RNAtails_wt.csv",
+      "sha256": "b266511de84f848f1c22558b2bb2fc04329164bfbeddae42d0bcaef57a651dab",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/data/data_RNAtails_wt.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "data/figures/pombe.jpg",
+      "role": "artifact",
+      "sha256": "4defb85868ef06a6a6137e590540e769ed856e2ffeba50807618d3227a36c6bc",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/data/figures/pombe.jpg",
+      "availability": "embedded-original-image-in-local-archive"
+    }
+  ],
+  "unresolved": [],
+  "providers": [],
+  "generated": []
+}

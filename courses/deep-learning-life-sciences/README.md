@@ -2,7 +2,13 @@
 
 Summer 2025/2026. CNNs, autoencoders, VAEs, single-cell and multimodal data.
 
-## Assignments
+## Final project
+
+[DNA regulatory-activity prediction](https://github.com/maxi7524/project_bioinformatics_regulatory_activity_appearance) (private): sequence-based classification/regression of regulatory activity. The owner confirmed this as the final course project; its implementation remains in the independent repository.
+
+## Supporting notebooks
+
+Existing laboratory notebooks are retained as secondary material.
 
 | Assignment | Files | Inputs |
 |---|---|---|

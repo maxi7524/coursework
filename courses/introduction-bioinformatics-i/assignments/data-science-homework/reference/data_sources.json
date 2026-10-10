@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_0.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_0.csv",
+      "sha256": "7188c0c8e49e1320fd4d2a25a892dff05902314464f4fc2a309934c5bf03a227",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_0.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_1.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_1.csv",
+      "sha256": "8ad74c37add288f7b93913a86bb949699f67155dbd09a75df5e3024b6419e51a",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_1.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_10.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_10.csv",
+      "sha256": "1324b48ee54f5e920208d6d7a33ad9d79109dd13f855e1cf079d1ebc7a2dc6ff",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_10.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_11.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_11.csv",
+      "sha256": "22bf04090f7cd5f4ee851d1ec7b341ea40a6db8af11e472a8ddaf51d381abc90",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_11.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_12.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_12.csv",
+      "sha256": "ede68f39360933d0ecc8b63a3268487c3bd48e5a273171761a4ff1c1d5a7eb5b",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_12.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_13.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_13.csv",
+      "sha256": "fff207aa3b9ee3843d50986adc1e201e57e246daf5a60da2ad399b5cc2ddab34",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_13.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_14.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_14.csv",
+      "sha256": "b57cc4e99fce4e0019b3715a9fadcef0a9f2a848ef94d635ba8e1e6194e10026",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_14.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_15.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_15.csv",
+      "sha256": "6b445a0d1d6810a006cb7ed699bc4c55e5b420ebf87d812c4cc9f890fe97582e",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_15.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_16.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_16.csv",
+      "sha256": "3ee4c6b0b0701384c6bd5424938b5afad5ec0be0111a640b7b1f540d3900db48",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_16.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_17.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_17.csv",
+      "sha256": "58fbd52b02d23b35edcd262868264843cb5dc8e53d4ab10f8f2bee8822916af1",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_17.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_18.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_18.csv",
+      "sha256": "64b8353565f8e0c95ec2703b3cce60ada983ed616020fb3e7ea6a77a835ca28e",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_18.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_19.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_19.csv",
+      "sha256": "a56101e264bbadbf70b5a00c9f0c183820c7798a69c20024d9df76c694bd5dbb",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_19.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_2.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_2.csv",
+      "sha256": "4ad54c62872f6b3e95b01fd5e0bc6e2d1286eda477761f29a60d3db1d088b24d",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_2.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_20.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_20.csv",
+      "sha256": "f6d02153c197e0ac6292b92e20791f1a0f50fefcd2a88e699796d5bbd22a3d2b",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_20.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_21.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_21.csv",
+      "sha256": "9a3e3026a3146b693be3c0691e7569334803c32c9324d9ad04dda1334c7a5707",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_21.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_22.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_22.csv",
+      "sha256": "39966aed31c586ead14fbf0ab1800e741dd11deddc8de485adc4a2de1e6c8b6b",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_22.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_23.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_23.csv",
+      "sha256": "f1ae865f45ce110ec0b2b771a1f90095e4d7fd30a07b0c4ff5b576ddc09d9c25",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_23.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_24.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_24.csv",
+      "sha256": "e6e865e49b3d03b10a2360859d1fbdababec9828b1844e6ffe0b9d01aaf46688",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_24.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_25.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_25.csv",
+      "sha256": "bd9cd03dc31d3ed59d80c4420d3d07ff3933521e5d04fcaf06c2cb8bcddb718c",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_25.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_26.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_26.csv",
+      "sha256": "51cfd148376a442d01600961739db5396918821c222dd8473d4442904d314590",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_26.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_27.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_27.csv",
+      "sha256": "2189112d542d89b4a80ccab1002d71d83b587844085bdb3c349f9abeab3395e9",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_27.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_28.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_28.csv",
+      "sha256": "fafa81ae661b797e500de5912ab0035c50bcc6c509162590347e771540ce5fcf",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_28.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_29.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_29.csv",
+      "sha256": "409849868f91af5d721b6d722ca947734aff4b1f50d13a660defd7e2c3761490",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_29.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_3.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_3.csv",
+      "sha256": "cf7e95a79123f26ec42ec4ce32cd866a70e3f3a3ee3465dd318ec74260a97c02",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_3.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_30.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_30.csv",
+      "sha256": "0327d39c0aae21f8d2913d89f6b6bfdef3cdf31f3979379a3501310898e5ce7c",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_30.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_31.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_31.csv",
+      "sha256": "8c1aa24439fc98004aba96e479dc81c9b9aeee93870876a206604da6d502856b",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_31.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_32.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_32.csv",
+      "sha256": "633de1dd8be05b554838f8adecc8340f0307026a9524865e70cc6181eb61141e",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_32.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_33.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_33.csv",
+      "sha256": "904c1b4336a9fd7fa5f18918766471de5b790867854e13e98a9b7abaadcbd2f1",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_33.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_34.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_34.csv",
+      "sha256": "60467f66de53feeeccbabb874eb1c3e4f72a54a0b32bd54cb53c0b28af6b4027",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_34.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_4.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_4.csv",
+      "sha256": "47c29b53491abc3094c82831d511274b1bc90f00b713b43bd1530ec6475ab7cc",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_4.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_5.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_5.csv",
+      "sha256": "59583863aee2a1b7a22f1ee073fdbccdcb2e77223dbb545d347633f25c64125e",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_5.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_6.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_6.csv",
+      "sha256": "8c88ed7ef29ba81f81f7de52b91ab09a57b35c1ddb1a5afd1c59c7f91fc30217",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_6.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_7.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_7.csv",
+      "sha256": "fdb56af1278d7628fbf8c9ecf4df7c40da725b9db2a98dd7f1aeac7c50041cc0",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_7.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_8.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_8.csv",
+      "sha256": "4780f2cc4ae413a24620b5b8813f156b5e0f15b1ac2656439917ffd0784e0936",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_8.csv",
+      "availability": "verified-source-and-local-archive"
+    },
+    {
+      "path": "PyConPL24_Pandas_Polars/raw_data_robot/Bt_9.csv",
+      "role": "input",
+      "url": "https://raw.githubusercontent.com/AdoHaha/PyConPL24_Pandas_Polars/24f2c6c0f93f2d25a4ab5e87a5392bb998d564ec/raw_data_robot/Bt_9.csv",
+      "sha256": "ac7a0378da6e228caf2af08551750af0a5f0559b401071053f3600614ccabde3",
+      "archive_path": "review-2026-10-10/external-inputs/data-science-homework/reference/PyConPL24_Pandas_Polars/raw_data_robot/Bt_9.csv",
+      "availability": "verified-source-and-local-archive"
+    }
+  ],
+  "unresolved": [],
+  "providers": [],
+  "generated": []
+}
