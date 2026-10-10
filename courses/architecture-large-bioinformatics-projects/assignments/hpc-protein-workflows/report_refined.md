@@ -110,9 +110,9 @@ In contrast, ProtBert and AlphaFold (images) both utilizing probabilistic patter
 
 The difference in these predictions stems from the protein's environment. IUPred analyzes the protein in isolation, identifying these regions as unstable and disordered. However, ProtBert and AlphaFold predict a stable structure because these segments become ordered when bound to partner proteins or positioned within a larger complex. This transition—from a disordered monomer to an ordered state upon interaction—explains the divergent results.
 
-alt text — `image-5.png` (untracked figure; see [input preparation](DATA.md)).
+![alt text](image-5.png)
 
-alt text — `image-4.png` (untracked figure; see [input preparation](DATA.md)).
+![alt text](image-4.png)
 
 The above AlphaFold visualizations for proteins *P0DX00* and *O75334* provide a clear illustration of this phenomenon. The IUPred fragments (encircled in black) are rendered as long alpha-helices.
 
@@ -140,8 +140,8 @@ Proteins with highest scores are:
 - *Q967Z0* - *Paramyosin* - major structural component of many thick filaments isolated from invertebrate muscles.
 - from second to fourth are *Tropomyosin*, which plays plays a central role in the calcium dependent regulation of muscle contraction
 
-alt text — `image.png` (untracked figure; see [input preparation](DATA.md)).
+![alt text](image.png)
 
-alt text — `image-1.png` (untracked figure; see [input preparation](DATA.md)).
+![alt text](image-1.png)
 
 Images shows visualization of those proteins which are just long alpha-helix.

@@ -6,16 +6,16 @@
       "sha256": "8409cf20385df22114079695e7956e158a73edd3a38916bfd566f3bb6d828c69",
       "role": "artifact",
       "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/comparison_structure/first/example_image.png",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/comparison_structure/first/example_image.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/architecture-large-bioinformatics-projects/assignments/week-03/comparison_structure/first/example_image.png?ref=main"
     },
     {
       "path": "comparison_structure/second/example_image.png",
       "sha256": "70d2f2884f6827dcc8eaf164ee2088807429f1d98da366ecdef19add19fffd7b",
       "role": "artifact",
       "archive_path": "private/semester_2025-2026_summer/ADPB/week_3/comparison_structure/second/example_image.png",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_summer/ADPB/week_3/comparison_structure/second/example_image.png?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/architecture-large-bioinformatics-projects/assignments/week-03/comparison_structure/second/example_image.png?ref=main"
     },
     {
       "path": "logs/Mycgen/Mycoplasmoides_genitalium_G37/report/blast_run.log",
@@ -141,18 +141,20 @@
       "availability": "local-submission-archive"
     },
     {
-      "path": "raport_return.html",
+      "path": "report.html",
       "sha256": "6dfa289430ede7b861c50864eb8ecf7b52998990ca0aa6a03488e562cff1df83",
       "role": "artifact",
       "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/raport_return.html",
-      "availability": "local-submission-archive"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/architecture-large-bioinformatics-projects/assignments/week-03/report.html?ref=main"
     },
     {
-      "path": "raport_return.pdf",
+      "path": "report.pdf",
       "sha256": "9a75ad29096b6553b59da6788722908f929530ae7675a55cb294fd09d40cd1c9",
       "role": "artifact",
       "archive_path": "review-2026-10-08/submissions/ADP26_lab03_hw_Strozyk_Max_1/ADP26_lab03_hw_Strozyk_Max/ADP26_lab03_hw_Strozyk_Max/raport_return.pdf",
-      "availability": "local-submission-archive"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/architecture-large-bioinformatics-projects/assignments/week-03/report.pdf?ref=main"
     },
     {
       "path": "results/blast_metadata.csv",

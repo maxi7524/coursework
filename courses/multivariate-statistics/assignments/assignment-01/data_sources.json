@@ -6,8 +6,8 @@
       "sha256": "31dd7056e28fe8132e5590b1bed99d251fd06e5112b68f9654e53b4f540ee6cf",
       "role": "artifact",
       "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assigment 1/25Assignment1.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assigment%201/25Assignment1.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/multivariate-statistics/assignments/assignment-01/25Assignment1.pdf?ref=main"
     },
     {
       "path": "boston_corrected.txt",
@@ -23,16 +23,16 @@
       "sha256": "e5cdd025f626dce95bedd51321717e38e0219e6e24c4ee745ae06dc6809775fa",
       "role": "artifact",
       "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assigment 1/main.html",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assigment%201/main.html?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/multivariate-statistics/assignments/assignment-01/main.html?ref=main"
     },
     {
       "path": "25Tutorial1.pdf",
       "sha256": "360743f0797679d062c1651c8ecd0833e6c326f86bd9cb0bcd397e85c2e46692",
       "role": "artifact",
       "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/zestaw 1/25Tutorial1.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/zestaw%201/25Tutorial1.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/multivariate-statistics/assignments/assignment-01/25Tutorial1.pdf?ref=main"
     },
     {
       "path": "Hidalgo1872.xls",

@@ -1,0 +1,19 @@
+nohup: ignoring input
+Loaded 1 record(s) from chrM.fa
+Running BioPython discovery...
+Running Pure Python discovery...
+Running EMBOSS getorf discovery...
+
+==================================================
+Method          | Runtime (sec)   | ORFs Found
+--------------------------------------------------
+BioPython       | 0.033           | 32        
+Pure Python     | 0.021           | 32        
+EMBOSS          | 0.010           | 11        
+==================================================
+Success! All results compiled into: data/results/orf_chrM.csv
+
+orfs: 75
+mapped: 0
+mapping_rate: 0.00%
+unique_reference_matches: 0

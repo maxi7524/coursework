@@ -5,8 +5,10 @@ Complete PDB/UniProt analysis pipeline: acquisition, protein-length and amino-ac
 | Material | Entry point |
 |---|---|
 | Workflow | [create_report.smk](create_report.smk), [config.yaml](config.yaml) |
-| Submitted analysis | [report.md](report.md) |
-| Source and license | [Original repository](https://github.com/maxi7524/project_bioinformatics_tools_proteins_data_analyse), [LICENSE](LICENSE) |
+| Submitted report | [PDF](report.pdf), [interactive HTML](report.html), [Markdown](report.md) |
+| Interactive timeline | [PDB trends with year slider](results/plots/pdb_trends_interactive.html) |
+| Figures | [Report figures and animations](results/plots/), [earlier figure versions](results/plots/historical/) |
+| License | [LICENSE](LICENSE) |
 
 Run from this assignment directory using the original environment (`requests`, Biopython, pandas, NumPy, SciPy, matplotlib, seaborn, Plotly, PyYAML and Snakemake):
 
@@ -15,6 +17,8 @@ python3 download_data.py
 snakemake --snakefile create_report.smk --cores 1
 ```
 
-Inputs and plots are untracked. The Markdown report is preserved; its generated images require restoration or regeneration. HTML/PDF reports and the interactive plot are available in the owner's archive. The scientific pipeline was not re-executed during organization.
+The original PDF, HTML and interactive timeline are committed with the report figures. Eighteen figures and GIF animations were recovered directly from the original HTML; no analysis was rerun. Downloaded protein data remain untracked.
 
-[Input preparation](DATA.md) · [Course index](../../README.md)
+To view the interactive report, download this assignment directory and open `report.html` in a browser, or serve the directory with `python3 -m http.server 8000`. GitHub displays HTML source; the local browser runs the year slider and animations. Viewing these reports requires no dataset download or scientific environment.
+
+[Original experiment/setup guide](ORIGINAL_GUIDE.md) · [Input preparation](DATA.md) · [Course index](../../README.md)

@@ -14,7 +14,8 @@
       "role": "artifact",
       "sha256": "4defb85868ef06a6a6137e590540e769ed856e2ffeba50807618d3227a36c6bc",
       "archive_path": "review-2026-10-10/external-inputs/data-science-homework/data/figures/pombe.jpg",
-      "availability": "embedded-original-image-in-local-archive"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/introduction-bioinformatics-i/assignments/data-science-homework/data/figures/pombe.jpg?ref=main"
     }
   ],
   "unresolved": [],

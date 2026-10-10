@@ -2,12 +2,12 @@
   "schema_version": 1,
   "resources": [
     {
-      "path": "lab04_Max_Strozyk.pdf",
+      "path": "report/submitted-pl.pdf",
       "sha256": "bafc218fc9bee2c09757ef4b8579923b77d37097e936a8da0e0300e34747c4ef",
       "role": "artifact",
-      "archive_path": "numerical-methods-lab04/lab04 Max Stróżyk.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/numerical-methods-lab04/contents/lab04%20Max%20Str%C3%B3%C5%BCyk.pdf?ref=0075a7691404abfd3cef6d2d40237ce87b04d2a0"
+      "archive_path": "numerical-methods-lab04/lab04 Max Str\u00f3\u017cyk.pdf",
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/numerical-methods/assignments/lab-04/report/submitted-pl.pdf?ref=main"
     }
   ],
   "unresolved": [],

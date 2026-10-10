@@ -118,7 +118,7 @@ In both cases i tried to find perspective where both sequences differ.
 * **Cyan**: Query sequence from *Mycoplasmoides genitalium* G37
 * **Green**: Target sequence from *CP014940*
 
-Superposition of  WP_009885894 vs WP_020862476 — `comparison_structure/first/example_image.png` (untracked figure; see [input preparation](DATA.md)).
+![Superposition of  WP_009885894 vs WP_020862476](comparison_structure/first/example_image.png)
 
 Here helixes are little displaced. 
 
@@ -126,6 +126,6 @@ Here helixes are little displaced.
 * **Cyan**: Query sequence from *Mycoplasmoides genitalium* G37
 * **Green**: Target sequence from *CP014940*
 
-Superposition of WP_010869411 vs WP_020862584 — `comparison_structure/second/example_image.png` (untracked figure; see [input preparation](DATA.md)).
+![Superposition of WP_010869411 vs WP_020862584](comparison_structure/second/example_image.png)
 
 Both structures share a nearly identical core fold, with secondary structures perfectly aligned. Minor deviations are visible mostly on the flexible loop regions.

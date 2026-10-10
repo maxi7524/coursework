@@ -43,10 +43,10 @@ Sequences for targeted species (E coli, Human, Yeast, A thaliana, D melanogaster
 
 The following charts illustrate the historical dominance and recent shifts in techniques used to determine protein structures deposited in the PDB.
 
-PDB Techniques Over Time — `results/plots/pdb_trends_absolute.gif` (untracked figure; see [input preparation](DATA.md)).
+![PDB Techniques Over Time](results/plots/pdb_trends_absolute.gif)
 *Figure 0.1: Animated progression of accumulated structures by method over time.*
 
-PDB Techniques Over Time — `results/plots/pdb_trends_percentage.gif` (untracked figure; see [input preparation](DATA.md)).
+![PDB Techniques Over Time](results/plots/pdb_trends_percentage.gif)
 *Figure 0.2: Animated progression of structures percentage by method over time.*
 :::
 
@@ -65,7 +65,7 @@ Below is the interactive structural growth timeline (2005-2025). You can use the
 *Note: The interactive structural growth timeline (2005-2025) is available in the HTML version of this report.*
 :::
 
-PDB Techniques Pie Chart — `results/plots/pdb_pie_chart.png` (untracked figure; see [input preparation](DATA.md)).
+![PDB Techniques Pie Chart](results/plots/pdb_pie_chart.png)
 *Figure 1: Overall distribution of structural determination methods in the PDB.*
 
 We can observe that in recent years *electron microscopy* became more popular. That is because it provides general method for investigating proteins with high resolution. It also does not incorporate protein crystallization which is hardest part in X ray crystallography. 
@@ -76,31 +76,31 @@ Based on the parsed UniProt FASTA files, we analyzed the frequency of specific a
 
 #### Length comparison between groups
 
-Length Comparison Species — `results/plots/length_comparison_species.png` (untracked figure; see [input preparation](DATA.md)).
+![Length Comparison Species](results/plots/length_comparison_species.png)
 *Figure 2: Distribution of protein lengths across selected species grouped by taxonomy.*
 
-Length Comparison Kingdoms — `results/plots/length_comparison_kingdoms.png` (untracked figure; see [input preparation](DATA.md)).
+![Length Comparison Kingdoms](results/plots/length_comparison_kingdoms.png)
 *Figure 3: Distribution of protein lengths across kingdoms.*
 
-AA Content Species — `results/plots/aa_content_E_coli_Human_Yeast.png` (untracked figure; see [input preparation](DATA.md)).
+![AA Content Species](results/plots/aa_content_E_coli_Human_Yeast.png)
 *Figure 4: Percentage content of amino acids across E.coli, Human, and Yeast.*
 
-AA Content Kingdoms — `results/plots/aa_content_kingdoms.png` (untracked figure; see [input preparation](DATA.md)).
+![AA Content Kingdoms](results/plots/aa_content_kingdoms.png)
 *Figure 5: Average amino acid content across taxonomic kingdoms.*
 
 
 ***
 
 #### Protein Length Histograms
-Hist E_coli — `results/plots/histograms/hist_E_coli.png` (untracked figure; see [input preparation](DATA.md)).
-Hist Human — `results/plots/histograms/hist_Human.png` (untracked figure; see [input preparation](DATA.md)).
-Hist Yeast — `results/plots/histograms/hist_Yeast.png` (untracked figure; see [input preparation](DATA.md)).
-Hist A_thaliana — `results/plots/histograms/hist_A_thaliana.png` (untracked figure; see [input preparation](DATA.md)).
-Hist D_melanogaster — `results/plots/histograms/hist_D_melanogaster.png` (untracked figure; see [input preparation](DATA.md)).
-Hist C_elegans — `results/plots/histograms/hist_C_elegans.png` (untracked figure; see [input preparation](DATA.md)).
-Hist Mouse — `results/plots/histograms/hist_Mouse.png` (untracked figure; see [input preparation](DATA.md)).
-Hist Zebrafish — `results/plots/histograms/hist_Zebrafish.png` (untracked figure; see [input preparation](DATA.md)).
-Hist B_subtilis — `results/plots/histograms/hist_B_subtilis.png` (untracked figure; see [input preparation](DATA.md)).
+![Hist E_coli](results/plots/histograms/hist_E_coli.png)
+![Hist Human](results/plots/histograms/hist_Human.png)
+![Hist Yeast](results/plots/histograms/hist_Yeast.png)
+![Hist A_thaliana](results/plots/histograms/hist_A_thaliana.png)
+![Hist D_melanogaster](results/plots/histograms/hist_D_melanogaster.png)
+![Hist C_elegans](results/plots/histograms/hist_C_elegans.png)
+![Hist Mouse](results/plots/histograms/hist_Mouse.png)
+![Hist Zebrafish](results/plots/histograms/hist_Zebrafish.png)
+![Hist B_subtilis](results/plots/histograms/hist_B_subtilis.png)
 
 #### Statistical Tables
 ##### Species - Length Statistics
@@ -407,11 +407,11 @@ We can observe that length of proteins differ significantly between kingdoms and
 #### Comparison between data bases
 
 ##### Length Distribution Comparison
-Length Comparison PDB vs UniProt — `results/plots/length_comparison_pdb_vs_uniprot.png` (untracked figure; see [input preparation](DATA.md)).
+![Length Comparison PDB vs UniProt](results/plots/length_comparison_pdb_vs_uniprot.png)
 *Figure 6: Length distribution comparison between PDB structures and UniProt sequences (log scale).*
 
 ##### Amino Acid Composition Comparison
-AA Content PDB vs UniProt — `results/plots/aa_content_pdb_vs_uniprot.png` (untracked figure; see [input preparation](DATA.md)).
+![AA Content PDB vs UniProt](results/plots/aa_content_pdb_vs_uniprot.png)
 *Figure 7: Average amino acid content comparison between PDB and UniProt.*
 
 ##### Detailed Comparison Table

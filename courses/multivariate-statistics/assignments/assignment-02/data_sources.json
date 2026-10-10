@@ -6,8 +6,8 @@
       "sha256": "cd025b0c853dd0eb2059c421e85421c93b3bf33da3f2e3f17546f9312480d3ed",
       "role": "artifact",
       "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/Assignment 2/assignment.html",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/Assignment%202/assignment.html?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/multivariate-statistics/assignments/assignment-02/assignment.html?ref=main"
     },
     {
       "path": "data/color.stimuli.rda",
@@ -50,8 +50,8 @@
       "sha256": "bef524408aa04f0ebf52aefc9400f32d4f59c407523b66aea9b9aff22e379761",
       "role": "artifact",
       "archive_path": "private/semester_2025-2026_winter/multivariate_statistics/zestaw 2/25Tutorial2.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/semester_2025-2026_winter/multivariate_statistics/zestaw%202/25Tutorial2.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/courses/multivariate-statistics/assignments/assignment-02/25Tutorial2.pdf?ref=main"
     },
     {
       "path": "data/ozone.csv",

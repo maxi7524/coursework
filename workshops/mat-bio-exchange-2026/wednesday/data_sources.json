@@ -6,32 +6,32 @@
       "sha256": "2b7dc36b3d835f1faa02714935c3421abd0070e6e456ab00401f4132369eddf8",
       "role": "artifact",
       "archive_path": "private/other/mathemathical_modeling_summer_2026/wednesday/GrindRtutorial.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/other/mathemathical_modeling_summer_2026/wednesday/GrindRtutorial.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/workshops/mat-bio-exchange-2026/wednesday/GrindRtutorial.pdf?ref=main"
     },
     {
       "path": "Maree_exercises_nullclines_excitable_media.pdf",
       "sha256": "3b77ff4f0d92b5c6e81004f99ae56f4c998b091397255267a950906b879e1cef",
       "role": "artifact",
       "archive_path": "private/other/mathemathical_modeling_summer_2026/wednesday/Maree_exercises_nullclines_excitable_media.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/other/mathemathical_modeling_summer_2026/wednesday/Maree_exercises_nullclines_excitable_media.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/workshops/mat-bio-exchange-2026/wednesday/Maree_exercises_nullclines_excitable_media.pdf?ref=main"
     },
     {
       "path": "Maree_slides_excitable.pdf",
       "sha256": "8ecc4ce23f4d06127b669e281cd97cfacff185ef798801cb693137e578c1b5ba",
       "role": "artifact",
       "archive_path": "private/other/mathemathical_modeling_summer_2026/wednesday/Maree_slides_excitable.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/other/mathemathical_modeling_summer_2026/wednesday/Maree_slides_excitable.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/workshops/mat-bio-exchange-2026/wednesday/Maree_slides_excitable.pdf?ref=main"
     },
     {
       "path": "Maree_slides_nullclines.pdf",
       "sha256": "14b2e3e364b48b7f0eb9ab2957c2170016cdb8691743f1ecab8ae07285a78c1d",
       "role": "artifact",
       "archive_path": "private/other/mathemathical_modeling_summer_2026/wednesday/Maree_slides_nullclines.pdf",
-      "availability": "pinned-original-repository-and-local-archive",
-      "github_api": "repos/maxi7524/private/contents/other/mathemathical_modeling_summer_2026/wednesday/Maree_slides_nullclines.pdf?ref=12389f5e44b27308b8727c19ec60533b806f704f"
+      "availability": "tracked-deliverable",
+      "github_api": "repos/maxi7524/coursework/contents/workshops/mat-bio-exchange-2026/wednesday/Maree_slides_nullclines.pdf?ref=main"
     }
   ],
   "unresolved": [],

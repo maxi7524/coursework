@@ -5,7 +5,7 @@ python3 download_data.py --list
 python3 download_data.py
 ```
 
-Paths are resolved relative to this assignment, regardless of the working directory. External inputs and generated artifacts are ignored by Git.
+Paths are resolved relative to this assignment, regardless of the working directory. External inputs and bulk generated datasets are ignored by Git. Preserved reports, figures and compact submitted result tables are tracked documentation.
 
 | Local input | Source |
 |---|---|
@@ -19,3 +19,5 @@ Gzip resources are streamed to their unpacked destination. Mutable upstream data
 Restore preserved outputs with `python3 download_data.py --archive-root /path/to/migration-archive --include-artifacts`. This also prepares the declared current inputs. The JSON manifest records checksums and exact archive paths.
 
 [Data policy](../../../../DATA_POLICY.md) · [Assignment](README.md)
+
+Committed reports and figures are already included; viewing them requires no data download. Their manifest retrieval URLs point to this collection rather than a retired source repository.
